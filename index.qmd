@@ -1,34 +1,42 @@
 ---
-title: "MUSA 550 Final Project Template"
-subtitle: "An example website demonstrating the power of Quarto for sharing analyses on the web"
+title: "Workspace"
+subtitle: "   "
 ---
 
-## Welcome!
+### Brief Biography
+A dedicated and insightful Master
+of Urban Planning student with a
+concentration in Urban Analytics and
+Climate Resilience at Harvard Graduate
+School of Design, aiming for completion
+in May 2024. With a rich background
+in architecture and finance, I possess
+a unique blend of design, analytical,
+and financial skills. My academic
+and professional journey is driven
+by a passion for sustainable urban
+development, climate resilience, and the
+innovative use of spatial data to inform
+policy and design.
 
-We can create beautiful websites that describe complex technical analyses in Python using [Quarto](https://quarto.org) 
-and deploy them online using [GitHub Pages](https://pages.github.com/). This combination of tools is a really powerful way 
-to create and share your work. This website is a demo that is meant to be used to create your own Quarto website for the 
-final project in MUSA 550. 
-
-Quarto is a relatively new tool, but is becoming popular quickly. It's a successor 
-to the Rmarkdown ecosystem that combines functionality into a single tool and also extends its computation power to other
-languages. Most importantly for us, Quarto supports executing Python code, allowing us to convert Jupyter notebooks to HTML and share them online.  
-
-::: {.callout-important}
-This template site, including the layout it uses, is just a suggested place to start! For your final project, you're welcome (and encouraged) to 
-make as many changes as you like to best fit your project.
-:::
-
-## Find out more
-
-The code for this repository is hosted on our course's GitHub page: [https://github.com/MUSA-550-Fall-2023/quarto-website-template](https://github.com/MUSA-550-Fall-2023/quarto-website-template).
-
-We covered the basics of getting started with Quarto and GitHub Pages in week 9. Take a look at
-[the slides for lecture 9A](https://musa-550-fall-2023.github.io/content/week-9/lecture-9A.html) to find out more.
+### Objective
+This portfolio showcases my
+comprehensive skill set, highlighting
+projects that span topical, analytical,
+and technical aspects of urban planning
+and climate resilience. It reflects my
+commitment to leveraging urban
+analytics for sustainable and resilient
+urban futures.
 
 
-
-
-
-
- 
+### Skills Summary
+Proficient in Python, R, ArcGIS Pro,
+Spatial Database Management,
+Spatial SQL, Spatial Statistics, Remote
+Sensing, Grasshopper (ENVI-met),
+InDesign, Machine Learning, and
+Git. My coursework and professional
+experiences have equipped me with
+the tools to tackle complex urban and
+environmental challenges.

@@ -5,29 +5,29 @@ project:
     port: 3333
 
 website:
-  title: "MUSA 550 Quarto Template"
-  site-url: "https://musa-550-fall-2023.github.io/quarto-website-template" 
-  repo-url: https://github.com/MUSA-550-Fall-2023/quarto-website-template 
+  title: "Gigi Ji Yeon Sung's Workspace"
+  site-url: "https://gigisung0503.github.io/" 
+  repo-url: https://github.com/gigisung0503/ 
   repo-actions: [source]
 
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-Nick Hand, 2023"
+    right: "All rights reserved. 2024."
+    left: "&copy; CC-Gigi Sung, 2024"
 
   sidebar:
-    logo: "images/course-icon.png"
+    logo: "images/boston.png"
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://nickhand.dev
-        text: "Personal Website"
+        href: https://gigisung0503.github.com
+        text: "GitHub"
       - icon: github
-        href: https://github.com/MUSA-550-Fall-2023/
+        href: https://github.com/gigisung0503/
         text: "MUSA 550 GitHub"
-      - icon: twitter
-        href: https://twitter.com/nicholashand
-        text: "Nick Hand Twitter"         
+      - icon: linkedin
+        href: https://linkedin.com/in/gigisung
+        text: "LinkedIn"         
 
     style: "docked"
     search: true
@@ -36,12 +36,12 @@ website:
       - href: index.qmd
         text: Welcome
       - about.qmd
-      - section: analysis/index.qmd
+      - section: Topical/index.qmd
         contents:
-          - analysis/1-python-code-blocks.qmd 
-          - analysis/2-static-images.ipynb
-          - analysis/3-altair-hvplot.ipynb
-          - analysis/4-folium.ipynb
+          - Topical/bos_uhi.ipynb 
+          - Topical/2-static-images.ipynb
+          - Topical/3-altair-hvplot.ipynb
+          - Topical/4-folium.ipynb
 
 format:
   html:
