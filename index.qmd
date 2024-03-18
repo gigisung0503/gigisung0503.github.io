@@ -3,6 +3,9 @@ title: "Workspace"
 subtitle: "   "
 ---
 
+![](images/goes.gif)
+
+
 ### Brief Biography
 A dedicated and insightful Master
 of Urban Planning student with a
