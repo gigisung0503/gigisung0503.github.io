@@ -7,7 +7,7 @@ project:
 website:
   title: "Gigi Ji Yeon Sung's Workspace"
   site-url: "https://gigisung0503.github.io/" 
-  repo-url: https://github.com/gigisung0503/ 
+  repo-url: "https://github.com/gigisung0503/gigisung0503.github.io.git"
   repo-actions: [source]
 
   page-footer:
