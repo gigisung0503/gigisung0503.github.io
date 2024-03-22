@@ -40,8 +40,6 @@ website:
         contents:
           - Topical/bos_uhi.ipynb 
           - Topical/sovi_svi.ipynb
-          # - Topical/3-altair-hvplot.ipynb
-          # - Topical/4-folium.ipynb
       - section: Work in Progress/index.qmd
         contents:
           - Work in Progress/mapping_uncertainty.ipynb 
