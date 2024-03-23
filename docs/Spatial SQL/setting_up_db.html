@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -79,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Topical/index.html">Topical</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Spatial SQL/setting_up_db.html">Spatial SQL/index.qmd</a></li><li class="breadcrumb-item"><a href="../Spatial SQL/setting_up_db.html">Setting up a Spatial Database with Your Local Machine</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -89,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
@@ -123,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../Topical/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../Topical/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Topical</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -155,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Spatial SQL/setting_up_db.html" class="sidebar-item-text sidebar-link">
+  <a href="../Spatial SQL/setting_up_db.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Setting up a Spatial Database with Your Local Machine</span></a>
   </div>
 </li>
@@ -194,22 +228,81 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topical" id="toc-topical" class="nav-link active" data-scroll-target="#topical">Topical</a></li>
+  <li><a href="#setting-up-a-spatial-database-with-your-local-machine" id="toc-setting-up-a-spatial-database-with-your-local-machine" class="nav-link active" data-scroll-target="#setting-up-a-spatial-database-with-your-local-machine">Setting up a Spatial Database with Your Local Machine</a>
+  <ul class="collapse">
+  <li><a href="#step-1-install-postgresql-and-postgis" id="toc-step-1-install-postgresql-and-postgis" class="nav-link" data-scroll-target="#step-1-install-postgresql-and-postgis">Step 1: Install PostgreSQL and PostGIS</a></li>
+  <li><a href="#step-2-create-a-new-database" id="toc-step-2-create-a-new-database" class="nav-link" data-scroll-target="#step-2-create-a-new-database">Step 2: Create a New Database</a></li>
+  <li><a href="#step-3-enable-postgis-extension" id="toc-step-3-enable-postgis-extension" class="nav-link" data-scroll-target="#step-3-enable-postgis-extension">Step 3: Enable PostGIS Extension</a></li>
+  <li><a href="#step-4-load-spatial-data" id="toc-step-4-load-spatial-data" class="nav-link" data-scroll-target="#step-4-load-spatial-data">Step 4: Load Spatial Data</a></li>
+  <li><a href="#step-5-verify-the-database-setup" id="toc-step-5-verify-the-database-setup" class="nav-link" data-scroll-target="#step-5-verify-the-database-setup">Step 5: Verify the Database Setup</a>
+  <ul class="collapse">
+  <li><a href="#conventions-to-know-about" id="toc-conventions-to-know-about" class="nav-link" data-scroll-target="#conventions-to-know-about">Conventions to know about</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Topical/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Spatial SQL/setting_up_db.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 
 
 
-<section id="topical" class="level1">
-<h1>Topical</h1>
-<p>This section includes examples of technical analysis done using Jupyter notebooks. Each sub-section highlights different types of analyses and visualizations. In particular, it highlights that we can easily publish interactive visualizations produced with packages such as hvPlot, altair, or Folium, without losing any of the interactive features.</p>
-<p>On this page, you might want to share more introductory or background information about the analyses to help guide the reader.</p>
+<section id="setting-up-a-spatial-database-with-your-local-machine" class="level1">
+<h1>Setting up a Spatial Database with Your Local Machine</h1>
+<p>In this tutorial, we will set up a spatial database using the PostGIS extension for PostgreSQL. We will use the <code>psql</code> command-line tool to create a new database, enable the PostGIS extension, and load spatial data into the database.</p>
+<section id="step-1-install-postgresql-and-postgis" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-install-postgresql-and-postgis">Step 1: Install PostgreSQL and PostGIS</h2>
+<p>First, you need to install PostgreSQL and PostGIS on your system. You can download the installer for your operating system from the official websites:</p>
+<ul>
+<li><p>PostgreSQL: <a href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a></p></li>
+<li><p>PostGIS: <a href="https://postgis.net/install/">https://postgis.net/install/</a></p></li>
+<li><p>Code for installing PostgreSQL and PostGIS on Ubuntu:</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> update</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install postgresql postgresql-contrib postgis</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>brew</code> is used to install, update, and manage packages on macOS.</p>
+</section>
+<section id="step-2-create-a-new-database" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-create-a-new-database">Step 2: Create a New Database</h2>
+<p>With PostgreSQL and PostGIS installed, you can now create a new database. Open Terminal and execute the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">createdb</span> spatial_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This command creates a new database named <code>spatial_db</code>. Feel free to replace <code>spatial_db</code> with any name you prefer.</p>
+</section>
+<section id="step-3-enable-postgis-extension" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-enable-postgis-extension">Step 3: Enable PostGIS Extension</h2>
+<p>To enable the PostGIS extension in your newly created database, execute the following command in Terminal:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-d</span> spatial_db <span class="at">-c</span> <span class="st">"CREATE EXTENSION postgis;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This enables the PostGIS extension within the <code>spatial_db</code> database.</p>
+</section>
+<section id="step-4-load-spatial-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-load-spatial-data">Step 4: Load Spatial Data</h2>
+<p>To load spatial data into your database, use the <code>shp2pgsql</code> tool for importing shapefiles into a PostGIS-enabled database.</p>
+<p>For instance, to import a shapefile named ‘countries.shp’ into the ‘spatial_db’ database, run the following command:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">shp2pgsql</span> <span class="at">-I</span> <span class="at">-s</span> 4326 countries.shp public.countries <span class="kw">|</span> <span class="ex">psql</span> <span class="at">-d</span> spatial_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This imports the ‘countries.shp’ shapefile into the ‘spatial_db’ database under the ‘public.countries’ table.</p>
+</section>
+<section id="step-5-verify-the-database-setup" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-verify-the-database-setup">Step 5: Verify the Database Setup</h2>
+<p>You can verify that the database setup is successful by connecting to the database using the <code>psql</code> command-line tool. Run the following command in the terminal:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-d</span> spatial_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This command connects to the ‘spatial_db’ database. You can run SQL queries to verify that the PostGIS extension is enabled and the spatial data is loaded correctly.</p>
+<p>That’s it! You have successfully set up a spatial database using the PostGIS extension for PostgreSQL. You can now use the database to perform spatial queries and analysis.</p>
+<section id="conventions-to-know-about" class="level3">
+<h3 class="anchored" data-anchor-id="conventions-to-know-about">Conventions to know about</h3>
+<ul>
+<li><p>Port: A port is a communication endpoint used to identify specific processes or network services on a computer. PostgreSQL’s default port is 5432. To connect to a database on a different port, you’d use the command:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-h</span> localhost <span class="at">-p</span> 5433 <span class="at">-U</span> postgres <span class="at">-d</span> spatial_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>User: The default user for PostgreSQL is <code>postgres</code>. You can specify a different user using the <code>-U</code> flag:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-U</span> myuser <span class="at">-d</span> spatial_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Host: The default host for PostgreSQL is <code>localhost</code>. If your database is hosted on a different server, you can specify the host using the <code>-h</code> flag:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-h</span> myhost <span class="at">-d</span> spatial_db</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -630,7 +723,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Topical/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Spatial SQL/setting_up_db.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>All rights reserved. 2024.</p>
 </div>

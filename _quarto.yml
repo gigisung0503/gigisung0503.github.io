@@ -40,9 +40,14 @@ website:
         contents:
           - Topical/bos_uhi.ipynb 
           - Topical/sovi_svi.ipynb
+      - section: Spatial SQL/index.qmd
+        contents:
+          - Spatial SQL/setting_up_db.md
+          - Spatial SQL/raster_function.md
       - section: Work in Progress/index.qmd
         contents:
           - Work in Progress/mapping_uncertainty.ipynb 
+
 format:
   html:
     highlight-style: solarized
