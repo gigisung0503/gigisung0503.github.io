@@ -5,7 +5,7 @@ project:
     port: 3333
 
 website:
-  title: "Gigi Ji Yeon Sung's Workspace"
+  title: "Gigi Sung's Workspace"
   site-url: "https://gigisung0503.github.io/" 
   repo-url: https://github.com/gigisung0503/gigisung0503.github.io.git
   repo-actions: [source]
@@ -14,42 +14,93 @@ website:
     right: "All rights reserved. 2024."
     left: "&copy; CC-Gigi Sung, 2024"
 
-  sidebar:
-    logo: "images/boston.png"
-    pinned: true
-    align: center
-    tools: 
-      - icon: globe
-        href: https://gigisung0503.github.com
-        text: "GitHub"
-      - icon: github
-        href: https://github.com/gigisung0503/
-        text: "MUSA 550 GitHub"
-      - icon: linkedin
-        href: https://linkedin.com/in/gigisung
-        text: "LinkedIn"         
 
-    style: "docked"
+  navbar:
+    background: '#FFFFFF'
     search: true
-    collapse-level: 2
-    contents:
-      - href: index.qmd
-        text: Welcome
+    left:
+      - text: "Home"
+        file: index.qmd
       - about.qmd
-      - section: Topical/index.qmd
+      - text: "Topical"
+        file: ./Topical/index.qmd
+      - text: "Spatial SQL"
+        file: ./Spatial SQL/index.qmd
+      - text: "Work in Progress"
+        file: ./Work in Progress/index.qmd 
+    tools:
+    - icon: github
+      href: https://github.com/gigisung0503/
+    - icon: linkedin
+      href: https://linkedin.com/in/gigisung
+
+
+  sidebar:
+      - title: "Topical"
+        style: "docked"
+        background: '#FFFFFF'
+        # collapse-level: 2
         contents:
-          - Topical/bos_uhi.ipynb 
-          - Topical/sovi_svi.ipynb
-      - section: Spatial SQL/index.qmd
+          section: Topical/index.qmd
+          contents: 
+            - ./Topical/bos_uhi.ipynb
+            - ./Topical/sovi_svi.ipynb
+          # - ./Topical/index.qmd
+          # - ./Topical/bos_uhi.ipynb
+          # - ./Topical/sovi_svi.ipynb
+
+      - title: "Spatial SQL"
         contents:
-          - Spatial SQL/setting_up_db.md
-          - Spatial SQL/raster_function.md
-      - section: Work in Progress/index.qmd
+          section: Spatial SQL/index.qmd
+          contents:
+            - ./Spatial SQL/setting_up_db.md
+            - ./Spatial SQL/raster_function.md
+
+      - title: "Work in Progress"
         contents:
-          - Work in Progress/mapping_uncertainty.ipynb 
+          section: Work in Progress/index.qmd
+          contents:
+            - ./Work in Progress/mapping_uncertainty.ipynb
+          
+
+
+  # sidebar:
+  #   # logo: "images/boston.png"
+  #   pinned: true
+  #   align: center
+  #   tools: 
+  #     - icon: globe
+  #       href: https://gigisung0503.github.com
+  #       text: "GitHub"
+  #     - icon: github
+  #       href: https://github.com/gigisung0503/
+  #       text: "MUSA 550 GitHub"
+  #     - icon: linkedin
+  #       href: https://linkedin.com/in/gigisung
+  #       text: "LinkedIn"         
+
+  #   style: "floating"
+  #   search: true
+  #   collapse-level: 2
+  #   contents:
+  #     - href: index.qmd
+  #       text: Welcome
+  #     - about.qmd
+  #     - section: Topical/index.qmd
+  #       contents:
+  #         - Topical/bos_uhi.ipynb 
+  #         - Topical/sovi_svi.ipynb
+  #     - section: Spatial SQL/index.qmd
+  #       contents:
+  #         - Spatial SQL/setting_up_db.md
+  #         - Spatial SQL/raster_function.md
+  #     - section: Work in Progress/index.qmd
+  #       contents:
+  #         - Work in Progress/mapping_uncertainty.ipynb 
 
 format:
   html:
+    page-layout: full
     highlight-style: solarized
     theme: cosmo
     css: styles.css

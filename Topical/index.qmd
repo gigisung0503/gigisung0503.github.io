@@ -1,11 +1,9 @@
 # Topical
 
-This section includes examples of technical analysis done using Jupyter notebooks.
-Each sub-section highlights different types of analyses and visualizations.
-In particular, it highlights that we can easily publish interactive visualizations
-produced with packages such as hvPlot, altair, or Folium, without losing
-any of the interactive features. 
+<!-- <iframe src="https://kepler.gl/#/demo?mapUrl=https://raw.githubusercontent.com/gigisung0503/archive/04d6fcfe9509666d2c0c84d2d129462ec43587eb/misc/svi_west.json" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="600" width="1000" allowfullscreen></iframe>
+*<A map showing CDC's Social Vulnerability Index>* -->
 
-On this page, you might want to share more introductory or background information about 
-the analyses to help guide the reader. 
+<!-- <iframe src="https://kepler.gl/#/demo?mapUrl=https://dl.dropboxusercontent.com/scl/fi/i86u36dotdcvxn7v92gv5/svi_national.json?rlkey=q1q9m7houco9ku21cl6c2olsg&dl=1" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="600" width="1000" allowfullscreen></iframe> -->
 
+
+This section showcases my research and work on climate change, urban planning, and sustainable development. The topics covered in this section are cross-cutting and can be applied to various sectors and scales. The aim is to provide a comprehensive overview of the key issues, concepts, and strategies related to those topics. Also, I will share my thoughts on the latest trends, challenges, and opportunities in the field.

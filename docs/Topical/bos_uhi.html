@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gigi Ji Yeon Sung’s Workspace - Urban Heat Island Effect</title>
+<title>Gigi Sung’s Workspace - Urban Heat Island Effect</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -73,11 +74,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -107,10 +108,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gigi Sung’s Workspace</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../Topical/index.html" aria-current="page"> 
+<span class="menu-text">Topical</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Spatial SQL/index.html"> 
+<span class="menu-text">Spatial SQL</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Work in Progress/index.html"> 
+<span class="menu-text">Work in Progress</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/gigisung0503/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://linkedin.com/in/gigisung" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -119,45 +161,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Topical/index.html">Topical</a></li><li class="breadcrumb-item"><a href="../Topical/bos_uhi.html">Urban Heat Island Effect</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/boston.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://gigisung0503.github.com" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/gigisung0503/" title="MUSA 550 GitHub" class="quarto-navigation-tool px-1" aria-label="MUSA 550 GitHub"><i class="bi bi-github"></i></a>
-    <a href="https://linkedin.com/in/gigisung" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-</div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About me</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../Topical/index.html" class="sidebar-item-text sidebar-link">
@@ -177,46 +189,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../Topical/sovi_svi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comparing Indices: CDC’s SVI and HVRI’s SoVI</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Spatial SQL/index.qmd</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Spatial SQL/setting_up_db.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Setting up a Spatial Database with Your Local Machine</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Spatial SQL/raster_function.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working with Raster Data in PostGIS</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../Work in Progress/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Work in Progress</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Work in Progress/mapping_uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mapping Uncertainty in ACS Data</span></a>
   </div>
 </li>
       </ul>
@@ -249,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Topical/bos_uhi.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Topical/index.html">Topical</a></li><li class="breadcrumb-item"><a href="../Topical/bos_uhi.html">Urban Heat Island Effect</a></li></ol></nav>
 <div class="quarto-title">
@@ -258,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -325,6 +297,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="data-prep">Data Prep</h3>
 <p>Utilizing satellite imagery and vector resources was instrumental in deriving key environmental indicators such as Land Surface Temperature (LST), Normalized Difference Vegetation Index (NDVI), Normalized Difference Built-up Index (NDBI), and Albedo, alongside mapping the spatial distribution of water bodies and reclassifying land use within the study area.</p>
 <p>The primary data source was the Landsat 8 satellite, accessible via the Google Earth Engine (GEE) platform, which offers an extensive archive of global satellite imagery. For this study, I focused on imagery collected during the warmer months of May 1 to September 15, 2023, to capture the peak of the UHI effect. The Landsat 8 imagery, specifically the Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) data, provided the necessary spectral bands to calculate LST, NDVI, NDBI, and Albedo.</p>
+<table class="table">
+<colgroup>
+<col style="width: 29%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>#### What variables do we want to control?</td>
+</tr>
+<tr class="even">
+<td><strong>Land Use</strong> Rationale: Different land use categories (e.g., residential, commercial, industrial) have distinct physical and material characteristics that influence surface temperatures. For example, industrial areas might have more impervious surfaces, leading to higher temperatures compared to residential areas with more vegetation.</td>
+</tr>
+<tr class="odd">
+<td><strong>NDVI (Normalized Difference Vegetation Index)</strong> Rationale: NDVI measures vegetation health and density, which are directly linked to cooling through evapotranspiration and shading. Higher NDVI values typically correspond to cooler surface temperatures.</td>
+</tr>
+<tr class="even">
+<td><strong>NDBI (Normalized Difference Built-up Index)</strong> Rationale: NDBI highlights the extent of built-up areas, which are associated with higher surface temperatures due to materials like concrete and asphalt that retain heat.</td>
+</tr>
+<tr class="odd">
+<td><strong>Albedo</strong> Rationale: Albedo represents the reflectivity of surfaces, with higher albedo surfaces reflecting more solar radiation and thus absorbing less heat. Variations in albedo across different urban surfaces can significantly affect local temperatures.</td>
+</tr>
+</tbody>
+</table>
 <div style="padding-left: 30px;">
 <section id="land-surface-temperature-lst" class="level4">
 <h4 class="anchored" data-anchor-id="land-surface-temperature-lst">Land Surface Temperature (LST)</h4>
@@ -357,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Convert Brightness Temperature to Land Surface Temperature:</li>
 </ol>
 <p>The actual LST calculation requires additional corrections for emissivity, which can be complex and context-specific. A simplified formula does not account for these factors accurately but provides a basis for understanding the process.</p>
-<p><img src="images/lst_dist.svg" class="img-fluid" alt="The distribution of LST pixel values."><br>
+<p><img src="../images/uhi/lst_dist.svg" class="img-fluid" alt="The distribution of LST pixel values."><br>
 <em>The distribution of LST pixel values. The two peaks indicate two populations, most likely the land and the ocean.</em></p>
 </section>
 <section id="albedo" class="level4">
@@ -409,12 +403,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The average LST map displays the spatial distribution of surface heat across Boston. Higher temperatures, depicted in warmer colors, often correlate with urbanized areas lacking vegetative cover. This visual aggregation highlights hotspots within the city, providing a clear representation of UHI effects. We can clearly see the divide in LST average values in between greeneries and built-up areas.</p>
 </section>
 </div>
-<hr>
-<p>What variables do we want to control?</p>
-<p><strong>Land Use</strong> Rationale: Different land use categories (e.g., residential, commercial, industrial) have distinct physical and material characteristics that influence surface temperatures. For example, industrial areas might have more impervious surfaces, leading to higher temperatures compared to residential areas with more vegetation.</p>
-<p><strong>NDVI (Normalized Difference Vegetation Index)</strong> Rationale: NDVI measures vegetation health and density, which are directly linked to cooling through evapotranspiration and shading. Higher NDVI values typically correspond to cooler surface temperatures.</p>
-<p><strong>NDBI (Normalized Difference Built-up Index)</strong> Rationale: NDBI highlights the extent of built-up areas, which are associated with higher surface temperatures due to materials like concrete and asphalt that retain heat.</p>
-<p><strong>Albedo</strong> Rationale: Albedo represents the reflectivity of surfaces, with higher albedo surfaces reflecting more solar radiation and thus absorbing less heat. Variations in albedo across different urban surfaces can significantly affect local temperatures.</p>
 
 
 </section>

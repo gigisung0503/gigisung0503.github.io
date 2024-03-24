@@ -1,7 +1,0 @@
-# Spatial SQL
-
-This section includes analysis using spatial SQL. Spatial SQL is an extension of the SQL (Structured Query Language) that is used for managing and manipulating spatial data in a relational database. It includes special functions and operators for dealing with geographical or geometrical data types, such as points, lines, and polygons. This allows for complex queries involving spatial relationships, such as intersection, union, and difference, as well as distance and containment queries. Examples of databases that support spatial SQL include PostgreSQL (with the PostGIS extension), MySQL, and SQLite (with the SpatiaLite extension).
-
-For the sake of consistency, I will demonstrate examples using PostGIS and PostgreSQL.
-
-In cases, I will also demonstrate the use of Docker. Docker is an open-source platform that automates the deployment, scaling, and management of applications. It uses containerization technology to encapsulate applications and their dependencies into a standardized unit for software development. This containerization aspect makes it possible to run several Docker containers with different applications or services on a single host without them interfering with each other, ensuring that they work uniformly despite differences in environments. Docker is widely used in DevOps practices such as continuous integration and continuous deployment.
