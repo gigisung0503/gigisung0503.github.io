@@ -26,8 +26,10 @@ website:
         file: ./Topical/index.qmd
       - text: "Spatial SQL"
         file: ./Spatial SQL/index.qmd
-      - text: "Work in Progress"
-        file: ./Work in Progress/index.qmd 
+      - text: "Policy Analysis"
+        file: ./Policy Analysis/index.qmd 
+      # - text: "Visualizations"
+      #   file: ./Visualizations/index.qmd 
     tools:
     - icon: github
       href: https://github.com/gigisung0503/
@@ -42,12 +44,17 @@ website:
         # collapse-level: 2
         contents:
           section: Topical/index.qmd
-          contents: 
-            - ./Topical/bos_uhi.ipynb
-            - ./Topical/sovi_svi.ipynb
-          # - ./Topical/index.qmd
-          # - ./Topical/bos_uhi.ipynb
-          # - ./Topical/sovi_svi.ipynb
+          contents:
+            - section: "Climate Mitigation"
+              contents:
+                # - ./Topical/bos_uhi.ipynb
+            - section: "Climate Adaptation"
+              contents:
+                - ./Topical/adaptation/bos_uhi.ipynb 
+                - ./Topical/adaptation/sovi_svi.ipynb
+            - section: "Analytics"
+              contents:
+                - ./Topical/analytics/spaceX.qmd 
 
       - title: "Spatial SQL"
         contents:
@@ -56,11 +63,34 @@ website:
             - ./Spatial SQL/setting_up_db.md
             - ./Spatial SQL/raster_function.md
 
-      - title: "Work in Progress"
+      - title: "Policy Analysis"
         contents:
-          section: Work in Progress/index.qmd
+          section: Policy Analysis/index.qmd
           contents:
-            - ./Work in Progress/mapping_uncertainty.ipynb
+            - section: "Chapter 1: TOD"
+              contents:
+                - ./Policy Analysis/Chapter1/TOD.qmd
+            - section: "Chapter 2: Energy"
+              contents:
+                - ./Policy Analysis/Chapter2/energy.qmd
+                - ./Policy Analysis/Chapter2/reference.md
+            - section: "Chapter 3: Land Use"
+              contents:
+                # - ./Policy Analysis/Chapter3/Zoning.qmd
+            - section: "Chapter 4: Housing"
+              contents:
+                # - ./Policy Analysis/Chapter4/Transportation.qmd
+            - section: "Chapter 5: Climate"
+              # contents:
+              #   - ./Policy Analysis/Chapter5/Climate.qmd
+            
+          
+
+      # - title: "Visualizations"
+      #   contents:
+      #     section: Visualizations/index.qmd
+      #     contents:
+      #       - ./Work in Progress/mapping_uncertainty.ipynb
           
 
 
@@ -100,7 +130,7 @@ website:
 
 format:
   html:
-    page-layout: full
+    # page-layout: full
     highlight-style: solarized
     theme: cosmo
     css: styles.css

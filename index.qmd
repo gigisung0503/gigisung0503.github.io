@@ -3,7 +3,7 @@ title: "Welcome!"
 subtitle: "   "
 ---
 
-![](images/goes.gif)
+<img src="images/goes.gif"  width="800" height="480">
 
 
 ### Brief Biography

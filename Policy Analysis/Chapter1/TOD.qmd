@@ -1,0 +1,216 @@
+# Chapter 1: Indicators for Transit-Oriented Development (TOD)
+
+## 1.1 Why Start With Indicators?
+
+- **Summary:** Indicators provide simple insights into complex phenomena and are critical for conveying nuanced context to non-technical audiences. Good indicators are relatable, simple, relative, and generate more questions than answers.
+
+
+
+### 1.1.1 Mapping & scale bias in areal aggregate data
+
+- Data Visualization as a Communication Tool: Data visualization is crucial for data scientists as it can convey complex information effectively. However, visualizations, especially maps, can sometimes be misleading.
+
+- Influence of Color on Map Narratives: The way colors are assigned to data on a map can significantly affect the narrative. For example, mapping median household income in Philadelphia shows increased incomes in Center City, but this perception is partly influenced by the color scheme used.
+
+- **Map Breaks and Distribution**: Different approaches to setting map breaks, such as equal interval breaks and quintile breaks,* can alter the narrative of a map.* Quintile breaks, which divide data into five equal parts, can provide a clearer contrast in income distribution across the city compared to equal interval breaks.
+
+- **Ecological Fallacy and Scale Bias**: Using summary statistics like mean or median to represent individual data points can lead to ecological fallacy [^1]. This bias occurs when conclusions about individual behavior are drawn from aggregate data. The assumption that a census tract represents a homogeneous neighborhood can further exacerbate this bias.
+
+- **Modifiable Areal Unit Problem (MAUP)**: The MAUP refers to the bias introduced when data is aggregated into arbitrarily defined spatial units, such as census tracts. This can lead to misleading interpretations of the data.
+
+- **Consideration of Scale Bias**: Scale bias is a critical factor to consider when creating and interpreting indicators. While it's challenging to eliminate scale bias entirely, acknowledging and understanding its impact is essential for producing useful analytics.
+
+[^1]: 
+
+The ecological fallacy is a logical error that occurs when conclusions about individual behavior are drawn from aggregate data. It happens when researchers make inferences about the behavior or characteristics of individuals based on data that has been collected and analyzed at a group level, such as census tracts, neighborhoods, or countries.
+
+    For example, if data shows that a particular neighborhood has a high average income, it would be an ecological fallacy to assume that every individual in that neighborhood is wealthy. In reality, the neighborhood might have a mix of income levels, but the average is skewed by a few very high-income residents.
+
+    The ecological fallacy highlights the importance of being cautious when interpreting aggregate data and not making unwarranted assumptions about individual characteristics or behaviors based on group-level statistics.
+
+
+
+## 1.2 Setup
+
+- **Python Libraries:** For this analysis, we will use `pandas` for data manipulation, `geopandas` for spatial data handling, `matplotlib` and `seaborn` for visualization, and `cenpy` for accessing Census data.
+
+```{python}
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import cenpy as cp
+import cenpy.tiger as tiger
+
+```
+
+
+
+
+
+### 1.2.1 Census Data: Download and Wrangle
+
+**Accessing Census Data**: We can use the cenpy library to access Census data for Philadelphia. The variables of interest include total population, number of white residents, median household income, median contract rent, total living in poverty, and bachelor's degree holders.
+
+
+```{python}
+
+variables = {
+    'B25026_001E': 'TotalPop',
+    'B02001_002E': 'NumberWhites',
+    'B15001_050E': 'TotalFemaleBachelors',
+    'B15001_009E': 'TotalMaleBacheors',
+    'B19013_001E': 'MedHHInc',
+    'B25058_001E': 'MedRent',
+    'B06012_002E': 'TotalPoverty'
+}
+
+
+
+```
+
+
+
+
+```{python}
+acs = cp.remote.APIConnection('ACSDT5Y2017')
+
+```
+
+```{python}
+
+tiger.available()
+acs.set_mapservice('tigerWMS_ACS2017')
+
+```
+
+
+
+```{python}
+acs.mapservice
+acs.mapservice.layers
+```
+
+
+```{python}
+acs.mapservice.layers[8]
+acs.mapservice.layers[8].variables
+geodata = acs.mapservice.query(layer=8, where="STATE = '42' AND COUNTY = '101'")
+geodata.head()
+
+```
+
+```{python}
+geodata.plot()
+```
+
+```{python}
+acs.variables.head()
+
+```
+
+
+
+```{python}
+acs.geographies['fips'].head()
+
+```
+
+```{python}
+
+list(variables.keys())
+```
+
+
+```{python}
+
+data = acs.query(cols= list(variables.keys())
+, geo_unit = 'tract:*',  geo_filter = {'state':'42' , 'county':'101'})
+
+data
+```
+
+
+
+
+```{python}
+geodata.columns
+```
+
+```{python}
+data.columns
+```
+
+
+Now, we are going to append geodata to census data.
+
+```{python}
+tract17 = pd.merge(data, geodata, left_on='tract', right_on='TRACT')
+
+tract17.head()
+```
+
+
+```{python}
+
+tract17.rename(columns=variables, inplace=True)
+tract17
+
+```
+
+
+
+```{python}
+tract17=gpd.GeoDataFrame(tract17, geometry='geometry')
+tract17.plot()
+```
+
+
+
+
+
+
+
+
+**Data Wrangling**: We can use pandas to manipulate the data, such as renaming columns, calculating rates, and adjusting for inflation.
+
+
+
+### 1.2.2 Transit Open Data: Download and Wrangle
+
+**Accessing Transit Data**: Suppose we have a GeoJSON file with the locations of subway stops in Philadelphia. We can use geopandas to read this data.
+
+```{python}
+septa_stops = gpd.read_file("https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/0c6e18b06d1675858dff1741a9e4a363bfa761db/DATA/Chapter1/PHL_CT00.geojson", geometry='geometry')
+
+print(septa_stops.head())
+```
+
+```{python}
+
+septa_stops.plot()
+```
+
+### 1.2.3 Relating Tracts & Subway Stops in Space
+
+We can use geopandas to perform spatial operations such as buffering, intersection, and spatial joins to relate Census tracts to subway stops.
+
+
+```{python}
+buffered_stops = septa_stops.buffer(2640)  # Buffer in feet
+buffered_stops.head
+```
+
+
+
+
+
+tracts_near_stops = gpd.sjoin(census_data, buffered_stops, op='intersects')
+
+
+tracts_near_stops.head()
+
+```
+
+
+
