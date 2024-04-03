@@ -28,6 +28,8 @@ website:
         file: ./Spatial SQL/index.qmd
       - text: "Policy Analysis"
         file: ./Policy Analysis/index.qmd 
+      - text: "Statistics"
+        file: ./Statistics/index.qmd
       # - text: "Visualizations"
       #   file: ./Visualizations/index.qmd 
     tools:
@@ -41,13 +43,12 @@ website:
       - title: "Topical"
         style: "docked"
         background: '#FFFFFF'
-        # collapse-level: 2
         contents:
           section: Topical/index.qmd
           contents:
             - section: "Climate Mitigation"
               contents:
-                # - ./Topical/bos_uhi.ipynb
+                - ./Topical/energy/microgrids.md
             - section: "Climate Adaptation"
               contents:
                 - ./Topical/adaptation/bos_uhi.ipynb 
@@ -55,6 +56,9 @@ website:
             - section: "Analytics"
               contents:
                 - ./Topical/analytics/spaceX.qmd 
+            - section: "Digital Transformation"
+              contents:
+                - ./Topical/dx/digital_twins.md
 
       - title: "Spatial SQL"
         contents:

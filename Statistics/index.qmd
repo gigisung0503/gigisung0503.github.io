@@ -1,0 +1,23 @@
+# Statistics
+
+This section covers basic and advanced concepts of statistics. 
+
+It will cover:
+
+1. Linear Regression
+   1. Simple linear regression
+      1. Assumptions and construction
+      2. Evaluation
+      3. Interpretation
+   2. Multiple linear regression
+      1. Assumptions and construction
+      2. Evaluation
+      3. Interpretation
+2. Logistic Regression
+3. Hypothesis Testing
+   1. The chi-squared test
+   2. ANOVA
+   3. MANOVA
+   4. MANCOVA
+4. Compare Regression Models
+5. Work Samples
