@@ -37,11 +37,27 @@ The results reveal that both proximity to and the size of parks and water bodies
 
 ---
 
-### ❏ Grid Vulnerability Index
+### ❏ Grid Vulnerability Index (GVI) - New York and Beyond
+
+#### Summary:
+
+The Grid Vulnerability Index (GVI) is a framework that combines real-time weather data with key power grid infrastructure components (power plants, transmission lines, and critical societal infrastructures) to dynamically assess grid stability. Using a hierarchical hexagonal grid system (H3) for spatial analysis, the GVI captures and integrates data at varying resolutions, enabling detailed local and regional analyses. Each component is assigned a vulnerability score based on factors such as energy source, capacity, length, and real-time weather conditions. The resulting index provides a granular visualization of grid vulnerability across New York State, with potential for expansion to a national level.
+
+#### Methodology:
+
+
+The GVI methodology involves data collection from diverse sources, including the U.S. Energy Information Administration (EIA) for power plant and transmission line data, the United States Geological Survey (USGS) for critical infrastructure data, and NOAA's Weather API for real-time weather conditions. Scoring algorithms consider factors like energy source, installed capacity, transmission line length, and the criticality of infrastructures during power outages. Weather conditions are scored based on their potential impact on grid operations, considering factors like temperature, dewpoint, wind speed, and humidity. These individual scores are then aggregated into a final GVI score for each grid cell.
+
+
+#### Results and Implications
+
+Analysis of the GVI results revealed spatial clusters of high vulnerability, particularly in densely populated areas and regions with aging infrastructure. These findings have significant implications for grid resilience planning and investment. The GVI can inform decisions regarding infrastructure upgrades, emergency preparedness, and resource allocation during extreme weather events. The dynamic nature of the index allows for real-time updates, enabling utilities and policymakers to respond proactively to evolving threats and mitigate potential disruptions to the power grid.
 
 
 
 
+[Visit the Story Map](https://arcg.is/0nLrHy)
+<iframe src="https://arcg.is/1i1XGP0" width="800" height="600" frameborder="0" allowfullscreen></iframe>
 
 
 
