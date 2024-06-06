@@ -22,7 +22,7 @@ website:
       - text: "Home"
         file: index.qmd
       - about.qmd
-      - text: "Topical"
+      - text: "Projects"
         file: ./Topical/index.qmd
       - text: "Spatial SQL"
         file: ./Spatial SQL/index.qmd
@@ -40,25 +40,25 @@ website:
 
 
   sidebar:
-      - title: "Topical"
+      - title: "Projects"
         style: "docked"
         background: '#FFFFFF'
-        contents:
-          section: Topical/index.qmd
-          contents:
-            - section: "Climate Mitigation"
-              contents:
-                - ./Topical/energy/microgrids.md
-            - section: "Climate Adaptation"
-              contents:
-                - ./Topical/adaptation/bos_uhi.ipynb 
-                - ./Topical/adaptation/sovi_svi.ipynb
-            - section: "Analytics"
-              contents:
-                - ./Topical/analytics/spaceX.qmd 
-            - section: "Digital Transformation"
-              contents:
-                - ./Topical/dx/digital_twins.md
+        # contents:
+        #   section: Topical/index.qmd
+        #   contents:
+        #     - section: "Climate Mitigation"
+        #       contents:
+        #         - ./Topical/energy/microgrids.md
+        #     - section: "Climate Adaptation"
+        #       contents:
+        #         - ./Topical/adaptation/bos_uhi.ipynb 
+        #         - ./Topical/adaptation/sovi_svi.ipynb
+        #     - section: "Analytics"
+        #       contents:
+        #         - ./Topical/analytics/spaceX.qmd 
+        #     - section: "Digital Transformation"
+        #       contents:
+        #         - ./Topical/dx/digital_twins.md
 
       - title: "Spatial SQL"
         contents:

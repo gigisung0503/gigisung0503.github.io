@@ -6,14 +6,35 @@ subtitle: "   "
 <img src="images/goes.gif"  width="800" height="480">
 
 
+
+
+<style>
+.node {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.node:hover {
+  background-color: #e0e0e0;
+}
+</style>
+
+
+
 ### Brief Biography
 A dedicated and insightful Master
 of Urban Planning student with a
-concentration in Urban Analytics and
-Climate Resilience at Harvard Graduate
+concentration in ***Urban Analytics and
+Climate Resilience*** at Harvard Graduate
 School of Design, aiming for completion
 in May 2024. With a rich background
-in architecture and finance, I possess
+in *architecture and finance*, I possess
 a unique blend of design, analytical,
 and financial skills. My academic
 and professional journey is driven
@@ -34,12 +55,12 @@ urban futures.
 
 
 ### Skills Summary
-Proficient in Python, R, ArcGIS Pro,
+Proficient in ***Python, R, ArcGIS Pro,
 Spatial Database Management,
 Spatial SQL, Spatial Statistics, Remote
 Sensing, Grasshopper (ENVI-met),
 InDesign, Machine Learning, and
-Git. My coursework and professional
+Git***. My coursework and professional
 experiences have equipped me with
 the tools to tackle complex urban and
 environmental challenges.

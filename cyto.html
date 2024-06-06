@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Repository Visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.0/cytoscape.min.js"></script>
+    <style>
+        #cy {
+            width: 100%;
+            height: 600px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="cy"></div>
+    <script>
+        const nodes = [
+            { data: { id: 'simple_linear_regression.qmd', label: 'Simple Linear Regression' } },
+            { data: { id: 'reference.md', label: 'Reference' } },
+            { data: { id: 'raster_function.md', label: 'Raster Function' } },
+            { data: { id: 'setting_up_db.md', label: 'Setting Up DB' } },
+            { data: { id: '3-altair-hvplot.ipynb', label: 'Altair & hvPlot' } },
+            // ... more nodes representing other files and external links
+            ];
+
+        const edges = [
+            { data: { source: 'simple_linear_regression.qmd', target: 'pandas.DataFrame.dropna.html' } },
+            { data: { source: 'simple_linear_regression.qmd', target: 'pandas.DataFrame.reset_index.html' } },
+            { data: { source: 'reference.md', target: 'www.eia.gov' } },
+            { data: { source: 'raster_function.md', target: 'spatial-sql.com' } },
+            { data: { source: 'setting_up_db.md', target: 'www.postgresql.org/download/' } },
+            { data: { source: 'setting_up_db.md', target: 'postgis.net/install/' } },
+            { data: { source: '3-altair-hvplot.ipynb', target: 'altair-viz.github.io' } },
+            { data: { source: '3-altair-hvplot.ipynb', target: 'hvplot.holoviz.org' } },
+            // ... more edges representing other links
+            ];
+
+        // Initialize Cytoscape with the nodes and edges
+        const cy = cytoscape({
+            container: document.getElementById('cy'), // container to render in
+            elements: { nodes, edges },
+            style: [
+                {
+                selector: 'node',
+                style: {
+                    'background-color': '#555',
+                    'label': 'data(label)',
+                    'text-valign': 'center',
+                    'color': 'white',
+                    'text-outline-width': 2,
+                    'text-outline-color': '#555',
+                    'font-family': 'Helvetica, Arial, sans-serif',
+                    'font-size': '10px'
+                }
+                },
+                {
+                selector: 'edge',
+                style: {
+                    'width': 2,
+                    'line-color': '#ccc',
+                    'curve-style': 'bezier',
+                    'target-arrow-shape': 'triangle',
+                    'target-arrow-color': '#ccc'
+                }
+                }
+            ],
+            layout: {
+                name: 'cose',
+                idealEdgeLength: 100,
+                nodeOverlap: 20
+            }
+            });
+
+        // Event handler for clicking on a node
+        cy.on('tap', 'node', function(evt) {
+        // Handle the click event, such as navigating to the file or displaying additional information
+        const nodeData = evt.target.data();
+        console.log(`Clicked on ${nodeData.id}`);
+        });
+        
+    </script>
+</body>
+</html>
