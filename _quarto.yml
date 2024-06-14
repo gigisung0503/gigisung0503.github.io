@@ -13,6 +13,8 @@ website:
   page-footer:
     right: "All rights reserved. 2024."
     left: "&copy; CC-Gigi Sung, 2024"
+  
+  google-analytics: "G-EPVTNRSWSE"
 
 
   navbar:
@@ -24,12 +26,15 @@ website:
       - about.qmd
       - text: "Projects"
         file: ./Topical/index.qmd
-      - text: "Spatial SQL"
-        file: ./Spatial SQL/index.qmd
-      - text: "Policy Analysis"
-        file: ./Policy Analysis/index.qmd 
-      - text: "Statistics"
-        file: ./Statistics/index.qmd
+      - text: "Research Log"
+        file: ./research/index.qmd
+
+      # - text: "Spatial SQL"
+      #   file: ./Spatial SQL/index.qmd
+      # - text: "Policy Analysis"
+      #   file: ./Policy Analysis/index.qmd 
+      # - text: "Statistics"
+      #   file: ./Statistics/index.qmd
       # - text: "Visualizations"
       #   file: ./Visualizations/index.qmd 
     tools:
@@ -37,6 +42,10 @@ website:
       href: https://github.com/gigisung0503/
     - icon: linkedin
       href: https://linkedin.com/in/gigisung
+
+    right:
+      - icon: rss
+        href: research/index.xml
 
 
   sidebar:
@@ -141,7 +150,6 @@ format:
     code-copy: true
     code-overflow: wrap
     toc: true
-
 
 
 
