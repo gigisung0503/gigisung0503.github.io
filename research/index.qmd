@@ -1,0 +1,16 @@
+---
+title: "Research Log"
+description: "Not-so daily logging of my research development"
+listing: 
+  contents: posts
+  sort: "date desc"
+  categories: true
+  feed: true
+
+---
+
+
+
+
+
+

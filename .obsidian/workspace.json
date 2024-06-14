@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "08bfe15c02af2919",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac231d270d465ee4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "19ea5402c27a50fe",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "55f901a9c8811b13",
+    "type": "split",
+    "children": [
+      {
+        "id": "e5e21da241a4626e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f1ce5ce8823f10e7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "02eacf94a82bd944",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bc21b46a6850d7f0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8cb49a5948d7da1e",
+    "type": "split",
+    "children": [
+      {
+        "id": "22786ae726af1446",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd42569dfc4a38b8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0fa4c2d19224065c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7e41afed6bace97c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2deaa9160c2f6bc4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "4681b670d2edf9fc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "19ea5402c27a50fe",
+  "lastOpenFiles": [
+    "Topical/dx/Outline I.md",
+    "Topical/dx/Outline II.md",
+    "Topical/dx/Research Draft.md",
+    "Topical/dx/Digital Twins.md",
+    "Topical/dx/Digital Transformation.md",
+    "Topical/energy/Mapping Grid Infra for DER integration.md",
+    "Topical/energy/Grid Modernization.md",
+    "Topical/energy/Grid Integration.md",
+    "Topical/energy/Grid Balance.md",
+    "Topical/energy/Frequency.md",
+    "Topical/energy/Feasibility (Grid infra and OWS).md",
+    "Topical/energy/Distributed Energy Resources (DERs).md",
+    "Distributed Energy Resources (DER).md",
+    "Topical/energy/Microgrids and OSW.md",
+    "Topical/energy/Microgrids.md",
+    "Topical/energy/AC Power.md",
+    "Untitled.canvas",
+    "Topical/energy/Offshore Wind Energy Projects in Europe.md",
+    "README.md",
+    "Work in Progress/examples.md",
+    "Work in Progress/useful_sources.md"
+  ]
+}
