@@ -128,7 +128,10 @@ I conducted a spatial analysis of economic metrics (e.g., employment, income, ed
 #### Results & Implications:
 The analysis of Economic Momentum Values highlighted significant spatial variability, with top-performing counties demonstrating robust economic indicators. I observed distinct geographical patterns, with notable differences between southeast and northeast states. The correlations between economic indicators and returns from different property types varied, revealing the nuanced nature of economic vitality and real estate performance. The insights from the Economic Momentum Indicator can guide policymakers and investors in making informed decisions to enhance resilience and optimize investments in diverse economic landscapes.
 
+[Download Report](https://raw.githubusercontent.com/gigisung0503/archive/blob/main/location_signal/ws_EconomicMomentumWhitepaper.pdf)
+
 {{< pdf pdf/ws_EconomicMomentumWhitepaper.pdf width=100% height=800 >}}
+
 
 
 <!-- Explore our diverse range of documents and notebooks: -->
