@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gigisung0503.github.io/Topical/analytics/spaceX_data_collection.html</loc>
-    <lastmod>2024-03-29T23:33:41.891Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/adaptation/bos_uhi.html</loc>
-    <lastmod>2024-04-19T03:59:10.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/dx/Outline II.html</loc>
-    <lastmod>2024-04-15T00:10:33.817Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/dx/Outline I.html</loc>
-    <lastmod>2024-04-09T18:52:12.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/dx/Research Draft.html</loc>
-    <lastmod>2024-04-10T18:46:38.697Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Grid Balance.html</loc>
-    <lastmod>2024-04-09T15:30:02.676Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Frequency.html</loc>
-    <lastmod>2024-04-09T15:45:14.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Distributed Energy Resources (DERs).html</loc>
-    <lastmod>2024-04-09T16:35:57.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Microgrids.html</loc>
-    <lastmod>2024-04-09T14:14:33.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Mapping Grid Infra for DER integration.html</loc>
-    <lastmod>2024-04-09T16:58:08.131Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Grid Integration.html</loc>
-    <lastmod>2024-04-09T15:27:30.648Z</lastmod>
-  </url>
-  <url>
     <loc>https://gigisung0503.github.io/Data Engineering/imf_etl/etl_gdp.html</loc>
     <lastmod>2024-03-31T03:14:10.542Z</lastmod>
   </url>
@@ -59,6 +15,50 @@
   <url>
     <loc>https://gigisung0503.github.io/index.html</loc>
     <lastmod>2024-06-05T02:34:11.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/analytics/spaceX.html</loc>
+    <lastmod>2024-03-29T17:52:17.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/adaptation/sovi_svi.html</loc>
+    <lastmod>2024-04-19T03:58:27.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/dx/Digital Twins.html</loc>
+    <lastmod>2024-04-09T18:52:36.791Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/dx/Digital Transformation.html</loc>
+    <lastmod>2024-04-09T18:44:50.671Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/index.html</loc>
+    <lastmod>2024-06-17T16:15:28.650Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/test.html</loc>
+    <lastmod>2024-04-07T02:33:19.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/AC Power.html</loc>
+    <lastmod>2024-04-09T15:48:36.177Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Feasibility (Grid infra and OWS).html</loc>
+    <lastmod>2024-04-09T16:29:25.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Offshore Wind Energy Projects in Europe.html</loc>
+    <lastmod>2024-04-09T14:18:24.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Grid Modernization.html</loc>
+    <lastmod>2024-04-09T15:52:30.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Microgrids and OSW.html</loc>
+    <lastmod>2024-04-09T16:41:38.971Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Archive/2-static-images.html</loc>
@@ -137,6 +137,50 @@
     <lastmod>2024-03-18T16:02:10.259Z</lastmod>
   </url>
   <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Grid Integration.html</loc>
+    <lastmod>2024-04-09T15:27:30.648Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Mapping Grid Infra for DER integration.html</loc>
+    <lastmod>2024-04-09T16:58:08.131Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Microgrids.html</loc>
+    <lastmod>2024-04-09T14:14:33.248Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Distributed Energy Resources (DERs).html</loc>
+    <lastmod>2024-04-09T16:35:57.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Frequency.html</loc>
+    <lastmod>2024-04-09T15:45:14.705Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/energy/Grid Balance.html</loc>
+    <lastmod>2024-04-09T15:30:02.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/dx/Research Draft.html</loc>
+    <lastmod>2024-04-10T18:46:38.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/dx/Outline I.html</loc>
+    <lastmod>2024-04-09T18:52:12.782Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/dx/Outline II.html</loc>
+    <lastmod>2024-04-15T00:10:33.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/adaptation/bos_uhi.html</loc>
+    <lastmod>2024-04-19T03:59:10.776Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Projects/analytics/spaceX_data_collection.html</loc>
+    <lastmod>2024-03-29T23:33:41.891Z</lastmod>
+  </url>
+  <url>
     <loc>https://gigisung0503.github.io/about.html</loc>
     <lastmod>2024-06-05T02:32:09.838Z</lastmod>
   </url>
@@ -147,49 +191,5 @@
   <url>
     <loc>https://gigisung0503.github.io/Data Engineering/web_scraping/wdbscraping.html</loc>
     <lastmod>2024-03-31T03:48:28.941Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Microgrids and OSW.html</loc>
-    <lastmod>2024-04-09T16:41:38.971Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Grid Modernization.html</loc>
-    <lastmod>2024-04-09T15:52:30.628Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Offshore Wind Energy Projects in Europe.html</loc>
-    <lastmod>2024-04-09T14:18:24.401Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/Feasibility (Grid infra and OWS).html</loc>
-    <lastmod>2024-04-09T16:29:25.070Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/AC Power.html</loc>
-    <lastmod>2024-04-09T15:48:36.177Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/energy/test.html</loc>
-    <lastmod>2024-04-07T02:33:19.660Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/index.html</loc>
-    <lastmod>2024-06-06T21:15:35.530Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/dx/Digital Transformation.html</loc>
-    <lastmod>2024-04-09T18:44:50.671Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/dx/Digital Twins.html</loc>
-    <lastmod>2024-04-09T18:52:36.791Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/adaptation/sovi_svi.html</loc>
-    <lastmod>2024-04-19T03:58:27.723Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Topical/analytics/spaceX.html</loc>
-    <lastmod>2024-03-29T17:52:17.713Z</lastmod>
   </url>
 </urlset>

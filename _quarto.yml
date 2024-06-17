@@ -25,7 +25,7 @@ website:
         file: index.qmd
       - about.qmd
       - text: "Projects"
-        file: ./Topical/index.qmd
+        file: ./Projects/index.qmd
       - text: "Research Log"
         file: ./research/index.qmd
 
@@ -53,21 +53,21 @@ website:
         style: "docked"
         background: '#FFFFFF'
         # contents:
-        #   section: Topical/index.qmd
+        #   section: Projects/index.qmd
         #   contents:
         #     - section: "Climate Mitigation"
         #       contents:
-        #         - ./Topical/energy/microgrids.md
+        #         - ./Projects/energy/microgrids.md
         #     - section: "Climate Adaptation"
         #       contents:
-        #         - ./Topical/adaptation/bos_uhi.ipynb 
-        #         - ./Topical/adaptation/sovi_svi.ipynb
+        #         - ./Projects/adaptation/bos_uhi.ipynb 
+        #         - ./Projects/adaptation/sovi_svi.ipynb
         #     - section: "Analytics"
         #       contents:
-        #         - ./Topical/analytics/spaceX.qmd 
+        #         - ./Projects/analytics/spaceX.qmd 
         #     - section: "Digital Transformation"
         #       contents:
-        #         - ./Topical/dx/digital_twins.md
+        #         - ./Projects/dx/digital_twins.md
 
       - title: "Spatial SQL"
         contents:
@@ -129,10 +129,10 @@ website:
   #     - href: index.qmd
   #       text: Welcome
   #     - about.qmd
-  #     - section: Topical/index.qmd
+  #     - section: Projects/index.qmd
   #       contents:
-  #         - Topical/bos_uhi.ipynb 
-  #         - Topical/sovi_svi.ipynb
+  #         - Projects/bos_uhi.ipynb 
+  #         - Projects/sovi_svi.ipynb
   #     - section: Spatial SQL/index.qmd
   #       contents:
   #         - Spatial SQL/setting_up_db.md
