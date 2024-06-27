@@ -2,6 +2,9 @@
   {
     "listing": "/research/index.html",
     "items": [
+      "/research/posts/useful_resources.html",
+      "/research/posts/lit_review.html",
+      "/research/posts/eta_etl.html",
       "/research/posts/post.html"
     ]
   }
