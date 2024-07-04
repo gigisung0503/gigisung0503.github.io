@@ -116,6 +116,33 @@ The analysis provided insights into potential hotspots for residential market de
 
 ---
 
+### ❏ Travel Mode Choices: Large Language Models vs Traditional Decision-Making Frameworks
+
+#### Abstract:
+This study analyzed how Large Language Models (LLMs) make judgments in the context of the travel
+mode choice decision-making process and existing behavioral studies, and compared it with a traditional
+decision-making framework. Utilizing the Swissmetro dataset, we first applied Expected Utility Theory
+via a Multinomial Logistic Model to establish a benchmark for travel mode choice predictions. We
+then established three sets of experiments with GPT-3.5 and compared the results with the benchmark
+model. First, we analyzed the impact of feature choice on LLM performance and reasoning. Second, we
+investigated the value of role prompting in terms of human behaviors. Lastly, we surveyed students and
+requested reasonings on travel behaviors and utilized them to fine-tune the LLM to make predictions.
+We found that in general, enriching the model with a broader range of features, designing prompts
+that reflect behavioral tendencies, and fine-tuning the model using human-like reasoning significantly
+enhance the predictive capabilities of GPT-3.5. We achieved a result almost comparable to that of
+Expected Utility Theory trained on a large dataset without showing GPT any training examples. This
+provides crucial evidence and directs potential future research in operationalizing LLMs to make travel
+behavior decision-making predictions that could benefit transportation planners.
+
+[Download Report](https://raw.githubuswercontent.com/gigisung0503/gigisung0503.github.io/blob/main/Projects/pdf/11.478.pdf)
+
+
+
+
+{{< pdf pdf/11.478.pdf width=100% height=800 >}}
+
+
+---
 ### ❏ Economic Momentum Indicator
 
 
