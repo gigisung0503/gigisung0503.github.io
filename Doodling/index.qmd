@@ -1,0 +1,16 @@
+---
+title: "Doodling"
+description: "Doodling and brief book-keeping of a day"
+listing: 
+  contents: posts
+  sort: "date desc"
+  categories: true
+  feed: true
+
+---
+
+
+
+
+
+
