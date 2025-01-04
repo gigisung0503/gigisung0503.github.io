@@ -8,5 +8,17 @@
       "/research/posts/api.html",
       "/research/posts/post.html"
     ]
+  },
+  {
+    "listing": "/Posts/index.html",
+    "items": [
+      "/Posts/posts/useful_resources.html",
+      "/Posts/posts/umngeni.html",
+      "/Posts/posts/informal_settlement.html",
+      "/Posts/posts/lit_review.html",
+      "/Posts/posts/eta_etl.html",
+      "/Posts/posts/api.html",
+      "/Posts/posts/post.html"
+    ]
   }
 ]

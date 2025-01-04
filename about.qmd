@@ -13,7 +13,7 @@ title: "About me"
 <!-- Text gets a column with width 8/12 -->
 ::: {.g-col-8}
 
-Hello, my name is Gigi Sung, and I am deeply invested in the field of urban analysis. As a graduate student at ***Harvard Graduate School of Design*** and a research assistant at Harvard ***Institute for Quantitative Social Science***, I find myself at the intersection of advanced research and practical applications.
+Hello, my name is Gigi Sung, and I am deeply invested in advancing urban analysis and planning through innovative technologies and equitable frameworks. As a graduate of the ***Harvard Graduate School of Design*** and a geospatial analyst at the ***World Health Organization***, I find myself at the nexus of cutting-edge research and impactful applications.
 
 My passion is anchored in the use of ***spatial data science*** to navigate and resolve urban challenges, and I am particularly excited about the potential of machine learning and deep learning to transform urban planning. Consider the transformative capabilities of land use classification, building footprint extraction, and urban growth prediction—these are just a few examples of how ml algorithms can redefine our understanding and planning of urban spaces. (***Of courese, we also constantly refer to statistical models***.)
 

@@ -5,7 +5,7 @@ subtitle: "   "
 
 <img src="images/goes.gif"  width="800" height="480">
 
-
+<!-- <iframe width="100%" height="600" src="https://harvard-cga.maps.arcgis.com/apps/dashboards/3e00175ed72347a7b51fdceedf925de8" frameborder="0" allowfullscreen></iframe>
 
 
 <style>
@@ -23,25 +23,22 @@ subtitle: "   "
 .node:hover {
   background-color: #e0e0e0;
 }
-</style>
+</style> -->
 
 
 
 ### Brief Biography
-A dedicated and insightful Master
-of Urban Planning student with a
-concentration in ***Urban Analytics and
-Climate Resilience*** at Harvard Graduate
-School of Design, aiming for completion
-in May 2024. With a rich background
-in *architecture and finance*, I possess
-a unique blend of design, analytical,
-and financial skills. My academic
-and professional journey is driven
-by a passion for sustainable urban
-development, climate resilience, and the
-innovative use of spatial data to inform
-policy and design.
+I am a geospatial analyst and urban planner driven by the belief that technology and data hold the power to transform cities into equitable, resilient, and sustainable spaces. At the World Health Organization, I lead projects that fuse satellite imagery and epidemiological data to address public health challenges, such as the relationship between climate change and disease seasonality in Yemen. I also contribute to national strategies, like Afghanistan's GIS roadmap, integrating geospatial tools to improve disease surveillance and emergency response systems.
+
+My career spans diverse fields—urban mobility, climate resilience, and social equity—united by a commitment to harnessing technology for impactful governance. During my fellowship with the Bloomberg Center for Cities, I developed GIS-based solutions for informal settlements in South Africa, optimizing service delivery for underserved populations. At Harvard GSD, I combined technical innovation with research, analyzing pandemic-driven mobility shifts and creating tools to evaluate infrastructure vulnerabilities to climate hazards.
+
+My vision is to shape technology governance in urban environments, ensuring that data and innovation are used not only to enhance efficiency but also to bridge gaps in equity and access. I believe emerging technologies must prioritize inclusivity, addressing the digital divide and empowering local communities through participatory frameworks. By leveraging tools like AI, GIS, and machine learning, I aim to foster urban systems that are not only intelligent but also just and adaptive to climate challenges.
+
+As a technologist and urbanist, I bring a unique perspective, combining technical expertise with a deep understanding of social systems. With skills in Python, SQL, GIS, and machine learning, I strive to design solutions that serve as catalysts for positive change in smart city ecosystems.
+
+
+
+
 
 ### Objective
 This portfolio showcases my
@@ -52,15 +49,3 @@ and climate resilience. It reflects my
 commitment to leveraging urban
 analytics for sustainable and resilient
 urban futures.
-
-
-### Skills Summary
-Proficient in ***Python, R, ArcGIS Pro,
-Spatial Database Management,
-Spatial SQL, Spatial Statistics, Remote
-Sensing, Grasshopper (ENVI-met),
-InDesign, Machine Learning, and
-Git***. My coursework and professional
-experiences have equipped me with
-the tools to tackle complex urban and
-environmental challenges.

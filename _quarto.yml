@@ -27,7 +27,7 @@ website:
       - text: "Projects"
         file: ./Projects/index.qmd
       - text: "Research Log"
-        file: ./research/index.qmd
+        file: ./Posts/index.qmd
 
       # - text: "Spatial SQL"
       #   file: ./Spatial SQL/index.qmd
@@ -45,7 +45,7 @@ website:
 
     right:
       - icon: rss
-        href: research/index.xml
+        href: Posts/index.xml
 
 
   sidebar:
