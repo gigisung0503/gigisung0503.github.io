@@ -3,28 +3,83 @@ title: "Welcome!"
 subtitle: "   "
 ---
 
-<img src="images/goes.gif"  width="800" height="480">
+<!-- 1) Include Mapbox GL and its CSS -->
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 
-<!-- <iframe width="100%" height="600" src="https://harvard-cga.maps.arcgis.com/apps/dashboards/3e00175ed72347a7b51fdceedf925de8" frameborder="0" allowfullscreen></iframe>
+<!-- 2) Include the Rain Layer plugin from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/mapbox-gl-rain-layer@latest/dist/mapbox-gl-rain-layer.min.js"></script>
 
+<!-- 3) Container for map + overlays (title/timestamp) -->
+<div id="map-container" style="position: relative; width: 800px; height: 480px;">
+  <!-- The actual map -->
+  <div id="map" style="width: 100%; height: 100%;"></div>
+  
+  <!-- A title box on top of the map -->
+  <div id="map-title" style="
+       position: absolute;
+       top: 10px; left: 10px;
+       font-size: 18px;
+       font-family: sans-serif;
+       background: rgba(255, 255, 255, 0.7);
+       padding: 6px 3px;
+       border-radius: 4px;
+       ">
+    Global Rain Radar
+  </div>
 
-<style>
-.node {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
+  <!-- A timestamp box below the title -->
+  <div id="timestamp" style="
+       position: absolute;
+       top: 50px; left: 10px;
+       font-size: 14px;
+       font-family: sans-serif;
+       background: rgba(255, 255, 255, 0.7);
+       padding: 4px 8px;
+       border-radius: 4px;
+       ">
+    <!-- We'll fill this in dynamically -->
+  </div>
+</div>
 
-.node:hover {
-  background-color: #e0e0e0;
-}
-</style> -->
+<script>
+  // 4) Your personal Mapbox access token:
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lnaXN1bmciLCJhIjoiY2xlMGhpM2hpMTV6dzNwbG9jN3g1bGg1MSJ9.za7zD76Y5ONC4-AFcERn_A';
 
+  // Create a new map instance
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-streets-v12',
+    center: [130.6917, 38.6895], // starting position [lng, lat]
+    zoom: 3,
+    pitch: 45,    // tilt the camera
+    bearing: -35.6
+  });
+
+  // Add the rain layer once the map has loaded
+  map.on('load', () => {
+
+    // Create the RainLayer instance
+    const rainLayer = new RainLayer({
+      id: 'rain',
+      source: 'rainviewer', // where the radar data come from
+      scale: 'noaa'         // the color scale 
+    });
+
+    // Add it to the map as a layer
+    map.addLayer(rainLayer);
+
+    // Update the local timestamp every 1 second
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('timestamp').textContent = 
+        'Local time: ' + now.toLocaleString();
+    }
+    setInterval(updateTime, 1000);
+    // Call it once right away
+    updateTime();
+  });
+</script>
 
 
 ### Brief Biography
