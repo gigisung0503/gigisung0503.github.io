@@ -149,13 +149,17 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research/index.html"> 
+    <a class="nav-link" href="../../Posts/index.html"> 
 <span class="menu-text">Research Log</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Doodling/index.html"> 
+<span class="menu-text">Doodling</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../../research/index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../Posts/index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -315,7 +319,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <ul>
 <li><strong>Python Libraries:</strong> For this analysis, we will use <code>pandas</code> for data manipulation, <code>geopandas</code> for spatial data handling, <code>matplotlib</code> and <code>seaborn</code> for visualization, and <code>cenpy</code> for accessing Census data.</li>
 </ul>
-<div id="dec5a487" class="cell" data-execution_count="1">
+<div id="eb29e5ee" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -326,7 +330,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <section id="census-data-download-and-wrangle" class="level3">
 <h3 class="anchored" data-anchor-id="census-data-download-and-wrangle">1.2.1 Census Data: Download and Wrangle</h3>
 <p><strong>Accessing Census Data</strong>: We can use the cenpy library to access Census data for Philadelphia. The variables of interest include total population, number of white residents, median household income, median contract rent, total living in poverty, and bachelor’s degree holders.</p>
-<div id="2174dd9b" class="cell" data-execution_count="2">
+<div id="0d22b1fe" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'B25026_001E'</span>: <span class="st">'TotalPop'</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'B02001_002E'</span>: <span class="st">'NumberWhites'</span>,</span>
@@ -337,10 +341,10 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'B06012_002E'</span>: <span class="st">'TotalPoverty'</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="b6069be8" class="cell" data-execution_count="3">
+<div id="ed98ac87" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>acs <span class="op">=</span> cp.remote.APIConnection(<span class="st">'ACSDT5Y2017'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8f0f0c45" class="cell" data-execution_count="4">
+<div id="534ea206" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tiger.available()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>acs.set_mapservice(<span class="st">'tigerWMS_ACS2017'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -348,7 +352,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
-<div id="e78700a9" class="cell" data-execution_count="5">
+<div id="ba0d2fc5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>acs.mapservice</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>acs.mapservice.layers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -440,7 +444,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
  (ESRILayer) Counties Labels]</code></pre>
 </div>
 </div>
-<div id="1c1eb174" class="cell" data-execution_count="6">
+<div id="8adcf51c" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>acs.mapservice.layers[<span class="dv">8</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>acs.mapservice.layers[<span class="dv">8</span>].variables</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>geodata <span class="op">=</span> acs.mapservice.query(layer<span class="op">=</span><span class="dv">8</span>, where<span class="op">=</span><span class="st">"STATE = '42' AND COUNTY = '101'"</span>)</span>
@@ -454,159 +458,140 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">OBJECTID</th>
-<th data-quarto-table-cell-role="th">AREALAND</th>
-<th data-quarto-table-cell-role="th">ALANDHIST</th>
-<th data-quarto-table-cell-role="th">AREAWATER</th>
-<th data-quarto-table-cell-role="th">AWATERHIST</th>
-<th data-quarto-table-cell-role="th">COUNTY</th>
-<th data-quarto-table-cell-role="th">EFFDATE</th>
-<th data-quarto-table-cell-role="th">ESTABDATE</th>
-<th data-quarto-table-cell-role="th">FUNCSTAT</th>
+<th data-quarto-table-cell-role="th">MTFCC</th>
+<th data-quarto-table-cell-role="th">OID</th>
 <th data-quarto-table-cell-role="th">GEOID</th>
-<th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">VINTAGE</th>
-<th data-quarto-table-cell-role="th">CENTLON</th>
+<th data-quarto-table-cell-role="th">STATE</th>
+<th data-quarto-table-cell-role="th">COUNTY</th>
+<th data-quarto-table-cell-role="th">TRACT</th>
+<th data-quarto-table-cell-role="th">BASENAME</th>
+<th data-quarto-table-cell-role="th">NAME</th>
+<th data-quarto-table-cell-role="th">LSADC</th>
+<th data-quarto-table-cell-role="th">FUNCSTAT</th>
+<th data-quarto-table-cell-role="th">AREALAND</th>
+<th data-quarto-table-cell-role="th">AREAWATER</th>
 <th data-quarto-table-cell-role="th">CENTLAT</th>
-<th data-quarto-table-cell-role="th">INTPTLON</th>
+<th data-quarto-table-cell-role="th">CENTLON</th>
 <th data-quarto-table-cell-role="th">INTPTLAT</th>
-<th data-quarto-table-cell-role="th">HU100</th>
-<th data-quarto-table-cell-role="th">POP100</th>
-<th data-quarto-table-cell-role="th">STGEOMETRY.AREA</th>
-<th data-quarto-table-cell-role="th">STGEOMETRY.LEN</th>
+<th data-quarto-table-cell-role="th">INTPTLON</th>
+<th data-quarto-table-cell-role="th">OBJECTID</th>
 <th data-quarto-table-cell-role="th">geometry</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>40975</td>
-<td>704917</td>
-<td>706242.0</td>
-<td>0</td>
-<td>0.0</td>
-<td>101</td>
-<td>None</td>
-<td>None</td>
-<td>S</td>
+<td>G5020</td>
+<td>20790510128341</td>
 <td>42101000100</td>
-<td>...</td>
-<td>90</td>
-<td>-075.1466629</td>
+<td>42</td>
+<td>101</td>
+<td>000100</td>
+<td>1</td>
+<td>Census Tract 1</td>
+<td>CT</td>
+<td>S</td>
+<td>704917</td>
+<td>0</td>
 <td>+39.9523827</td>
 <td>-075.1466629</td>
 <td>+39.9523827</td>
-<td>None</td>
-<td>None</td>
-<td>1.200997e+06</td>
-<td>4499.686432</td>
+<td>-075.1466629</td>
+<td>40975</td>
 <td>POLYGON ((-8365905.972 4858674.427, -8365885.3...</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>40976</td>
-<td>382481</td>
-<td>382691.0</td>
-<td>0</td>
-<td>0.0</td>
-<td>101</td>
-<td>None</td>
-<td>None</td>
-<td>S</td>
+<td>G5020</td>
+<td>20790510128392</td>
 <td>42101000200</td>
-<td>...</td>
-<td>90</td>
-<td>-075.1569774</td>
+<td>42</td>
+<td>101</td>
+<td>000200</td>
+<td>2</td>
+<td>Census Tract 2</td>
+<td>CT</td>
+<td>S</td>
+<td>382481</td>
+<td>0</td>
 <td>+39.9553999</td>
 <td>-075.1569774</td>
 <td>+39.9553999</td>
-<td>None</td>
-<td>None</td>
-<td>6.517008e+05</td>
-<td>3688.951440</td>
+<td>-075.1569774</td>
+<td>40976</td>
 <td>POLYGON ((-8367094.196 4859452.933, -8367072.1...</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>40977</td>
-<td>546270</td>
-<td>552091.0</td>
-<td>22680</td>
-<td>356.0</td>
-<td>101</td>
-<td>None</td>
-<td>None</td>
-<td>S</td>
+<td>G5020</td>
+<td>20790510128432</td>
 <td>42101000300</td>
-<td>...</td>
-<td>90</td>
-<td>-075.1712337</td>
+<td>42</td>
+<td>101</td>
+<td>000300</td>
+<td>3</td>
+<td>Census Tract 3</td>
+<td>CT</td>
+<td>S</td>
+<td>546270</td>
+<td>22680</td>
 <td>+39.9571482</td>
-<td>-075.1712767</td>
+<td>-075.1712337</td>
 <td>+39.9569074</td>
-<td>None</td>
-<td>None</td>
-<td>9.694725e+05</td>
-<td>5047.896480</td>
+<td>-075.1712767</td>
+<td>40977</td>
 <td>POLYGON ((-8368992.305 4860135.356, -8368934.1...</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>5715</td>
-<td>216838</td>
-<td>NaN</td>
-<td>15884</td>
-<td>NaN</td>
-<td>101</td>
-<td>None</td>
-<td>None</td>
-<td>S</td>
+<td>G5020</td>
+<td>207903717001433</td>
 <td>42101000401</td>
-<td>...</td>
-<td>90</td>
-<td>-075.1765866</td>
+<td>42</td>
+<td>101</td>
+<td>000401</td>
+<td>4.01</td>
+<td>Census Tract 4.01</td>
+<td>CT</td>
+<td>S</td>
+<td>216838</td>
+<td>15884</td>
 <td>+39.9541571</td>
-<td>-075.1758082</td>
+<td>-075.1765866</td>
 <td>+39.9541871</td>
-<td>None</td>
-<td>None</td>
-<td>3.965197e+05</td>
-<td>2723.305215</td>
+<td>-075.1758082</td>
+<td>5715</td>
 <td>POLYGON ((-8369100.507 4859112.102, -8369024.1...</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>5717</td>
-<td>105511</td>
-<td>NaN</td>
-<td>0</td>
-<td>NaN</td>
-<td>101</td>
-<td>None</td>
-<td>None</td>
-<td>S</td>
+<td>G5020</td>
+<td>207903717001446</td>
 <td>42101000901</td>
-<td>...</td>
-<td>90</td>
-<td>-075.1623004</td>
+<td>42</td>
+<td>101</td>
+<td>000901</td>
+<td>9.01</td>
+<td>Census Tract 9.01</td>
+<td>CT</td>
+<td>S</td>
+<td>105511</td>
+<td>0</td>
 <td>+39.9478866</td>
 <td>-075.1623004</td>
 <td>+39.9478866</td>
-<td>None</td>
-<td>None</td>
-<td>1.797434e+05</td>
-<td>1726.774176</td>
+<td>-075.1623004</td>
+<td>5717</td>
 <td>POLYGON ((-8367312.271 4858243.305, -8367301.9...</td>
 </tr>
 </tbody>
 </table>
 
-<p>5 rows × 28 columns</p>
 </div>
 </div>
 </div>
 </div>
-<div id="4516a857" class="cell" data-execution_count="7">
+<div id="a9aa7724" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>geodata.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -616,7 +601,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="0e33b713" class="cell" data-execution_count="8">
+<div id="43343d2a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>acs.variables.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
@@ -712,7 +697,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="846b8808" class="cell" data-execution_count="9">
+<div id="60447520" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>acs.geographies[<span class="st">'fips'</span>].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
@@ -784,7 +769,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="8721e24d" class="cell" data-execution_count="10">
+<div id="57840e39" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(variables.keys())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>['B25026_001E',
@@ -796,7 +781,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
  'B06012_002E']</code></pre>
 </div>
 </div>
-<div id="b21380f0" class="cell" data-execution_count="11">
+<div id="62eb9d35" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> acs.query(cols<span class="op">=</span> <span class="bu">list</span>(variables.keys())</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>, geo_unit <span class="op">=</span> <span class="st">'tract:*'</span>,  geo_filter <span class="op">=</span> {<span class="st">'state'</span>:<span class="st">'42'</span> , <span class="st">'county'</span>:<span class="st">'101'</span>})</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -974,18 +959,16 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="73178e6d" class="cell" data-execution_count="12">
+<div id="0f7e6fcf" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>geodata.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>Index(['OBJECTID', 'AREALAND', 'ALANDHIST', 'AREAWATER', 'AWATERHIST',
-       'COUNTY', 'EFFDATE', 'ESTABDATE', 'FUNCSTAT', 'GEOID', 'LSADC', 'MTFCC',
-       'BASENAME', 'NAME', 'OID', 'STATE', 'TRACT', 'UR', 'VINTAGE', 'CENTLON',
-       'CENTLAT', 'INTPTLON', 'INTPTLAT', 'HU100', 'POP100', 'STGEOMETRY.AREA',
-       'STGEOMETRY.LEN', 'geometry'],
+<pre><code>Index(['MTFCC', 'OID', 'GEOID', 'STATE', 'COUNTY', 'TRACT', 'BASENAME', 'NAME',
+       'LSADC', 'FUNCSTAT', 'AREALAND', 'AREAWATER', 'CENTLAT', 'CENTLON',
+       'INTPTLAT', 'INTPTLON', 'OBJECTID', 'geometry'],
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="faa10ae9" class="cell" data-execution_count="13">
+<div id="036b8d6d" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>Index(['B25026_001E', 'B02001_002E', 'B15001_050E', 'B15001_009E',
@@ -995,7 +978,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 <p>Now, we are going to append geodata to census data.</p>
-<div id="6c0894b5" class="cell" data-execution_count="14">
+<div id="b6da321e" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tract17 <span class="op">=</span> pd.merge(data, geodata, left_on<span class="op">=</span><span class="st">'tract'</span>, right_on<span class="op">=</span><span class="st">'TRACT'</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>tract17.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1019,15 +1002,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <th data-quarto-table-cell-role="th">county</th>
 <th data-quarto-table-cell-role="th">tract</th>
 <th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">VINTAGE</th>
-<th data-quarto-table-cell-role="th">CENTLON</th>
+<th data-quarto-table-cell-role="th">LSADC</th>
+<th data-quarto-table-cell-role="th">FUNCSTAT</th>
+<th data-quarto-table-cell-role="th">AREALAND</th>
+<th data-quarto-table-cell-role="th">AREAWATER</th>
 <th data-quarto-table-cell-role="th">CENTLAT</th>
-<th data-quarto-table-cell-role="th">INTPTLON</th>
+<th data-quarto-table-cell-role="th">CENTLON</th>
 <th data-quarto-table-cell-role="th">INTPTLAT</th>
-<th data-quarto-table-cell-role="th">HU100</th>
-<th data-quarto-table-cell-role="th">POP100</th>
-<th data-quarto-table-cell-role="th">STGEOMETRY.AREA</th>
-<th data-quarto-table-cell-role="th">STGEOMETRY.LEN</th>
+<th data-quarto-table-cell-role="th">INTPTLON</th>
+<th data-quarto-table-cell-role="th">OBJECTID</th>
 <th data-quarto-table-cell-role="th">geometry</th>
 </tr>
 </thead>
@@ -1045,15 +1028,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>006700</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2242816</td>
+<td>CT</td>
+<td>S</td>
+<td>1001468</td>
+<td>0</td>
 <td>+39.9242475</td>
 <td>-075.2242816</td>
 <td>+39.9242475</td>
-<td>None</td>
-<td>None</td>
-<td>1.704849e+06</td>
-<td>5286.646163</td>
+<td>-075.2242816</td>
+<td>7609</td>
 <td>POLYGON ((-8374836.689 4854899.950, -8374750.9...</td>
 </tr>
 <tr class="even">
@@ -1069,15 +1052,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>007000</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2214770</td>
+<td>CT</td>
+<td>S</td>
+<td>469047</td>
+<td>0</td>
 <td>+39.9351850</td>
 <td>-075.2214770</td>
 <td>+39.9351850</td>
-<td>None</td>
-<td>None</td>
-<td>7.987345e+05</td>
-<td>3611.461559</td>
+<td>-075.2214770</td>
+<td>33751</td>
 <td>POLYGON ((-8374204.728 4856502.019, -8374162.0...</td>
 </tr>
 <tr class="odd">
@@ -1093,15 +1076,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>008000</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2268464</td>
+<td>CT</td>
+<td>S</td>
+<td>430891</td>
+<td>0</td>
 <td>+39.9506586</td>
 <td>-075.2268464</td>
 <td>+39.9506586</td>
-<td>None</td>
-<td>None</td>
-<td>7.340853e+05</td>
-<td>3420.750305</td>
+<td>-075.2268464</td>
+<td>28038</td>
 <td>POLYGON ((-8374706.223 4858379.218, -8374705.7...</td>
 </tr>
 <tr class="even">
@@ -1117,15 +1100,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>009400</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2322437</td>
+<td>CT</td>
+<td>S</td>
+<td>366714</td>
+<td>0</td>
 <td>+39.9632709</td>
 <td>-075.2322437</td>
 <td>+39.9632709</td>
-<td>None</td>
-<td>None</td>
-<td>6.249849e+05</td>
-<td>3197.687479</td>
+<td>-075.2322437</td>
+<td>59933</td>
 <td>POLYGON ((-8375308.573 4860435.266, -8375304.4...</td>
 </tr>
 <tr class="odd">
@@ -1141,26 +1124,26 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>009500</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2379141</td>
+<td>CT</td>
+<td>S</td>
+<td>319096</td>
+<td>0</td>
 <td>+39.9658712</td>
 <td>-075.2379141</td>
 <td>+39.9658712</td>
-<td>None</td>
-<td>None</td>
-<td>5.438711e+05</td>
-<td>3311.223277</td>
+<td>-075.2379141</td>
+<td>59934</td>
 <td>POLYGON ((-8375726.132 4860644.844, -8375690.7...</td>
 </tr>
 </tbody>
 </table>
 
-<p>5 rows × 38 columns</p>
+<p>5 rows × 28 columns</p>
 </div>
 </div>
 </div>
 </div>
-<div id="8978bf43" class="cell" data-execution_count="15">
+<div id="4a5d1f8f" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tract17.rename(columns<span class="op">=</span>variables, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>tract17</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
@@ -1183,15 +1166,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <th data-quarto-table-cell-role="th">county</th>
 <th data-quarto-table-cell-role="th">tract</th>
 <th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">VINTAGE</th>
-<th data-quarto-table-cell-role="th">CENTLON</th>
+<th data-quarto-table-cell-role="th">LSADC</th>
+<th data-quarto-table-cell-role="th">FUNCSTAT</th>
+<th data-quarto-table-cell-role="th">AREALAND</th>
+<th data-quarto-table-cell-role="th">AREAWATER</th>
 <th data-quarto-table-cell-role="th">CENTLAT</th>
-<th data-quarto-table-cell-role="th">INTPTLON</th>
+<th data-quarto-table-cell-role="th">CENTLON</th>
 <th data-quarto-table-cell-role="th">INTPTLAT</th>
-<th data-quarto-table-cell-role="th">HU100</th>
-<th data-quarto-table-cell-role="th">POP100</th>
-<th data-quarto-table-cell-role="th">STGEOMETRY.AREA</th>
-<th data-quarto-table-cell-role="th">STGEOMETRY.LEN</th>
+<th data-quarto-table-cell-role="th">INTPTLON</th>
+<th data-quarto-table-cell-role="th">OBJECTID</th>
 <th data-quarto-table-cell-role="th">geometry</th>
 </tr>
 </thead>
@@ -1209,15 +1192,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>006700</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2242816</td>
+<td>CT</td>
+<td>S</td>
+<td>1001468</td>
+<td>0</td>
 <td>+39.9242475</td>
 <td>-075.2242816</td>
 <td>+39.9242475</td>
-<td>None</td>
-<td>None</td>
-<td>1.704849e+06</td>
-<td>5286.646163</td>
+<td>-075.2242816</td>
+<td>7609</td>
 <td>POLYGON ((-8374836.689 4854899.950, -8374750.9...</td>
 </tr>
 <tr class="even">
@@ -1233,15 +1216,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>007000</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2214770</td>
+<td>CT</td>
+<td>S</td>
+<td>469047</td>
+<td>0</td>
 <td>+39.9351850</td>
 <td>-075.2214770</td>
 <td>+39.9351850</td>
-<td>None</td>
-<td>None</td>
-<td>7.987345e+05</td>
-<td>3611.461559</td>
+<td>-075.2214770</td>
+<td>33751</td>
 <td>POLYGON ((-8374204.728 4856502.019, -8374162.0...</td>
 </tr>
 <tr class="odd">
@@ -1257,15 +1240,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>008000</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2268464</td>
+<td>CT</td>
+<td>S</td>
+<td>430891</td>
+<td>0</td>
 <td>+39.9506586</td>
 <td>-075.2268464</td>
 <td>+39.9506586</td>
-<td>None</td>
-<td>None</td>
-<td>7.340853e+05</td>
-<td>3420.750305</td>
+<td>-075.2268464</td>
+<td>28038</td>
 <td>POLYGON ((-8374706.223 4858379.218, -8374705.7...</td>
 </tr>
 <tr class="even">
@@ -1281,15 +1264,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>009400</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2322437</td>
+<td>CT</td>
+<td>S</td>
+<td>366714</td>
+<td>0</td>
 <td>+39.9632709</td>
 <td>-075.2322437</td>
 <td>+39.9632709</td>
-<td>None</td>
-<td>None</td>
-<td>6.249849e+05</td>
-<td>3197.687479</td>
+<td>-075.2322437</td>
+<td>59933</td>
 <td>POLYGON ((-8375308.573 4860435.266, -8375304.4...</td>
 </tr>
 <tr class="odd">
@@ -1305,15 +1288,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>009500</td>
 <td>...</td>
-<td>90</td>
-<td>-075.2379141</td>
+<td>CT</td>
+<td>S</td>
+<td>319096</td>
+<td>0</td>
 <td>+39.9658712</td>
 <td>-075.2379141</td>
 <td>+39.9658712</td>
-<td>None</td>
-<td>None</td>
-<td>5.438711e+05</td>
-<td>3311.223277</td>
+<td>-075.2379141</td>
+<td>59934</td>
 <td>POLYGON ((-8375726.132 4860644.844, -8375690.7...</td>
 </tr>
 <tr class="even">
@@ -1353,15 +1336,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>033600</td>
 <td>...</td>
-<td>90</td>
-<td>-075.0592347</td>
+<td>CT</td>
+<td>S</td>
+<td>1153477</td>
+<td>0</td>
 <td>+40.0614797</td>
 <td>-075.0592347</td>
 <td>+40.0614797</td>
-<td>None</td>
-<td>None</td>
-<td>1.971461e+06</td>
-<td>5510.975381</td>
+<td>-075.0592347</td>
+<td>33748</td>
 <td>POLYGON ((-8356539.773 4874784.998, -8356411.7...</td>
 </tr>
 <tr class="even">
@@ -1377,15 +1360,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>036303</td>
 <td>...</td>
-<td>90</td>
-<td>-074.9702251</td>
+<td>CT</td>
+<td>S</td>
+<td>2555016</td>
+<td>0</td>
 <td>+40.1051803</td>
 <td>-074.9702251</td>
 <td>+40.1051803</td>
-<td>None</td>
-<td>None</td>
-<td>4.372461e+06</td>
-<td>9811.423274</td>
+<td>-074.9702251</td>
+<td>22366</td>
 <td>POLYGON ((-8347015.945 4881106.829, -8346996.7...</td>
 </tr>
 <tr class="odd">
@@ -1401,15 +1384,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>036600</td>
 <td>...</td>
-<td>90</td>
-<td>-075.1389514</td>
+<td>CT</td>
+<td>S</td>
+<td>1004520</td>
+<td>1426274</td>
 <td>+39.9448587</td>
-<td>-075.1404797</td>
+<td>-075.1389514</td>
 <td>+39.9469291</td>
-<td>None</td>
-<td>None</td>
-<td>4.140532e+06</td>
-<td>12032.481001</td>
+<td>-075.1404797</td>
+<td>72014</td>
 <td>POLYGON ((-8365255.643 4855808.086, -8365233.3...</td>
 </tr>
 <tr class="even">
@@ -1425,15 +1408,15 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>029900</td>
 <td>...</td>
-<td>90</td>
-<td>-075.0747147</td>
+<td>CT</td>
+<td>S</td>
+<td>591446</td>
+<td>0</td>
 <td>+40.0131465</td>
 <td>-075.0747147</td>
 <td>+40.0131465</td>
-<td>None</td>
-<td>None</td>
-<td>1.009450e+06</td>
-<td>4468.046079</td>
+<td>-075.0747147</td>
+<td>57263</td>
 <td>POLYGON ((-8357962.770 4867672.142, -8357888.0...</td>
 </tr>
 <tr class="odd">
@@ -1449,26 +1432,26 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <td>101</td>
 <td>027700</td>
 <td>...</td>
-<td>90</td>
-<td>-075.1512097</td>
+<td>CT</td>
+<td>S</td>
+<td>543124</td>
+<td>0</td>
 <td>+40.0505407</td>
 <td>-075.1512097</td>
 <td>+40.0505407</td>
-<td>None</td>
-<td>None</td>
-<td>9.279828e+05</td>
-<td>5047.627150</td>
+<td>-075.1512097</td>
+<td>71681</td>
 <td>POLYGON ((-8366544.612 4873096.939, -8366541.1...</td>
 </tr>
 </tbody>
 </table>
 
-<p>384 rows × 38 columns</p>
+<p>384 rows × 28 columns</p>
 </div>
 </div>
 </div>
 </div>
-<div id="ceb57b8c" class="cell" data-execution_count="16">
+<div id="4ea0bff9" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tract17<span class="op">=</span>gpd.GeoDataFrame(tract17, geometry<span class="op">=</span><span class="st">'geometry'</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>tract17.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1484,7 +1467,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <section id="transit-open-data-download-and-wrangle" class="level3">
 <h3 class="anchored" data-anchor-id="transit-open-data-download-and-wrangle">1.2.2 Transit Open Data: Download and Wrangle</h3>
 <p><strong>Accessing Transit Data</strong>: Suppose we have a GeoJSON file with the locations of subway stops in Philadelphia. We can use geopandas to read this data.</p>
-<div id="25dd29b8" class="cell" data-execution_count="17">
+<div id="db87cc99" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>septa_stops <span class="op">=</span> gpd.read_file(<span class="st">"https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/0c6e18b06d1675858dff1741a9e4a363bfa761db/DATA/Chapter1/PHL_CT00.geojson"</span>, geometry<span class="op">=</span><span class="st">'geometry'</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(septa_stops.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1504,7 +1487,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 4  MULTIPOLYGON (((-75.14882 39.95631, -75.14792 ...  </code></pre>
 </div>
 </div>
-<div id="0a7e82dc" class="cell" data-execution_count="18">
+<div id="7cf1ac6b" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>septa_stops.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -1518,11 +1501,11 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <section id="relating-tracts-subway-stops-in-space" class="level3">
 <h3 class="anchored" data-anchor-id="relating-tracts-subway-stops-in-space">1.2.3 Relating Tracts &amp; Subway Stops in Space</h3>
 <p>We can use geopandas to perform spatial operations such as buffering, intersection, and spatial joins to relate Census tracts to subway stops.</p>
-<div id="79be09f0" class="cell" data-execution_count="19">
+<div id="80188dae" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>buffered_stops <span class="op">=</span> septa_stops.<span class="bu">buffer</span>(<span class="dv">2640</span>)  <span class="co"># Buffer in feet</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>buffered_stops.head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/ls/4rhr7kfj5nd_v0fn499s11hm0000gn/T/ipykernel_60217/543701200.py:1: UserWarning:
+<pre><code>/var/folders/ls/4rhr7kfj5nd_v0fn499s11hm0000gn/T/ipykernel_27899/543701200.py:1: UserWarning:
 
 Geometry is in a geographic CRS. Results from 'buffer' are likely incorrect. Use 'GeoSeries.to_crs()' to re-project geometries to a projected CRS before this operation.
 

@@ -28,7 +28,8 @@ website:
         file: ./Projects/index.qmd
       - text: "Research Log"
         file: ./Posts/index.qmd
-
+      - text: "Doodling"
+        file: ./Doodling/index.qmd
       # - text: "Spatial SQL"
       #   file: ./Spatial SQL/index.qmd
       # - text: "Policy Analysis"
