@@ -20,45 +20,56 @@ title: "Projects"
 
 ### ❏ Boston: The Green Space, Blue Space, and Urban Heat Island
 
-#### Summary:
-In this study, I explore the mitigating effects of green and blue spaces on Urban Heat Islands (UHIs) in Boston. This research is driven by the growing concern over UHIs, where urban areas experience higher temperatures than their rural counterparts, exacerbating heatwaves. Boston, with its rich mix of historical, commercial, and natural landscapes, serves as an ideal case study for assessing how parks, rivers, and the ocean contribute to cooling urban environments. My findings aim to provide actionable insights for urban planning, emphasizing the critical role of integrating green and blue spaces in urban settings to combat the UHI effect.
-
-#### Methodology:
-I adopted a methodology that combines Landsat8 satellite imagery and GIS data to assess the relationship between the proximity and size of green and blue spaces and urban temperatures in Boston. By drawing from and adapting the methodology of Park Jong-Hwa & Cho Gi-Hyoug (2016), my study specifically focuses on Land Surface Temperature (LST) as the quantifiable measure of UHIs. Notably, I excluded Digital Elevation Model (DEM) data due to Boston’s relatively flat terrain and instead emphasized the importance of proximity to water bodies. Variables such as Land Use, NDVI, NDBI, and Albedo were controlled to isolate their effects on urban temperatures. My approach involves processing Landsat 8 satellite imagery to derive environmental indicators and reclassifying land use within Boston to understand how urban green and blue spaces impact urban heat.
-
-#### Results and Implications:
-The results reveal that both proximity to and the size of parks and water bodies significantly correlate with lower urban temperatures, thus mitigating the UHI effect in Boston. Specifically, the research highlights that larger parks and closer proximity to water bodies are associated with cooler urban areas. These findings underscore the intrinsic value of urban nature in mitigating heat islands and provide a compelling argument for urban planners to incorporate more green and blue spaces in cities. By demonstrating the cooling effects of these natural spaces, my study contributes to a broader understanding of sustainable urban planning practices aimed at combating the adverse effects of urban heat, offering a blueprint for other cities facing similar challenges.
-
-
 [Visit the Story Map](https://arcg.is/0nLrHy)
 <iframe src="https://arcg.is/0nLrHy" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+
+#### Summary:
+In this study, I investigate how green and blue spaces mitigate the **Urban Heat Island (UHI)** effect in Boston. Urban areas often experience higher temperatures than their rural counterparts, intensifying heatwaves and associated risks. Boston’s diverse mix of historical, commercial, and natural environments makes it an ideal setting to assess the cooling impacts of parks, rivers, and waterfronts. Findings from this analysis underscore the importance of integrating green and blue spaces into urban planning strategies to counteract the UHI effect.
+
+
+#### Methodology:
+- **Data Sources**: Landsat 8 satellite imagery and GIS datasets
+- **Metrics**: Land Surface Temperature (LST), proximity to green and blue spaces, NDVI, NDBI, and Albedo
+- **Approach**:
+  - Adapted the methodology of Park Jong-Hwa & Cho Gi-Hyoug (2016), focusing on LST as a measure of UHI intensity
+  - Excluded DEM data due to Boston’s relatively flat terrain
+  - Analyzed how water proximity influences UHI dynamics, controlling for other key factors
+
+#### Results and Implications:
+The size of, and proximity to, parks and water bodies show a strong inverse correlation with urban temperatures. These findings highlight the crucial role of urban nature in reducing heat stress and provide actionable insights for city planners seeking to mitigate the UHI effect through thoughtful landscape design and policy interventions.
+
+
+
+
 
 
 
 ---
 
 ### ❏ Grid Vulnerability Index (GVI) - New York and Beyond
+[Visit the Story Map](https://arcg.is/1i1XGP0)
+<iframe src="https://arcg.is/1i1XGP0" width="800" height="600" frameborder="0" allowfullscreen></iframe>
 
 #### Summary:
 
-The Grid Vulnerability Index (GVI) is a framework that combines real-time weather data with key power grid infrastructure components (power plants, transmission lines, and critical societal infrastructures) to dynamically assess grid stability. Using a hierarchical hexagonal grid system (H3) for spatial analysis, the GVI captures and integrates data at varying resolutions, enabling detailed local and regional analyses. Each component is assigned a vulnerability score based on factors such as energy source, capacity, length, and real-time weather conditions. The resulting index provides a granular visualization of grid vulnerability across New York State, with potential for expansion to a national level.
+The **Grid Vulnerability Index (GVI)** assesses power grid stability by integrating real-time weather data with key infrastructure assets—power plants, transmission lines, and critical community facilities. Employing a **hierarchical hexagonal grid system (H3)**, the GVI captures vulnerability scores across various spatial scales and rolls them into a single measure of grid resilience.
+
 
 #### Methodology:
 
 
-The GVI methodology involves data collection from diverse sources, including the U.S. Energy Information Administration (EIA) for power plant and transmission line data, the United States Geological Survey (USGS) for critical infrastructure data, and NOAA's Weather API for real-time weather conditions. Scoring algorithms consider factors like energy source, installed capacity, transmission line length, and the criticality of infrastructures during power outages. Weather conditions are scored based on their potential impact on grid operations, considering factors like temperature, dewpoint, wind speed, and humidity. These individual scores are then aggregated into a final GVI score for each grid cell.
-
+- **Data Sources**:
+  - U.S. Energy Information Administration (EIA) – Power plant and transmission line data
+  - United States Geological Survey (USGS) – Critical infrastructure data
+  - NOAA Weather API – Real-time weather updates
+- **Scoring System**:
+  - Assigned vulnerability scores based on energy source, capacity, and transmission line length
+  - Integrated weather impacts (temperature, dewpoint, wind speed, humidity) into final GVI
+- **Analysis**: Merged individual scores for each grid cell to create a composite visualization of grid risk
 
 #### Results and Implications
 
-Analysis of the GVI results revealed spatial clusters of high vulnerability, particularly in densely populated areas and regions with aging infrastructure. These findings have significant implications for grid resilience planning and investment. The GVI can inform decisions regarding infrastructure upgrades, emergency preparedness, and resource allocation during extreme weather events. The dynamic nature of the index allows for real-time updates, enabling utilities and policymakers to respond proactively to evolving threats and mitigate potential disruptions to the power grid.
-
-
-
-
-[Visit the Story Map](https://arcg.is/1i1XGP0)
-<iframe src="https://arcg.is/1i1XGP0" width="800" height="600" frameborder="0" allowfullscreen></iframe>
-
+*High GVI scores were detected in densely populated areas and locations with older infrastructure*. These insights are vital for resilience planning, guiding infrastructure investment and emergency preparedness. By enabling real-time updates, the GVI aids utilities and policymakers in anticipating and mitigating power grid disruptions.
 
 
 
@@ -66,46 +77,45 @@ Analysis of the GVI results revealed spatial clusters of high vulnerability, par
 
 
 ### ❏ Spatial Statistics on Land Surface Temperature in Seoul
-
-
-#### Summary:
-This project aims to understand the spatial distribution of land surface temperature in the Seoul Metropolitan Area, focusing on the interaction between urbanization patterns, vegetation cover, and topography. A significant aspect of my work involved employing a suite of spatial and non-spatial statistical tools such as Moran’s I, Spatial Lag, and Spatial Error model to analyze the data, taking into account the spatial clustering of variables and their impact on urban heat.
-
-#### Methodology:
-Spatial Statistical Analysis
-Started with the computation of Moran’s I to detect spatial autocorrelation in land surface temperature, confirming the presence of spatial clustering.
-Applied a linear regression model to identify the relationship between temperature and predictors such as tree coverage, built-up areas, and altitude, without considering spatial dependencies.
-Performed Moran’s I on residuals from the linear regression model to test for unaccounted spatial autocorrelation, indicating the need for spatially explicit models.
-Implemented Spatial Lag Model and Spatial Error Model to incorporate spatial dependencies directly into the regression analysis, enhancing the model’s explanatory power.
-Model Evaluation and Selection
-Utilized the Akaike Information Criterion (AIC) and Log-Likelihood Values to compare model fit and complexity, guiding the selection of the most appropriate model.
-Applied Lagrange Multiplier tests to diagnose and decide between spatial lag and spatial error models, ensuring the chosen model best represented the spatial processes influencing temperature distribution.
-
-#### Results & Implications:
-The analysis demonstrated that spatially explicit models offer superior insights into the factors driving land surface temperature patterns.
-The findings advocate for the integration of green infrastructure in urban planning as a strategy to counteract the urban heat island effect.
-
-
 [Download PDF](https://raw.githubusercontent.com/gigisung0503/spatial_statistics/main/05.%20Final%20Project/Final%20Project.pdf)
 
 {{< pdf pdf/spatial_statistics.pdf width=100% height=800 >}}
+
+#### Summary:
+This project examines *how urban form, vegetation coverage, and elevation shape land surface temperature* in the Seoul Metropolitan Area. By applying a variety of spatial and non-spatial statistical techniques—such as Moran’s I, Spatial Lag, and Spatial Error models—I evaluated the spatial clustering of temperature and its contributing factors.
+
+
+#### Methodology:
+- **Spatial Autocorrelation**: Calculated Moran’s I to confirm clustering in temperature data.
+- **Regression Modeling**:
+  - Linear regression to assess basic relationships between temperature and predictors (tree coverage, built-up areas, and altitude).
+  - Spatial Lag and Spatial Error models to account for unobserved spatial dependencies.
+- **Model Evaluation**: Used **AIC** and **Log-Likelihood** to compare model performance, applying Lagrange Multiplier tests to distinguish between lag and error specifications.
+
+#### Results & Implications:
+**Spatially explicit models** offered deeper insight into the drivers of urban heat, underscoring the role of green infrastructure in mitigating temperature extremes. This analysis aids city planners in designing heat-resilient strategies and supports evidence-based policy interventions in high-risk urban zones.
+
+---
+
+### ❏ Economic Momentum Indicator
+
+[Download Report](https://raw.githubusercontent.com/gigisung0503/archive/blob/main/location_signal/ws_EconomicMomentumWhitepaper.pdf)
+{{< pdf pdf/ws_EconomicMomentumWhitepaper.pdf width=100% height=800 >}}
+
+#### Summary:
+In this exercise, I evaluated the economic strength and potential of various locations to withstand climate-related challenges. This indicator is vital for understanding how regions can either mitigate or amplify the impacts of climate events through robust economic foundations. Key metrics integrated into this indicator include employment rates, median income, house prices, and education levels, along with dynamic measures like the income-to-house-price ratio to assess housing affordability. The indicator’s effectiveness was validated by its correlation with returns from five types of real estate, providing deep insights into local economic trends and their broader implications.
+
+#### Methodology:
+I conducted a spatial analysis of economic metrics (e.g., employment, income, education) across CBSAs, incorporating dynamic measures, such as changes in employment rates, median income levels, and educational attainment over time. This allowed me to capture not just the current economic health of an area but also its trajectory. To validate my approach, I modeled and correlated these metrics with real estate returns across property types, using data from the ACS, FHFA, and NCREIF. I calculated and scaled various ratios (e.g., education level, employment, and income-to-house-price) and aggregated them into composite economic momentum scores. Correlation analyses were then used to examine the relationship between these scores and real estate returns, and the geographic distribution of scores was analyzed to identify leading and lagging counties.
+
+#### Results & Implications:
+The analysis of Economic Momentum Values highlighted significant spatial variability, with top-performing counties demonstrating robust economic indicators. I observed distinct geographical patterns, with notable differences between southeast and northeast states. The correlations between economic indicators and returns from different property types varied, revealing the nuanced nature of economic vitality and real estate performance. The insights from the Economic Momentum Indicator can guide policymakers and investors in making informed decisions to enhance resilience and optimize investments in diverse economic landscapes.
 
 
 
 ---
 
 ### ❏ ETL and EDA for Internal Migration Analysis
-
-#### Summary: 
-Conducted an exploratory data analysis (EDA) and developed an ETL pipeline to analyze U.S. Population Migration data, aiming to derive a “Internal Migration” signal indicative of residential market demand. This project involved data manipulation, analysis, and visualization to uncover patterns of internal migration at the county level.
-
-#### Technical Details:
-ETL Process: Designed and implemented an ETL pipeline to extract data from various formats and years, which are provided by Internal Revenue Service(IRS). Transformed the data by cleaning and standardizing it, and loaded the processed data for analysis.
-EDA: Employed statistical and visual analysis techniques to explore migration trends, identify high migration areas and anomalies, and calculate net migration flows. Utilized Python libraries such as GeoPandas for data manipulation, Plotly and Plotly Express for interactive visualizations, and seaborn for statistical plots.
-
-#### Impact: 
-The analysis provided insights into potential hotspots for residential market demand. The pipeline helped build a new location signal “Internal Migration.” This project highlights my ability to handle complex datasets and extract actionable insights. 
-
 [Download EDA Notebook](https://raw.githubusercontent.com/gigisung0503/climate_migration/main/ETL_EDA/EDA_migration.ipynb)
 <iframe src="https://nbviewer.jupyter.org/github/gigisung0503/climate_migration/blob/main/ETL_EDA/EDA_migration.ipynb?flush_cache=true" style="width: 100%; height: 800px; border: none;"></iframe>
 
@@ -113,11 +123,30 @@ The analysis provided insights into potential hotspots for residential market de
 [Download ETL Notebook](https://raw.githubusercontent.com/gigisung0503/climate_migration/blob/main/ETL_EDA/ETL_migration.ipynb)
 <iframe src="https://nbviewer.jupyter.org/github/gigisung0503/climate_migration/blob/main/ETL_EDA/ETL_migration.ipynb?flush_cache=true" style="width: 100%; height: 800px; border: none;"></iframe>
 
+#### Summary: 
+This project involved building an **ETL pipeline and conducting exploratory data analysis** on U.S. Internal Revenue Service (IRS) migration data to identify a potential “Internal Migration” signal. Insights from this analysis could inform residential market demand and investment strategies.
+
+
+#### Technical Details:
+- **ETL Process**:
+  - Extracted data from multiple IRS sources
+  - Cleaned and standardized datasets
+  - Loaded the final data into a unified structure for further exploration
+- **EDA**:
+    - Statistical and visual approaches to detect net migration trends at the county level
+    - Python libraries (GeoPandas, Plotly, seaborn) for geospatial and statistical analysis
+
+#### Impact: 
+This project demonstrates the value of **combining ETL pipelines with geospatial analytics** to reveal migration hotspots. The newly developed “Internal Migration” signal provides a basis for market demand forecasting and policy decision-making in diverse urban contexts.
+
+
+
 
 ---
 
 ### ❏ Travel Mode Choices: Large Language Models vs Traditional Decision-Making Frameworks
-
+[Download Report](https://raw.githubuswercontent.com/gigisung0503/gigisung0503.github.io/blob/main/Projects/pdf/11.478.pdf)
+{{< pdf pdf/11.478.pdf width=100% height=800 >}}
 #### Abstract:
 This study analyzed how Large Language Models (LLMs) make judgments in the context of the travel
 mode choice decision-making process and existing behavioral studies, and compared it with a traditional
@@ -134,30 +163,13 @@ Expected Utility Theory trained on a large dataset without showing GPT any train
 provides crucial evidence and directs potential future research in operationalizing LLMs to make travel
 behavior decision-making predictions that could benefit transportation planners.
 
-[Download Report](https://raw.githubuswercontent.com/gigisung0503/gigisung0503.github.io/blob/main/Projects/pdf/11.478.pdf)
 
-
-
-
-{{< pdf pdf/11.478.pdf width=100% height=800 >}}
 
 
 ---
-### ❏ Economic Momentum Indicator
 
 
-#### Summary:
-In this exercise, I evaluated the economic strength and potential of various locations to withstand climate-related challenges. This indicator is vital for understanding how regions can either mitigate or amplify the impacts of climate events through robust economic foundations. Key metrics integrated into this indicator include employment rates, median income, house prices, and education levels, along with dynamic measures like the income-to-house-price ratio to assess housing affordability. The indicator’s effectiveness was validated by its correlation with returns from five types of real estate, providing deep insights into local economic trends and their broader implications.
 
-#### Methodology:
-I conducted a spatial analysis of economic metrics (e.g., employment, income, education) across CBSAs, incorporating dynamic measures, such as changes in employment rates, median income levels, and educational attainment over time. This allowed me to capture not just the current economic health of an area but also its trajectory. To validate my approach, I modeled and correlated these metrics with real estate returns across property types, using data from the ACS, FHFA, and NCREIF. I calculated and scaled various ratios (e.g., education level, employment, and income-to-house-price) and aggregated them into composite economic momentum scores. Correlation analyses were then used to examine the relationship between these scores and real estate returns, and the geographic distribution of scores was analyzed to identify leading and lagging counties.
-
-#### Results & Implications:
-The analysis of Economic Momentum Values highlighted significant spatial variability, with top-performing counties demonstrating robust economic indicators. I observed distinct geographical patterns, with notable differences between southeast and northeast states. The correlations between economic indicators and returns from different property types varied, revealing the nuanced nature of economic vitality and real estate performance. The insights from the Economic Momentum Indicator can guide policymakers and investors in making informed decisions to enhance resilience and optimize investments in diverse economic landscapes.
-
-[Download Report](https://raw.githubusercontent.com/gigisung0503/archive/blob/main/location_signal/ws_EconomicMomentumWhitepaper.pdf)
-
-{{< pdf pdf/ws_EconomicMomentumWhitepaper.pdf width=100% height=800 >}}
 
 
 

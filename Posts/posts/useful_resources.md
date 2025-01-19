@@ -10,7 +10,13 @@ date: "1/1/2099"
 # Useful Resources
 This page contains a collection of useful resources for data science, machine learning, and artificial intelligence. The resources include books, courses, tutorials, tools, and more to help you learn and grow in the field of data science.
 
+0. **Datasets**
+    - [Kaggle Datasets](https://www.kaggle.com/datasets) - A platform for data science and machine learning datasets
+    - [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php) - A collection of databases, domain theories, and data generators that are used by the machine learning community for the empirical analysis of machine learning algorithms
+    - [Google Dataset Search](https://datasetsearch.research.google.com/) - A search engine for datasets
+    - [ArcGIS World Roads](https://who.maps.arcgis.com/home/item.html?id=83535020ce154bd5a498957c159e3a99) - World Roads represents the major roads, highways, local roads, and ferries of the world.
 
+</br></br>
 
 1. **Books**
     - [Python for Data Analysis](https://www.oreilly.com/library/view/python-for-data/9781491957653/) by Wes McKinney
@@ -52,10 +58,7 @@ This page contains a collection of useful resources for data science, machine le
 
 </br></br>
 
-5. **Datasets**
-    - [Kaggle Datasets](https://www.kaggle.com/datasets) - A platform for data science and machine learning datasets
-    - [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php) - A collection of databases, domain theories, and data generators that are used by the machine learning community for the empirical analysis of machine learning algorithms
-    - [Google Dataset Search](https://datasetsearch.research.google.com/) - A search engine for datasets
+
 
 
 

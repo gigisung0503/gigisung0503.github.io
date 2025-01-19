@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gigi Sung">
-<meta name="dcterms.date" content="2025-01-04">
+<meta name="dcterms.date" content="2025-01-14">
 
-<title>Gigi Sung’s Workspace - Random Thoughts in These Days</title>
+<title>Gigi Sung’s Workspace - Meditron X Retrieval Augmented Generation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,16 +143,29 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#meditron-70b" id="toc-meditron-70b" class="nav-link active" data-scroll-target="#meditron-70b">Meditron 70B</a></li>
+  <li><a href="#environment-setup" id="toc-environment-setup" class="nav-link" data-scroll-target="#environment-setup">1. Environment Setup</a></li>
+  <li><a href="#build-and-test-your-vector-store" id="toc-build-and-test-your-vector-store" class="nav-link" data-scroll-target="#build-and-test-your-vector-store">2. Build and Test Your Vector Store</a></li>
+  <li><a href="#start-the-local-server-in-lm-studio" id="toc-start-the-local-server-in-lm-studio" class="nav-link" data-scroll-target="#start-the-local-server-in-lm-studio">3. Start the Local Server in LM Studio</a></li>
+  <li><a href="#querying-the-vector-store-llm-in-one-flow" id="toc-querying-the-vector-store-llm-in-one-flow" class="nav-link" data-scroll-target="#querying-the-vector-store-llm-in-one-flow">4. Querying the Vector Store + LLM in One Flow</a></li>
+  <li><a href="#example-python-integration" id="toc-example-python-integration" class="nav-link" data-scroll-target="#example-python-integration">5. Example: Python Integration</a></li>
+  <li><a href="#expanding-to-a-chat-endpoint" id="toc-expanding-to-a-chat-endpoint" class="nav-link" data-scroll-target="#expanding-to-a-chat-endpoint">6. Expanding to a Chat Endpoint</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">7. Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/posts/2025-01-14-LLM.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Random Thoughts in These Days</h1>
+<h1 class="title">Meditron X Retrieval Augmented Generation</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">journal</div>
+    <div class="quarto-category">development</div>
   </div>
   </div>
 
@@ -170,7 +183,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 4, 2025</p>
+      <p class="date">January 14, 2025</p>
     </div>
   </div>
   
@@ -182,11 +195,194 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </header>
 
 
-<p>These days, I have been working and concentrating on spending quality alone time. I have been learning a lot, but I have not been able to write down my thoughts. Not because I haven’t had time to do so, but because I was sure that I would not commit myself to putting enough time and effort into fully capturing my emotions and thoughts. This is what I feel whenever I keep a journal. After some time, when I revisit the pieces, I am surprised by how flat and reduced the texts are, and I soon become deflated by the fact that the mediocre words have overwritten my rich feelings and thoughts. But regardless of the fact that my writing almost always fails to capture the sophisticated aspects of my thoughts, I still feel the need to write.</p>
-<p>Or else, the only artifacts that I leave on Earth would be those of ChatGPT. I admit that the text prediction model is quite impressive, and most of the time, generates more concise and quintessential pieces. The texts are almost too perfect, meaning coherent and decisive, that they sound eerie. I wonder if “Uncanny Valley” is not only for visual representation but also for textual representation.</p>
-<p>Anyhow, I plan to build muscles for writing. The muscles for reflection and spirituality. The muscles for keeping a record of all the bad and good things happening in my life. About things that drag me down and boost me up. About people who have shared love and people who have manipulated me.</p>
+<section id="meditron-70b" class="level2">
+<h2 class="anchored" data-anchor-id="meditron-70b">Meditron 70B</h2>
+<p>This project leverages a specialized Large Language Model (LLM)—built on LLama-2 and adapted to the medical domain—to help WHO EMRO staff quickly find and interpret vital health information. The model functions as both a dynamic search engine and an automated knowledge assistant. It can pull from WHO’s internal/historical documents (e.g., situation reports, response plans, rapid risk assessments) to generate targeted outputs, such as a “Response Plan for [disease]” or a “Public Health Support Assessment.” When opted in, the system can also draw upon external web-based resources to enrich its responses.</p>
+<p>Ultimately, the project aims to reduce the time and effort required for WHO teams to locate and analyze critical regional health data. By storing vector representations of documents and retrieving them based on user queries, the LLM surfaces the most relevant content, then synthesizes an answer or formatted report. This approach ensures quicker, more accurate decision-making for outbreak response, risk assessment, and public health planning.</p>
+<hr>
+<p>Below is a consolidated workflow that takes into account both your vector-store creation (via FAISS + Sentence Transformers) and using the local LM Studio API endpoint to query Meditron 7B. This will let you practice Retrieval-Augmented Generation (RAG) on your own machine until you’re ready for the 70B server-based solution.</p>
+</section>
+<section id="environment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="environment-setup">1. Environment Setup</h2>
+<ol type="1">
+<li>Install Dependencies • Python 3.9+ • pip install langchain sentence-transformers faiss-cpu PyPDF2 transformers torch requests</li>
+<li>(Optional) Create a Virtual Environment • Helps keep dependencies isolated. • Example:</li>
+</ol>
+<pre><code>python -m venv .venv
+source .venv/bin/activate
+pip install ...</code></pre>
+<ol start="3" type="1">
+<li>Collect WHO PDFs • Download or gather small PDF files to test your pipeline (e.g., monthly or weekly situation reports).</li>
+</ol>
+</section>
+<section id="build-and-test-your-vector-store" class="level2">
+<h2 class="anchored" data-anchor-id="build-and-test-your-vector-store">2. Build and Test Your Vector Store</h2>
+<p>Use a script similar to VSdatabase-test.py:</p>
+<ol type="1">
+<li>Text Extraction</li>
+</ol>
+<p>• Parse PDFs with PyPDF2 to extract text. 2. Chunking</p>
+<p>• Split the raw text into segments (e.g., ~500 tokens or words). 3. Embedding</p>
+<p>• Convert each chunk into a vector using SentenceTransformers (e.g., all-MiniLM-L6-v2). 4. FAISS Index</p>
+<p>• Store chunk embeddings in a FAISS index for fast similarity searches. • Confirm the index is built by printing index.ntotal.</p>
+<p>Example snippet for building the index:</p>
+<pre><code>pdf_path = "path_to_who_report.pdf"
+document_text = extract_text_from_pdf(pdf_path)
+chunks = chunk_text(document_text, chunk_size=500)
+vectors = text_to_vectors(chunks)  # uses SentenceTransformers
+index = build_faiss_index(vectors)
+faiss.write_index(index, "faiss_index.bin")
+</code></pre>
+</section>
+<section id="start-the-local-server-in-lm-studio" class="level2">
+<h2 class="anchored" data-anchor-id="start-the-local-server-in-lm-studio">3. Start the Local Server in LM Studio</h2>
+<ol type="1">
+<li>Open LM Studio, load “meditron-7b”.</li>
+<li>Click Start to launch the local server.</li>
+<li>By default, it listens at http://localhost:1234.</li>
+<li>Under “API Usage,” verify the endpoints and model name (e.g., meditron-7b)</li>
+<li>Confirm you see endpoints like: • POST /v1/completions • POST /v1/chat/completions • POST /v1/embeddings (if supported)</li>
+</ol>
+</section>
+<section id="querying-the-vector-store-llm-in-one-flow" class="level2">
+<h2 class="anchored" data-anchor-id="querying-the-vector-store-llm-in-one-flow">4. Querying the Vector Store + LLM in One Flow</h2>
+<p>Below is a conceptual combined workflow:</p>
+<pre><code>flowchart LR
+    A[WHO PDFs] --&gt; B[Extract &amp; Chunk Text]
+    B --&gt; C[Embed Chunks with SentenceTransformers]
+    C --&gt; D[Store in FAISS Index]
+    E[User Query] --&gt; F[Vector Store Query]
+    F --&gt; G[Retrieve Top-k Chunks]
+    G --&gt; H[Create Prompt with Chunks + Question]
+    H --&gt; I[POST to LM Studio LLM API]
+    I --&gt; J[LLM Generates Answer]
+    J --&gt; K[Answer Returned to User]</code></pre>
+<p>Steps Explained</p>
+<ol type="1">
+<li><p>User Query</p>
+<ul>
+<li>You have a question, e.g.&nbsp;“What does the WHO say about outbreak detection in 2019?”</li>
+</ul></li>
+<li><p>Vector Store Query</p>
+<ul>
+<li>Use the same embedding method on the user query and search the FAISS index.</li>
+</ul></li>
+<li><p>Retrieve Top-k Chunks</p>
+<ul>
+<li>FAISS returns, say, the top 3–5 most relevant text segments from the PDF(s).</li>
+</ul></li>
+<li><p>Prompt Assembly</p>
+<ul>
+<li>Concatenate these chunks into a short “Context” string.</li>
+</ul></li>
+</ol>
+<ul>
+<li>Form a prompt that looks like:</li>
+</ul>
+<pre><code>CONTEXT:
+&lt;chunk 1&gt;
+&lt;chunk 2&gt;
+&lt;chunk 3&gt;
+
+USER QUESTION:
+&lt;your question here&gt;
+
+PLEASE ANSWER BASED ON THE ABOVE CONTEXT:</code></pre>
+<ol start="5" type="1">
+<li>Send Prompt to the LLM
+<ul>
+<li>Make a POST request to LM Studio’s v1/completions or v1/chat/completions.</li>
+</ul></li>
+<li>Receive Model Answer
+<ul>
+<li>Display or store the final answer from the model.</li>
+</ul></li>
+</ol>
+</section>
+<section id="example-python-integration" class="level2">
+<h2 class="anchored" data-anchor-id="example-python-integration">5. Example: Python Integration</h2>
+<p>Below is a minimal example showing how you might tie it together:</p>
+<pre><code>import requests
+import numpy as np
+import faiss
+from sentence_transformers import SentenceTransformer
+
+# 1) Load the FAISS index
+index = faiss.read_index("faiss_index.bin")
+
+# 2) Function to query FAISS
+embedding_model = SentenceTransformer('all-MiniLM-L6-v2')  # same model as used for storing
+
+def query_vector_store(user_query, index, chunks, k=3):
+    query_vector = embedding_model.encode(user_query)
+    distances, faiss_indices = index.search(np.array([query_vector]), k)
+    return [(faiss_indices[0][i], distances[0][i]) for i in range(k)]
+
+# 3) Retrieve top-k chunks
+chunks = [...]  # The list of text chunks you embedded during index creation
+user_query = "What does WHO say about cholera outbreaks in 2019?"
+
+results = query_vector_store(user_query, index, chunks, k=3)
+retrieved_texts = []
+for idx, dist in results:
+    retrieved_texts.append(chunks[idx])
+
+# 4) Build the final prompt
+context = "\n\n".join(retrieved_texts)
+prompt_text = f"Context:\n{context}\n\nUser Question:\n{user_query}\n\nAnswer:"
+
+# 5) Call the LM Studio local server
+url = "http://localhost:1234/v1/completions"
+headers = {"Content-Type": "application/json"}
+
+data = {
+    "model": "meditron-7b",   # Replace with the model name from LM Studio
+    "prompt": prompt_text,
+    "max_tokens": 300,
+    "temperature": 0.7
+}
+
+response = requests.post(url, headers=headers, json=data)
+
+# 6) Parse and print the response
+json_resp = response.json()
+if "choices" in json_resp:
+    print("Model answer:", json_resp["choices"][0]["text"])
+else:
+    print("Error:", json_resp)</code></pre>
+</section>
+<section id="expanding-to-a-chat-endpoint" class="level2">
+<h2 class="anchored" data-anchor-id="expanding-to-a-chat-endpoint">6. Expanding to a Chat Endpoint</h2>
+<p>If you prefer the Chat style with roles (system, user, assistant): 1. Change the endpoint to /v1/chat/completions. 2. Format your data as:</p>
+<pre><code>data = {
+  "model": "meditron-7b",
+  "messages": [
+    {"role": "system", "content": "You are a helpful epidemiology assistant."},
+    {"role": "user", "content": f"Context:\n{context}\n\nQuestion:\n{user_query}"}
+  ],
+  "max_tokens": 300,
+  "temperature": 0.7
+}
+</code></pre>
+<pre><code>3.  Parse the response.json() similarly.</code></pre>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">7. Next Steps</h2>
+<pre><code>1.  Scale Up
+•   Once your server can handle 70B, replicate the same approach—only change the model name in LM Studio.
+2.  User Interface
+•   Build a Flask or Streamlit app that:
+•   Accepts user queries,
+•   Pulls relevant text from FAISS,
+•   Sends a combined prompt to the LLM,
+•   Displays the final response.
+3.  Ongoing Updates
+•   As WHO releases new PDFs, embed them, add to the FAISS index, and keep your pipeline fresh without retraining the model.</code></pre>
+<p>Final Summary</p>
+<p>By combining your vector-store retrieval (FAISS + SentenceTransformers) with the LM Studio local server (OpenAI-like API), you can implement a practical end-to-end RAG system on your personal Mac. This will allow you to test question-answering over WHO documents using the Meditron 7B model—setting the stage for seamless migration to the Meditron 70B once your dedicated server is ready.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -750,7 +946,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Doodling/posts/2025-01-08-Mapbox.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/posts/2025-01-14-LLM.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>All rights reserved. 2024.</p>
 </div>

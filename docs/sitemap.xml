@@ -5,8 +5,16 @@
     <lastmod>2025-01-04T19:49:16.009Z</lastmod>
   </url>
   <url>
-    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-05.html</loc>
-    <lastmod>2025-01-12T19:11:05.048Z</lastmod>
+    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-14-LLM.html</loc>
+    <lastmod>2025-01-14T07:26:02.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-08-Map.html</loc>
+    <lastmod>2025-01-12T11:35:10.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-12-Karma.html</loc>
+    <lastmod>2025-01-12T20:42:52.039Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Data Engineering/web_scraping/wdbscraping.html</loc>
@@ -18,7 +26,7 @@
   </url>
   <url>
     <loc>https://gigisung0503.github.io/about.html</loc>
-    <lastmod>2024-12-05T09:06:14.462Z</lastmod>
+    <lastmod>2025-01-17T18:00:20.117Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Projects/analytics/spaceX_data_collection.html</loc>
@@ -89,60 +97,64 @@
     <lastmod>2024-03-22T19:36:16.998Z</lastmod>
   </url>
   <url>
-    <loc>https://gigisung0503.github.io/Posts/posts/post.html</loc>
-    <lastmod>2024-07-17T12:33:12.883Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Posts/posts/informal_settlement.html</loc>
-    <lastmod>2024-07-17T11:54:38.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Posts/posts/umngeni.html</loc>
-    <lastmod>2024-07-17T14:09:19.582Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Policy Analysis/Chapter2/energy.html</loc>
-    <lastmod>2024-03-28T17:36:27.585Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Policy Analysis/index.html</loc>
-    <lastmod>2024-03-27T16:17:15.132Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Policy Analysis/Chapter1/TOD.html</loc>
-    <lastmod>2024-03-28T17:21:56.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Statistics/simple_linear_regression.html</loc>
-    <lastmod>2024-03-31T00:45:38.757Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Statistics/index.html</loc>
-    <lastmod>2024-04-02T14:49:14.161Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Policy Analysis/introduction/introduction.html</loc>
-    <lastmod>2024-03-27T16:24:37.446Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Policy Analysis/Chapter2/reference.html</loc>
-    <lastmod>2024-03-28T19:04:50.718Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Posts/posts/eta_etl.html</loc>
-    <lastmod>2024-06-27T19:34:45.651Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Posts/posts/lit_review.html</loc>
-    <lastmod>2024-06-27T19:34:52.811Z</lastmod>
+    <loc>https://gigisung0503.github.io/Posts/posts/2025-01-14-LLM.html</loc>
+    <lastmod>2025-01-19T09:09:14.495Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Posts/posts/api.html</loc>
     <lastmod>2024-07-04T09:08:02.731Z</lastmod>
   </url>
   <url>
+    <loc>https://gigisung0503.github.io/Posts/posts/lit_review.html</loc>
+    <lastmod>2024-06-27T19:34:52.811Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Posts/posts/eta_etl.html</loc>
+    <lastmod>2024-06-27T19:34:45.651Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Policy Analysis/Chapter2/reference.html</loc>
+    <lastmod>2024-03-28T19:04:50.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Policy Analysis/introduction/introduction.html</loc>
+    <lastmod>2024-03-27T16:24:37.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Statistics/index.html</loc>
+    <lastmod>2024-04-02T14:49:14.161Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Statistics/simple_linear_regression.html</loc>
+    <lastmod>2024-03-31T00:45:38.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Policy Analysis/Chapter1/TOD.html</loc>
+    <lastmod>2024-03-28T17:21:56.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Policy Analysis/index.html</loc>
+    <lastmod>2024-03-27T16:17:15.132Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Policy Analysis/Chapter2/energy.html</loc>
+    <lastmod>2024-03-28T17:36:27.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Posts/posts/umngeni.html</loc>
+    <lastmod>2024-07-17T14:09:19.582Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Posts/posts/informal_settlement.html</loc>
+    <lastmod>2024-07-17T11:54:38.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gigisung0503.github.io/Posts/posts/post.html</loc>
+    <lastmod>2024-07-17T12:33:12.883Z</lastmod>
+  </url>
+  <url>
     <loc>https://gigisung0503.github.io/Posts/posts/useful_resources.html</loc>
-    <lastmod>2024-07-18T15:48:20.171Z</lastmod>
+    <lastmod>2025-01-18T11:41:31.216Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Posts/index.html</loc>
@@ -190,7 +202,7 @@
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Projects/index.html</loc>
-    <lastmod>2024-06-28T04:21:41.253Z</lastmod>
+    <lastmod>2025-01-19T09:04:53.542Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Projects/dx/Digital Transformation.html</loc>
@@ -210,7 +222,7 @@
   </url>
   <url>
     <loc>https://gigisung0503.github.io/index.html</loc>
-    <lastmod>2025-01-07T18:25:11.193Z</lastmod>
+    <lastmod>2025-01-17T17:52:32.175Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Visualizations/holoviz.html</loc>
@@ -225,19 +237,15 @@
     <lastmod>2024-03-31T03:14:10.542Z</lastmod>
   </url>
   <url>
-    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-08-Map.html</loc>
-    <lastmod>2025-01-12T11:35:10.886Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-07-Movie.html</loc>
-    <lastmod>2025-01-12T11:33:10.775Z</lastmod>
+    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-05.html</loc>
+    <lastmod>2025-01-12T19:11:05.048Z</lastmod>
   </url>
   <url>
     <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-12.html</loc>
     <lastmod>2025-01-12T20:01:31.713Z</lastmod>
   </url>
   <url>
-    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-12-Karma.html</loc>
-    <lastmod>2025-01-12T20:42:52.039Z</lastmod>
+    <loc>https://gigisung0503.github.io/Doodling/posts/2025-01-07-Movie.html</loc>
+    <lastmod>2025-01-12T11:33:10.775Z</lastmod>
   </url>
 </urlset>
