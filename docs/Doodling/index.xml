@@ -10,7 +10,127 @@
 <atom:link href="https://gigisung0503.github.io/Doodling/index.xml" rel="self" type="application/rss+xml"/>
 <description>Doodling and brief book-keeping of a day</description>
 <generator>quarto-1.4.551</generator>
-<lastBuildDate>Mon, 13 Jan 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 15 Feb 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>How Generative AI Is Revolutionizing Research and Industry 🚀</title>
+  <dc:creator>Gigi Sung</dc:creator>
+  <link>https://gigisung0503.github.io/Doodling/posts/2025-02-05-genAI.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>How Generative AI Is Revolutionizing Research and Industry 🚀</strong></p>
+<p>Generative AI is more than just a buzzword—it’s a technology transforming how we create and interact with content across various fields. Unlike traditional AI systems that mainly focus on classification or prediction, generative AI goes a step further by generating new text, images, videos, and even sounds based on patterns learned from enormous datasets. This ability to “predict” the next element in a sequence is the core principle behind these models.</p>
+<section id="the-core-concept-prediction-based-generation" class="level3">
+<h3 class="anchored" data-anchor-id="the-core-concept-prediction-based-generation">The Core Concept: Prediction-Based Generation</h3>
+<p>At its heart, generative AI works by analyzing vast amounts of data to learn the relationships between different elements. For instance, a large language model (LLM) like ChatGPT learns how words, phrases, and sentences co-occur in human language. When given a prompt, it calculates the probability of the next word and generates text that is coherent and contextually relevant. Similarly, models like DALL-E create images by predicting pixel patterns that correspond to a given textual description. This universal approach—predicting what comes next—is what unifies all forms of generative AI, regardless of whether the output is text, images, videos, or sound.</p>
+</section>
+<section id="boosting-research-across-diverse-domains" class="level3">
+<h3 class="anchored" data-anchor-id="boosting-research-across-diverse-domains">Boosting Research Across Diverse Domains</h3>
+<p>One of the most exciting aspects of generative AI is its potential to dramatically boost productivity in research and industry:</p>
+<ul>
+<li><p><strong>Accelerating Scientific Discovery:</strong><br>
+In fields like neuroscience, climate science, and biomedical research, generative AI can analyze complex datasets, identify hidden patterns, and even propose new hypotheses. For example, by fine-tuning a pre-trained model on specialized climate data, researchers can gain fresh insights into weather patterns and environmental changes.</p></li>
+<li><p><strong>Enhancing Healthcare:</strong><br>
+Generative AI is already making waves in healthcare—from aiding in the interpretation of medical images and optimizing treatment plans to accelerating drug discovery. By synthesizing large volumes of research data, these models can suggest novel approaches to diagnostics and therapeutics.</p></li>
+<li><p><strong>Transforming Creative Industries:</strong><br>
+Whether it’s writing compelling narratives, designing stunning visuals, or even composing music, generative AI is empowering creators to push the boundaries of creativity. Artists and media professionals can now collaborate with AI to produce content that is both innovative and engaging.</p></li>
+<li><p><strong>Optimizing Business Processes:</strong><br>
+In industries like finance and manufacturing, generative AI automates routine tasks such as report generation, data summarization, and even coding. This not only speeds up operations but also frees up human talent for more strategic, creative endeavors.</p></li>
+</ul>
+</section>
+<section id="domain-adaptation-without-starting-from-scratch" class="level3">
+<h3 class="anchored" data-anchor-id="domain-adaptation-without-starting-from-scratch">Domain Adaptation Without Starting From Scratch</h3>
+<p>A common concern is whether every field needs to build its own AI model from scratch. Fortunately, that’s not the case. Most industries can start with a powerful, general-purpose foundation model and then fine-tune it with domain-specific data. This approach leverages the model’s inherent ability to understand general patterns while tailoring it to specialized needs—be it climate data, biomedical signals, or financial records. Additionally, techniques like prompt engineering and retrieval-augmented generation (RAG) allow experts to supplement these models with the latest, domain-specific insights without reinventing the wheel. 🔧</p>
+</section>
+<section id="why-the-huge-attention-on-generative-ai" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-huge-attention-on-generative-ai">Why the Huge Attention on Generative AI?</h3>
+<p>Generative AI’s ability to drastically increase productivity is a key reason for its rising prominence. By automating creative and analytical tasks, it not only saves time and resources but also opens up entirely new possibilities for innovation. Whether it’s enhancing scientific research, personalizing healthcare, or transforming content creation, generative AI is poised to reshape our world in profound ways.</p>
+<hr>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ul>
+<li><a href="https://www.databricks.com/kr/discover/generative-ai">DataBricks</a> – Overview of Generative AI and LLMs<br>
+</li>
+<li><a href="https://www.samsungsds.com/kr/insights/generative-ai-trends.html">Samsung SDS</a> – Discussion on domain adaptation and fine-tuning<br>
+</li>
+<li><a href="https://aws.amazon.com/ko/what-is/generative-ai/">AWS</a> – AWS perspective on generative AI capabilities</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>genAI</category>
+  <guid>https://gigisung0503.github.io/Doodling/posts/2025-02-05-genAI.html</guid>
+  <pubDate>Sat, 15 Feb 2025 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Trump’s Bold Gaza Proposal: Implications for Global Agencies and Food for Thought</title>
+  <dc:creator>Gigi Sung</dc:creator>
+  <link>https://gigisung0503.github.io/Doodling/posts/2025-02-05-gaza.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="trumps-bold-gaza-proposal-implications-for-global-agencies-and-food-for-thought" class="level1">
+<h1>Trump’s Bold Gaza Proposal: Implications for Global Agencies and Food for Thought</h1>
+<p>In a stunning development in the Middle East, U.S. President Donald Trump announced <mark>a plan to “take over” the Gaza Strip</mark> —envisioning the area as a transformed economic hub, a sort of “Riviera of the Middle East.” According to Trump, the U.S. would assume long-term control of Gaza after forcibly relocating its 1.8 to 2.3 million Palestinian residents to neighboring countries like Egypt and Jordan. This move, reminiscent of some of his previous off-the-cuff expansionist remarks about Greenland or Panama, has sent shockwaves through the international community.</p>
+<section id="current-affairs-unpacking-the-situation" class="level2">
+<h2 class="anchored" data-anchor-id="current-affairs-unpacking-the-situation">Current Affairs: Unpacking the Situation</h2>
+<p>The proposal was made during a press conference alongside Israeli Prime Minister Benjamin Netanyahu, who notably expressed enthusiasm for the idea as a potential “historic decision.” Trump painted Gaza as a “demolition site” needing complete overhaul—promising to clear hazardous remnants (like unexploded bombs and ruined buildings) and subsequently build luxury hotels, residential complexes, and other infrastructure to generate jobs and economic activity<sup>1</sup><sup>2</sup>.</p>
+<p>However, the plan has ignited immediate condemnation. Critics from both sides of the political spectrum in the U.S. have decried the proposal as not only ethically dubious but also a violation of international law. Democratic leaders have labeled it “reckless” and warned that forcibly relocating an entire population amounts to a form of ethnic cleansing<sup>3</sup>. Even some Republicans, while occasionally supportive of Trump’s bold style, express concern about the long-term geopolitical ramifications and the risk of entangling the U.S. in another protracted occupation.</p>
+<p>The international response has been similarly polarized. Arab states, already burdened with hosting millions of displaced Palestinians from past conflicts, have unequivocally rejected any plan that would force further resettlement<sup>4</sup>. Meanwhile, UN agencies—long reliant on U.S. funding—are bracing for potential operational disruptions if Trump’s broader “America First” policies lead to further cuts in aid, as witnessed in past decisions to suspend funding for organizations like UNRWA and the WHO<sup>5</sup>.</p>
+</section>
+<section id="qa-recap-implications-for-un-agencies" class="level2">
+<h2 class="anchored" data-anchor-id="qa-recap-implications-for-un-agencies">Q&amp;A Recap: Implications for UN Agencies</h2>
+<p>Question: What is the implication of Trump’s move for UN agencies like WHO EMRO or WHO country offices?</p>
+<p><strong>Answer</strong>: Trump’s proposal would likely exacerbate humanitarian and public health crises. Forced displacement of millions would lead to overcrowded refugee camps, deteriorating sanitation, and the heightened spread of infectious diseases. UN agencies such as WHO EMRO and WHO country offices would face enormous operational challenges. They would need to quickly scale up emergency health responses—ranging from disease surveillance to vaccination campaigns—while grappling with security risks and disrupted coordination with local governments. Moreover, a potential cut in U.S. funding—consistent with Trump’s previous “America First” policies—could undermine the operational budgets of these agencies, further limiting their capacity to address both immediate crises and long-term public health infrastructure rebuilding.</p>
+<p>Thought Process Behind the Answer: The analysis involved weighing the logistical challenges of mass displacement and the security risks inherent in a conflict-torn area. By referencing authoritative sources on past funding cuts and previous similar proposals, the conclusion was drawn that such a move would have severe ripple effects across humanitarian and public health sectors. This reasoning aligns with reported concerns from global agencies facing reduced budgets and operational capacity<sup>6</sup>[^Reuters2].</p>
+<p>Food for Thought</p>
+<p>Trump’s Gaza proposal opens several avenues for further reflection and investigation: • Humanitarian Impact: How will forced displacement affect not only Gaza but also the neighboring countries that might be forced to host additional refugees? What measures can be taken to mitigate the likely humanitarian crises? • Operational Challenges for UN Agencies: UN agencies, especially WHO EMRO, might have to reallocate resources to manage a surge in health emergencies. Future research could focus on how these organizations adapt in times of political uncertainty and funding cuts. • Geopolitical Repercussions: Trump’s move could further destabilize the region, complicating efforts to achieve a two-state solution. Monitoring the reactions from regional powers like Egypt, Jordan, and Saudi Arabia could offer insights into future diplomatic shifts. • U.S. Foreign Policy Trends: This proposal, alongside prior actions such as withdrawing from WHO and UNRWA funding, underscores a pattern of unilateral decision-making. How will these moves shape America’s role in global governance? Is there a recalibration on the horizon with a potential shift in funding or policy direction?</p>
+<p>For those interested in staying on track with these evolving stories, it’s worthwhile to periodically check updates from authoritative sources such as: - Reuters for breaking news on U.S. foreign aid and funding cuts. - The Guardian and AP News for in-depth analysis on Trump’s proposals and their international fallout. - CNN and BBC for balanced views on regional responses and geopolitical implications. - UN agency reports (from WHO, UNRWA, UNHCR) for firsthand information on operational challenges and humanitarian impacts. - Think tanks like Chatham House and the International Crisis Group, which offer expert analyses and policy recommendations.</p>
+<p>By keeping an eye on these sources, readers can follow the multifaceted impact of Trump’s controversial proposal—both on the ground in Gaza and across global institutions that strive to maintain order and provide humanitarian assistance in challenging times.</p>
+<p>Stay informed, and remember that in times of geopolitical turbulence, critical thinking and a balanced view of diverse perspectives are more important than ever.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><p>The Guardian. <em>Afternoon Update: Trump’s plan to ‘take over’ Gaza sparks international controversy.</em> Retrieved February 2025.<br>
+<a href="https://www.theguardian.com/world/live/2025/feb/05/trump-gaza-take-over-reaction-israel-netanyahu-middle-east-latest-live">Link</a></p></li>
+<li><p>Reuters. <em>Trump says US will ‘take over’ Gaza Strip amid global condemnation.</em> Retrieved February 2025.<br>
+<a href="https://www.reuters.com/world/middle-east/trump-says-us-will-take-over-gaza-strip-2025-02-05/">Link</a></p></li>
+<li><p>Associated Press. <em>Trump’s proposal for Gaza draws criticism from human rights advocates.</em> Retrieved February 2025.<br>
+<a href="https://apnews.com/article/db2c407baf803291a4acf6edfd708c48">Link</a></p></li>
+<li><p>Yahoo News. <em>Arab countries reject Trump’s plan to relocate Palestinian refugees from Gaza.</em> Retrieved February 2025.<br>
+<a href="https://www.yahoo.com/news/arab-countries-reject-trump-proposal-134202326.html">Link</a></p></li>
+<li><p>Reuters. <em>US funding freeze imperils humanitarian operations as Trump suspends aid to UN agencies.</em> Retrieved February 2025.<br>
+<a href="https://www.reuters.com/world/us/trump-stops-us-involvement-with-un-human-rights-council-extends-unrwa-funding-halt-2025-02-04/">Link</a></p></li>
+</ol>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The Guardian reported on Trump’s press conference where he outlined his vision for Gaza as a redevelopment project reminiscent of luxury coastal regions.[^Guardian]↩︎</p></li>
+<li id="fn2"><p>Reuters detailed the specific claims Trump made about assuming control and “cleaning out” the area to pave the way for economic development.[^Reuters]↩︎</p></li>
+<li id="fn3"><p>AP News highlighted the domestic outrage and warnings from human rights advocates about the ethnic cleansing implications of the proposal.[^AP]↩︎</p></li>
+<li id="fn4"><p>Yahoo News recently covered how Arab countries have firmly rejected plans to forcefully relocate Palestinian refugees, emphasizing the geopolitical instability such measures would provoke.[^Yahoo]↩︎</p></li>
+<li id="fn5"><p>Reuters also discussed the broader context of U.S. funding cuts to UN agencies—a pattern that has already seen Trump withdrawing support from key institutions like the WHO, with serious implications for global humanitarian work.[^Reuters2]↩︎</p></li>
+<li id="fn6"><p>Reuters also discussed the broader context of U.S. funding cuts to UN agencies—a pattern that has already seen Trump withdrawing support from key institutions like the WHO, with serious implications for global humanitarian work.[^Reuters2]↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>review</category>
+  <guid>https://gigisung0503.github.io/Doodling/posts/2025-02-05-gaza.html</guid>
+  <pubDate>Tue, 04 Feb 2025 22:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Meditron X Retrieval Augmented Generation</title>
   <dc:creator>Gigi Sung</dc:creator>
@@ -254,71 +374,6 @@ else:
   <category>journal</category>
   <guid>https://gigisung0503.github.io/Doodling/posts/2025-01-12.html</guid>
   <pubDate>Sat, 11 Jan 2025 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Review: Take This Waltz, 2011</title>
-  <dc:creator>Gigi Sung</dc:creator>
-  <link>https://gigisung0503.github.io/Doodling/posts/2025-01-07-Movie.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><strong>Take This Waltz: Restlessness in Comfortable Love</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://static01.nyt.com/images/2022/05/25/arts/take-anatomy1/take-anatomy1-superJumbo.jpg" class="img-fluid figure-img"></p>
-<figcaption>Michelle Williams in Take This Waltz (My favorite scene) Credit: https://www.nytimes.com/2012/06/29/movies/take-this-waltz-directed-by-sarah-polley.html</figcaption>
-</figure>
-</div>
-<p>Sarah Polley’s second feature film, <em>Take This Waltz</em>, dives into the uneasy space between affection, routine, and longing. Whereas her debut, <em>Away From Her</em>, told the story of an older couple facing Alzheimer’s, <em>Take This Waltz</em> focuses on a younger marriage quietly slipping into dissatisfaction. The result is a candid look at how even a seemingly happy relationship can push someone to crave something thrilling and new.</p>
-<hr>
-<section id="a-marriage-of-familiar-routines" class="level3">
-<h3 class="anchored" data-anchor-id="a-marriage-of-familiar-routines">A Marriage of Familiar Routines</h3>
-<p>Margot (Michelle Williams) and Lou (Seth Rogen) appear to have a pleasant, easygoing life. He’s a cookbook writer immersed in developing chicken recipes; she’s bright and imaginative. Their shared comfort suggests they’re doing just fine—until Margot meets Daniel (Luke Kirby). His spontaneity electrifies something in her that routine and security just can’t touch.</p>
-<hr>
-</section>
-<section id="symbolic-hints-chicken-and-the-scrambler" class="level3">
-<h3 class="anchored" data-anchor-id="symbolic-hints-chicken-and-the-scrambler">Symbolic Hints: Chicken and the Scrambler</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://newcityfilm.com/wp-content/uploads/2012/06/coupledetat4.jpg" class="img-fluid figure-img"></p>
-<figcaption>A Fairground Scrambler Ride —An Exhilarating Blur of Lights, Speed, and Chaos Credit: https://newcityfilm.com/wp-content/uploads/2012/06/coupledetat4.jpg</figcaption>
-</figure>
-</div>
-<p>Polley uses quiet symbols to capture Margot’s state of mind. Lou’s endless chicken experiments point to his sincere yet predictable approach to life—steadfast but lacking surprise. Meanwhile, the Scrambler ride at a fairground stands in for Margot’s chaotic, head-spinning attraction to Daniel. As fun as it looks, it’s easy to end up dizzy and disoriented, unsure whether the rush truly solves anything or just repeats a familiar pattern with a new face.</p>
-<hr>
-</section>
-<section id="shifts-in-perspective" class="level3">
-<h3 class="anchored" data-anchor-id="shifts-in-perspective">Shifts in Perspective</h3>
-<p>Visually, Polley keeps us on our toes. Scenes that first appear to show Margot cooking for Lou might suddenly reveal she’s with Daniel instead, underlining how blurred the line can be between devotion and transgression. In one montage set to Leonard Cohen’s “Take This Waltz,” <strong>we watch Margot and Daniel’s relationship unfold in a rush—from its magnetic start to its sobering shift back into routine.</strong></p>
-<hr>
-</section>
-<section id="a-troubling-question" class="level3">
-<h3 class="anchored" data-anchor-id="a-troubling-question">A Troubling Question</h3>
-<p><strong>The core dilemma:</strong> <em style="color: #355C7D;">Is Margot’s restlessness about her marriage or about her own inability to settle down?</em> Lou is not cruel or neglectful—he’s genuinely caring, even a bit playful. Yet his unwavering stability may be part of what makes Margot itch to break free. Polley never labels Margot’s desire as “wrong” or “right.” Instead, she shows how people can drift away from good partners, lured by the promise of excitement—only to wonder if they’ll end up right where they started.</p>
-<hr>
-</section>
-<section id="why-it-resonates" class="level3">
-<h3 class="anchored" data-anchor-id="why-it-resonates">Why It Resonates</h3>
-<p>Ultimately, <em>Take This Waltz</em> shows how love can toggle between the comfort of the known and the spark of the unfamiliar. By the film’s end, there’s no tidy answer—only a reminder that longing can stem as much from within ourselves as it can from our circumstances. Polley leaves us reflecting on whether a new relationship is ever truly new, or if we keep recreating the same patterns in a different guise. It’s a thoughtful, lingering portrait of how the search for happiness might just circle back to the restlessness that sent us searching in the first place.</p>
-<hr>
-</section>
-<section id="a-personal-reflection" class="level3">
-<h3 class="anchored" data-anchor-id="a-personal-reflection">A Personal Reflection</h3>
-<p>This film was a source of deep comfort for me. It also set me free from a lingering sense of guilt that had been weighing on me until quite recently. In my own past relationship, I was essentially in Lou’s position. From Margot’s perspective (or the director’s lens following Margot), Lou is portrayed as someone who values stability—almost to the point of seeming flat. I suspect that was a conscious choice in the film, a kind of cinematic compromise to underscore the contrast between Lou and Daniel.</p>
-<p>Yet in my mind, Lou might be a far more sensitive soul than the film lets on. He could be the type who finds a sense of novelty in every small shift—whether it’s cooking chicken yet again or uttering the same “I love you” that others might find stale. Maybe those “boring” daily acts of affection felt fresh to Lou in subtle ways. Who knows? At least, that was my case.</p>
-<p>Margot, however, seems to be tuned to a different frequency. To her, life with Lou feels like a cycle stuck on repeat, with no variation. Once Margot decides their marriage is “boring,” Lou’s every quality becomes monochromatic to her, as if she’s slipped a gray filter ovemr him. Interestingly, Daniel—Margot’s supposed alternative—turns out not to be the ideal she imagined. That part, oddly enough, gave me some solace.</p>
-<p>I never truly learned why my own relationship had to end, though I suspect “boredom” was a major factor, and I ended up blaming myself for causing it. Seeing Margot’s endless restlessness hinted at in the film was a comfort. Realizing that someone like Margot—driven by impulses no one can fully quell—would struggle to find lasting contentment made me feel liberated. I may sound a bit twisted saying so.</p>
-<p>That being said, I’d like to discuss moral (or could be ehtical) considerations w relationships in my next post. Will share more soon.</p>
-
-
-</section>
-
- ]]></description>
-  <category>review</category>
-  <guid>https://gigisung0503.github.io/Doodling/posts/2025-01-07-Movie.html</guid>
-  <pubDate>Mon, 06 Jan 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Random Thoughts These Days</title>

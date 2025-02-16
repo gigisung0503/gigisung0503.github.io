@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Gigi Sung">
-<meta name="dcterms.date" content="2025-01-14">
+<meta name="description" content="Not-so daily logging of my research development">
 
-<title>Gigi Sung’s Workspace - Meditron X Retrieval Augmented Generation</title>
+<title>Gigi Sung’s Workspace - Research Log</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +24,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPVTNRSWSE"></script>
 
 <script type="text/javascript">
@@ -80,9 +110,38 @@ gtag('js', new Date());
 gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
-</head>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="alternate" type="application/rss+xml" title="Gigi Sung's Workspace" href="index.xml" data-external="1"></head>
 
 <body class="nav-fixed">
 
@@ -91,7 +150,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gigi Sung’s Workspace</span>
     </a>
   </div>
@@ -102,29 +161,29 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Projects/index.html"> 
+    <a class="nav-link" href="../Projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Posts/index.html"> 
+    <a class="nav-link active" href="../ResearchLog/index.html" aria-current="page"> 
 <span class="menu-text">Research Log</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Doodling/index.html"> 
+    <a class="nav-link" href="../Doodling/index.html"> 
 <span class="menu-text">Doodling</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../../Posts/index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../ResearchLog/index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -143,49 +202,26 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#meditron-70b" id="toc-meditron-70b" class="nav-link active" data-scroll-target="#meditron-70b">Meditron 70B</a></li>
-  <li><a href="#environment-setup" id="toc-environment-setup" class="nav-link" data-scroll-target="#environment-setup">1. Environment Setup</a></li>
-  <li><a href="#build-and-test-your-vector-store" id="toc-build-and-test-your-vector-store" class="nav-link" data-scroll-target="#build-and-test-your-vector-store">2. Build and Test Your Vector Store</a></li>
-  <li><a href="#start-the-local-server-in-lm-studio" id="toc-start-the-local-server-in-lm-studio" class="nav-link" data-scroll-target="#start-the-local-server-in-lm-studio">3. Start the Local Server in LM Studio</a></li>
-  <li><a href="#querying-the-vector-store-llm-in-one-flow" id="toc-querying-the-vector-store-llm-in-one-flow" class="nav-link" data-scroll-target="#querying-the-vector-store-llm-in-one-flow">4. Querying the Vector Store + LLM in One Flow</a></li>
-  <li><a href="#example-python-integration" id="toc-example-python-integration" class="nav-link" data-scroll-target="#example-python-integration">5. Example: Python Integration</a></li>
-  <li><a href="#expanding-to-a-chat-endpoint" id="toc-expanding-to-a-chat-endpoint" class="nav-link" data-scroll-target="#expanding-to-a-chat-endpoint">6. Expanding to a Chat Endpoint</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">7. Next Steps</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/posts/2025-01-14-LLM.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="development">development <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Meditron X Retrieval Augmented Generation</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">development</div>
-  </div>
-  </div>
+<h1 class="title">Research Log</h1>
+</div>
 
+<div>
+  <div class="description">
+    Not-so daily logging of my research development
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Gigi Sung </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 14, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -195,196 +231,279 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </header>
 
 
-<section id="meditron-70b" class="level2">
-<h2 class="anchored" data-anchor-id="meditron-70b">Meditron 70B</h2>
-<p>This project leverages a specialized Large Language Model (LLM)—built on LLama-2 and adapted to the medical domain—to help WHO EMRO staff quickly find and interpret vital health information. The model functions as both a dynamic search engine and an automated knowledge assistant. It can pull from WHO’s internal/historical documents (e.g., situation reports, response plans, rapid risk assessments) to generate targeted outputs, such as a “Response Plan for [disease]” or a “Public Health Support Assessment.” When opted in, the system can also draw upon external web-based resources to enrich its responses.</p>
-<p>Ultimately, the project aims to reduce the time and effort required for WHO teams to locate and analyze critical regional health data. By storing vector representations of documents and retrieving them based on user queries, the LLM surfaces the most relevant content, then synthesizes an answer or formatted report. This approach ensures quicker, more accurate decision-making for outbreak response, risk assessment, and public health planning.</p>
-<hr>
-<p>Below is a consolidated workflow that takes into account both your vector-store creation (via FAISS + Sentence Transformers) and using the local LM Studio API endpoint to query Meditron 7B. This will let you practice Retrieval-Augmented Generation (RAG) on your own machine until you’re ready for the 70B server-based solution.</p>
-</section>
-<section id="environment-setup" class="level2">
-<h2 class="anchored" data-anchor-id="environment-setup">1. Environment Setup</h2>
-<ol type="1">
-<li>Install Dependencies • Python 3.9+ • pip install langchain sentence-transformers faiss-cpu PyPDF2 transformers torch requests</li>
-<li>(Optional) Create a Virtual Environment • Helps keep dependencies isolated. • Example:</li>
-</ol>
-<pre><code>python -m venv .venv
-source .venv/bin/activate
-pip install ...</code></pre>
-<ol start="3" type="1">
-<li>Collect WHO PDFs • Download or gather small PDF files to test your pipeline (e.g., monthly or weekly situation reports).</li>
-</ol>
-</section>
-<section id="build-and-test-your-vector-store" class="level2">
-<h2 class="anchored" data-anchor-id="build-and-test-your-vector-store">2. Build and Test Your Vector Store</h2>
-<p>Use a script similar to VSdatabase-test.py:</p>
-<ol type="1">
-<li>Text Extraction</li>
-</ol>
-<p>• Parse PDFs with PyPDF2 to extract text. 2. Chunking</p>
-<p>• Split the raw text into segments (e.g., ~500 tokens or words). 3. Embedding</p>
-<p>• Convert each chunk into a vector using SentenceTransformers (e.g., all-MiniLM-L6-v2). 4. FAISS Index</p>
-<p>• Store chunk embeddings in a FAISS index for fast similarity searches. • Confirm the index is built by printing index.ntotal.</p>
-<p>Example snippet for building the index:</p>
-<pre><code>pdf_path = "path_to_who_report.pdf"
-document_text = extract_text_from_pdf(pdf_path)
-chunks = chunk_text(document_text, chunk_size=500)
-vectors = text_to_vectors(chunks)  # uses SentenceTransformers
-index = build_faiss_index(vectors)
-faiss.write_index(index, "faiss_index.bin")
-</code></pre>
-</section>
-<section id="start-the-local-server-in-lm-studio" class="level2">
-<h2 class="anchored" data-anchor-id="start-the-local-server-in-lm-studio">3. Start the Local Server in LM Studio</h2>
-<ol type="1">
-<li>Open LM Studio, load “meditron-7b”.</li>
-<li>Click Start to launch the local server.</li>
-<li>By default, it listens at http://localhost:1234.</li>
-<li>Under “API Usage,” verify the endpoints and model name (e.g., meditron-7b)</li>
-<li>Confirm you see endpoints like: • POST /v1/completions • POST /v1/chat/completions • POST /v1/embeddings (if supported)</li>
-</ol>
-</section>
-<section id="querying-the-vector-store-llm-in-one-flow" class="level2">
-<h2 class="anchored" data-anchor-id="querying-the-vector-store-llm-in-one-flow">4. Querying the Vector Store + LLM in One Flow</h2>
-<p>Below is a conceptual combined workflow:</p>
-<pre><code>flowchart LR
-    A[WHO PDFs] --&gt; B[Extract &amp; Chunk Text]
-    B --&gt; C[Embed Chunks with SentenceTransformers]
-    C --&gt; D[Store in FAISS Index]
-    E[User Query] --&gt; F[Vector Store Query]
-    F --&gt; G[Retrieve Top-k Chunks]
-    G --&gt; H[Create Prompt with Chunks + Question]
-    H --&gt; I[POST to LM Studio LLM API]
-    I --&gt; J[LLM Generates Answer]
-    J --&gt; K[Answer Returned to User]</code></pre>
-<p>Steps Explained</p>
-<ol type="1">
-<li><p>User Query</p>
-<ul>
-<li>You have a question, e.g.&nbsp;“What does the WHO say about outbreak detection in 2019?”</li>
-</ul></li>
-<li><p>Vector Store Query</p>
-<ul>
-<li>Use the same embedding method on the user query and search the FAISS index.</li>
-</ul></li>
-<li><p>Retrieve Top-k Chunks</p>
-<ul>
-<li>FAISS returns, say, the top 3–5 most relevant text segments from the PDF(s).</li>
-</ul></li>
-<li><p>Prompt Assembly</p>
-<ul>
-<li>Concatenate these chunks into a short “Context” string.</li>
-</ul></li>
-</ol>
-<ul>
-<li>Form a prompt that looks like:</li>
-</ul>
-<pre><code>CONTEXT:
-&lt;chunk 1&gt;
-&lt;chunk 2&gt;
-&lt;chunk 3&gt;
-
-USER QUESTION:
-&lt;your question here&gt;
-
-PLEASE ANSWER BASED ON THE ABOVE CONTEXT:</code></pre>
-<ol start="5" type="1">
-<li>Send Prompt to the LLM
-<ul>
-<li>Make a POST request to LM Studio’s v1/completions or v1/chat/completions.</li>
-</ul></li>
-<li>Receive Model Answer
-<ul>
-<li>Display or store the final answer from the model.</li>
-</ul></li>
-</ol>
-</section>
-<section id="example-python-integration" class="level2">
-<h2 class="anchored" data-anchor-id="example-python-integration">5. Example: Python Integration</h2>
-<p>Below is a minimal example showing how you might tie it together:</p>
-<pre><code>import requests
-import numpy as np
-import faiss
-from sentence_transformers import SentenceTransformer
-
-# 1) Load the FAISS index
-index = faiss.read_index("faiss_index.bin")
-
-# 2) Function to query FAISS
-embedding_model = SentenceTransformer('all-MiniLM-L6-v2')  # same model as used for storing
-
-def query_vector_store(user_query, index, chunks, k=3):
-    query_vector = embedding_model.encode(user_query)
-    distances, faiss_indices = index.search(np.array([query_vector]), k)
-    return [(faiss_indices[0][i], distances[0][i]) for i in range(k)]
-
-# 3) Retrieve top-k chunks
-chunks = [...]  # The list of text chunks you embedded during index creation
-user_query = "What does WHO say about cholera outbreaks in 2019?"
-
-results = query_vector_store(user_query, index, chunks, k=3)
-retrieved_texts = []
-for idx, dist in results:
-    retrieved_texts.append(chunks[idx])
-
-# 4) Build the final prompt
-context = "\n\n".join(retrieved_texts)
-prompt_text = f"Context:\n{context}\n\nUser Question:\n{user_query}\n\nAnswer:"
-
-# 5) Call the LM Studio local server
-url = "http://localhost:1234/v1/completions"
-headers = {"Content-Type": "application/json"}
-
-data = {
-    "model": "meditron-7b",   # Replace with the model name from LM Studio
-    "prompt": prompt_text,
-    "max_tokens": 300,
-    "temperature": 0.7
-}
-
-response = requests.post(url, headers=headers, json=data)
-
-# 6) Parse and print the response
-json_resp = response.json()
-if "choices" in json_resp:
-    print("Model answer:", json_resp["choices"][0]["text"])
-else:
-    print("Error:", json_resp)</code></pre>
-</section>
-<section id="expanding-to-a-chat-endpoint" class="level2">
-<h2 class="anchored" data-anchor-id="expanding-to-a-chat-endpoint">6. Expanding to a Chat Endpoint</h2>
-<p>If you prefer the Chat style with roles (system, user, assistant): 1. Change the endpoint to /v1/chat/completions. 2. Format your data as:</p>
-<pre><code>data = {
-  "model": "meditron-7b",
-  "messages": [
-    {"role": "system", "content": "You are a helpful epidemiology assistant."},
-    {"role": "user", "content": f"Context:\n{context}\n\nQuestion:\n{user_query}"}
-  ],
-  "max_tokens": 300,
-  "temperature": 0.7
-}
-</code></pre>
-<pre><code>3.  Parse the response.json() similarly.</code></pre>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">7. Next Steps</h2>
-<pre><code>1.  Scale Up
-•   Once your server can handle 70B, replicate the same approach—only change the model name in LM Studio.
-2.  User Interface
-•   Build a Flask or Streamlit app that:
-•   Accepts user queries,
-•   Pulls relevant text from FAISS,
-•   Sends a combined prompt to the LLM,
-•   Displays the final response.
-3.  Ongoing Updates
-•   As WHO releases new PDFs, embed them, add to the FAISS index, and keep your pipeline fresh without retraining the model.</code></pre>
-<p>Final Summary</p>
-<p>By combining your vector-store retrieval (FAISS + SentenceTransformers) with the LM Studio local server (OpenAI-like API), you can implement a practical end-to-end RAG system on your personal Mac. This will allow you to test question-answering over WHO documents using the Meditron 7B model—setting the stage for seamless migration to the Meditron 70B once your dedicated server is ready.</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="4070901600000" data-listing-file-modified-sort="1737200491216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1027">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/useful_resources.html" class="no-external"></a></p><a href="../ResearchLog/posts/useful_resources.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/useful_resources.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/useful_resources.html" class="no-external">Useful Resources</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/useful_resources.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/useful_resources.html" class="no-external">This page contains a collection of useful resources for data science, machine learning, and artificial intelligence. The resources include books, courses, tutorials, tools…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/useful_resources.html" class="no-external">
+<div class="listing-date">
+Jan 1, 2099
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="development" data-listing-date-sort="1736805600000" data-listing-file-modified-sort="1737277754495" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="975">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external"></a></p><a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external">Meditron X Retrieval Augmented Generation</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('development'); return false;">
+development
+</div>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external">This project leverages a specialized Large Language Model (LLM)—built on LLama-2 and adapted to the medical domain—to help WHO EMRO staff quickly find and interpret vital…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/2025-01-14-LLM.html" class="no-external">
+<div class="listing-date">
+Jan 14, 2025
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="development" data-listing-date-sort="1736805600000" data-listing-file-modified-sort="1737352253335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external"></a></p><a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external">Retrieval Augmented Generation</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('development'); return false;">
+development
+</div>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external">LLM 의 도전과제 1. 최신정보의 부재 2. 출처의 부정확성</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/2025-01-19-RAG.html" class="no-external">
+<div class="listing-date">
+Jan 14, 2025
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1721163600000" data-listing-file-modified-sort="1721225359582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/umngeni.html" class="no-external"></a></p><a href="../ResearchLog/posts/umngeni.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/umngeni.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/umngeni.html" class="no-external">The Modern Missionary</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/umngeni.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/umngeni.html" class="no-external">“So, what is your impression of South Africa so far?” <br><br></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/umngeni.html" class="no-external">
+<div class="listing-date">
+Jul 17, 2024
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1721163600000" data-listing-file-modified-sort="1721217278365" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="187">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/informal_settlement.html" class="no-external"></a></p><a href="../ResearchLog/posts/informal_settlement.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/informal_settlement.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/informal_settlement.html" class="no-external">Detecting Informal Settlements with Satellite Imagery</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/informal_settlement.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/informal_settlement.html" class="no-external">While your intentions to provide quality public service may be commendable, achieving this goal requires an accurate demographic, socioeconomic, and sptial data.…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/informal_settlement.html" class="no-external">
+<div class="listing-date">
+Jul 17, 2024
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1719435600000" data-listing-file-modified-sort="1719516892811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="648">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/lit_review.html" class="no-external"></a></p><a href="../ResearchLog/posts/lit_review.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/lit_review.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/lit_review.html" class="no-external">Automated Literature Review</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/lit_review.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/lit_review.html" class="no-external">Yup. A literature review could be dragging and ineffective without systematic tools. This post will introduce a prompt that can help you automate the process of literature…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/lit_review.html" class="no-external">
+<div class="listing-date">
+Jun 27, 2024
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1718398800000" data-listing-file-modified-sort="1719516885651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1322">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/eta_etl.html" class="no-external"></a></p><a href="../ResearchLog/posts/eta_etl.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/eta_etl.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/eta_etl.html" class="no-external">EDA and ETL Convention</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/eta_etl.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/eta_etl.html" class="no-external">EDA should be a fun and liberal process 😇 but it’s also important to have a structured approach to ensure a comprehensive understanding of the dataset. This template…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/eta_etl.html" class="no-external">
+<div class="listing-date">
+Jun 15, 2024
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1646085600000" data-listing-file-modified-sort="1720084082731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/api.html" class="no-external"></a></p><a href="../ResearchLog/posts/api.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/api.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/api.html" class="no-external">API Exercise</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/api.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/api.html" class="no-external">This excercise follows the instructuion provided by Python Coding for Public Policy @ NYU Wagner.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/api.html" class="no-external">
+<div class="listing-date">
+Mar 1, 2022
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1621630800000" data-listing-file-modified-sort="1721219592883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="892">
+<div class="thumbnail">
+<p><a href="../ResearchLog/posts/post.html" class="no-external"></a></p><a href="../ResearchLog/posts/post.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../ResearchLog/posts/post.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../ResearchLog/posts/post.html" class="no-external">Supply Risk of Minerals</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../ResearchLog/posts/post.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../ResearchLog/posts/post.html" class="no-external">By focusing on South Korea, this research can provide valuable insights and recommendations to the South Korean government for managing and securing the supply of critical…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../ResearchLog/posts/post.html" class="no-external">
+<div class="listing-date">
+May 22, 2021
+</div>
+<div class="listing-author">
+Gigi Sung
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -946,7 +1065,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/posts/2025-01-14-LLM.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/ResearchLog/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>All rights reserved. 2024.</p>
 </div>

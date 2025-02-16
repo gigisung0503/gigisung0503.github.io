@@ -2,25 +2,27 @@
   {
     "listing": "/Doodling/index.html",
     "items": [
+      "/Doodling/posts/2025-02-05-genAI.html",
+      "/Doodling/posts/2025-02-05-gaza.html",
       "/Doodling/posts/2025-01-14-LLM.html",
       "/Doodling/posts/2025-01-12-Karma.html",
       "/Doodling/posts/2025-01-12.html",
-      "/Doodling/posts/2025-01-07-Movie.html",
       "/Doodling/posts/2025-01-05.html",
       "/Doodling/posts/2025-01-08-Map.html"
     ]
   },
   {
-    "listing": "/Posts/index.html",
+    "listing": "/ResearchLog/index.html",
     "items": [
-      "/Posts/posts/useful_resources.html",
-      "/Posts/posts/2025-01-14-LLM.html",
-      "/Posts/posts/umngeni.html",
-      "/Posts/posts/informal_settlement.html",
-      "/Posts/posts/lit_review.html",
-      "/Posts/posts/eta_etl.html",
-      "/Posts/posts/api.html",
-      "/Posts/posts/post.html"
+      "/ResearchLog/posts/useful_resources.html",
+      "/ResearchLog/posts/2025-01-14-LLM.html",
+      "/ResearchLog/posts/2025-01-19-RAG.html",
+      "/ResearchLog/posts/umngeni.html",
+      "/ResearchLog/posts/informal_settlement.html",
+      "/ResearchLog/posts/lit_review.html",
+      "/ResearchLog/posts/eta_etl.html",
+      "/ResearchLog/posts/api.html",
+      "/ResearchLog/posts/post.html"
     ]
   }
 ]

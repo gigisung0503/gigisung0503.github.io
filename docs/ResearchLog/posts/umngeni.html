@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Not-so daily logging of my research development">
+<meta name="author" content="Gigi Sung">
+<meta name="dcterms.date" content="2024-07-17">
 
-<title>Gigi Sung’s Workspace - Research Log</title>
+<title>Gigi Sung’s Workspace - The Modern Missionary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EPVTNRSWSE"></script>
 
 <script type="text/javascript">
@@ -110,38 +80,9 @@ gtag('js', new Date());
 gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Gigi Sung's Workspace" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed">
 
@@ -150,7 +91,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Gigi Sung’s Workspace</span>
     </a>
   </div>
@@ -161,29 +102,29 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Projects/index.html"> 
+    <a class="nav-link" href="../../Projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../Posts/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../ResearchLog/index.html"> 
 <span class="menu-text">Research Log</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Doodling/index.html"> 
+    <a class="nav-link" href="../../Doodling/index.html"> 
 <span class="menu-text">Doodling</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../Posts/index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../ResearchLog/index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -202,26 +143,40 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="development">development <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-your-impression-of-south-africa" id="toc-what-is-your-impression-of-south-africa" class="nav-link active" data-scroll-target="#what-is-your-impression-of-south-africa">What is your impression of South Africa?</a></li>
+  <li><a href="#indigent-policy-program" id="toc-indigent-policy-program" class="nav-link" data-scroll-target="#indigent-policy-program">Indigent Policy Program</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/ResearchLog/posts/umngeni.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Log</h1>
+<h1 class="title">The Modern Missionary</h1>
 </div>
 
-<div>
-  <div class="description">
-    Not-so daily logging of my research development
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gigi Sung </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 17, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -231,246 +186,27 @@ window.Quarto = {
 </header>
 
 
+<section id="what-is-your-impression-of-south-africa" class="level1">
+<h1>What is your impression of South Africa?</h1>
+<p>“So, what is your impression of South Africa so far?” <br><br></p>
+<p>This is the first question I get asked whenever I meet someone here in uMngeni. And I give the most unremarkable answer one could imagine: <br><br></p>
+<p>“Ahh, it’s almost the same as the States.” <br><br></p>
+<p>Then comes the confused look. They might think, “What is she talking about? South Africa is nothing like the States. She’s Asian. She mustn’t have been in America for that long.” That’s a fair guess. I’ve lived in the States for two and a half years now. Boston, New York, San Francisco, and Seattle are the only cities I’ve visited.</p>
+<p>Regardless, my argument remains the same. South Africa is almost the same as the States, and the rest of the “developing” world. The work of capital and the way of business are the same, hense the same look of development. You realize how true the word “globalization” is that you get a shiver.</p>
+<p>“Developing” countries, like South Africa, and South Korea a few decades ago, are burdened with obssesive imperative to close the gap with the “developed” world. The “developed” world fuel this obsession by providing loans, investments, and technologies. And they make sure that the “developing” countries are on the right track by dispatching their experts and consultants like me.</p>
+<p>Yeah. That is what I am doing. I am an embassador with a mission to implant the same protocols and business conventions as accepted by the “developed” world. At the end of this mission, a bigger, more efficient, and more profitable market with “educated” consumers awaits the “developed” world.</p>
+<p>I say this with a touch of sarcasm but without criticism. It is as natural as white ants expanding their colonies. There is no value judgment here. I don’t believe there’s an alternative way of being in this humanity. You either colonize or get colonized. You either set the rules or follow the rules. It is sad, though, that the “rules” are now the same everywhere.</p>
+<p>Returning to the question, “What is your impression of South Africa?” You now understand how my answer makes sense. South Africa is almost the same as the States. It is a place where the same rules apply. It is a place where the same marathon is run. It’s just that South Africa and our fellow once-colonized-and-now-developing countries are many steps behind.</p>
+<p>“Then, what about humanitarian work?” You might ask, thinking that it is with noble cause, not hiding any insidious scheme behind, different from the “development missionary.” I also acknowledge that a set of humanitarian inteventions is with impricable motive/value. But really, there is a fine line between humanitarian and development work in the field. Development gives access to water, electricity, and education, a better life. The time of execution is a differentiater. The results are the same.</p>
+</section>
+<section id="indigent-policy-program" class="level1">
+<h1>Indigent Policy Program</h1>
+<p>Now, that was a heavy introduction. You still do not know why I am in SA. I am here as a consultant hired by Harvard Bloomberg Cities Leadership Initiative. Within the timeline of 10 weeks, I investigate, diagnose, and prescribe a solution to the indigent policy program in uMngeni. May be that is too broad.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="4070901600000" data-listing-file-modified-sort="1737200491216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1027">
-<div class="thumbnail">
-<p><a href="../Posts/posts/useful_resources.html" class="no-external"></a></p><a href="../Posts/posts/useful_resources.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/useful_resources.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/useful_resources.html" class="no-external">Useful Resources</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/useful_resources.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/useful_resources.html" class="no-external">This page contains a collection of useful resources for data science, machine learning, and artificial intelligence. The resources include books, courses, tutorials, tools…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/useful_resources.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2099
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="development" data-listing-date-sort="1736805600000" data-listing-file-modified-sort="1737277754495" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="975">
-<div class="thumbnail">
-<p><a href="../Posts/posts/2025-01-14-LLM.html" class="no-external"></a></p><a href="../Posts/posts/2025-01-14-LLM.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/2025-01-14-LLM.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/2025-01-14-LLM.html" class="no-external">Meditron X Retrieval Augmented Generation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/2025-01-14-LLM.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('development'); return false;">
-development
-</div>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/2025-01-14-LLM.html" class="no-external">This project leverages a specialized Large Language Model (LLM)—built on LLama-2 and adapted to the medical domain—to help WHO EMRO staff quickly find and interpret vital…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/2025-01-14-LLM.html" class="no-external">
-<div class="listing-date">
-Jan 14, 2025
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1721163600000" data-listing-file-modified-sort="1721225359582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
-<div class="thumbnail">
-<p><a href="../Posts/posts/umngeni.html" class="no-external"></a></p><a href="../Posts/posts/umngeni.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/umngeni.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/umngeni.html" class="no-external">The Modern Missionary</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/umngeni.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/umngeni.html" class="no-external">“So, what is your impression of South Africa so far?” <br><br></a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/umngeni.html" class="no-external">
-<div class="listing-date">
-Jul 17, 2024
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1721163600000" data-listing-file-modified-sort="1721217278365" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="187">
-<div class="thumbnail">
-<p><a href="../Posts/posts/informal_settlement.html" class="no-external"></a></p><a href="../Posts/posts/informal_settlement.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/informal_settlement.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/informal_settlement.html" class="no-external">Detecting Informal Settlements with Satellite Imagery</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/informal_settlement.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/informal_settlement.html" class="no-external">While your intentions to provide quality public service may be commendable, achieving this goal requires an accurate demographic, socioeconomic, and sptial data.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/informal_settlement.html" class="no-external">
-<div class="listing-date">
-Jul 17, 2024
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1719435600000" data-listing-file-modified-sort="1719516892811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="648">
-<div class="thumbnail">
-<p><a href="../Posts/posts/lit_review.html" class="no-external"></a></p><a href="../Posts/posts/lit_review.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/lit_review.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/lit_review.html" class="no-external">Automated Literature Review</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/lit_review.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/lit_review.html" class="no-external">Yup. A literature review could be dragging and ineffective without systematic tools. This post will introduce a prompt that can help you automate the process of literature…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/lit_review.html" class="no-external">
-<div class="listing-date">
-Jun 27, 2024
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1718398800000" data-listing-file-modified-sort="1719516885651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1322">
-<div class="thumbnail">
-<p><a href="../Posts/posts/eta_etl.html" class="no-external"></a></p><a href="../Posts/posts/eta_etl.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/eta_etl.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/eta_etl.html" class="no-external">EDA and ETL Convention</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/eta_etl.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/eta_etl.html" class="no-external">EDA should be a fun and liberal process 😇 but it’s also important to have a structured approach to ensure a comprehensive understanding of the dataset. This template…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/eta_etl.html" class="no-external">
-<div class="listing-date">
-Jun 15, 2024
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1646085600000" data-listing-file-modified-sort="1720084082731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
-<div class="thumbnail">
-<p><a href="../Posts/posts/api.html" class="no-external"></a></p><a href="../Posts/posts/api.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/api.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/api.html" class="no-external">API Exercise</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/api.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/api.html" class="no-external">This excercise follows the instructuion provided by Python Coding for Public Policy @ NYU Wagner.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/api.html" class="no-external">
-<div class="listing-date">
-Mar 1, 2022
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1621630800000" data-listing-file-modified-sort="1721219592883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="892">
-<div class="thumbnail">
-<p><a href="../Posts/posts/post.html" class="no-external"></a></p><a href="../Posts/posts/post.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../Posts/posts/post.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Posts/posts/post.html" class="no-external">Supply Risk of Minerals</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Posts/posts/post.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../Posts/posts/post.html" class="no-external">By focusing on South Korea, this research can provide valuable insights and recommendations to the South Korean government for managing and securing the supply of critical…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../Posts/posts/post.html" class="no-external">
-<div class="listing-date">
-May 22, 2021
-</div>
-<div class="listing-author">
-Gigi Sung
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1032,7 +768,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/ResearchLog/posts/umngeni.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>All rights reserved. 2024.</p>
 </div>

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gigi Sung">
-<meta name="dcterms.date" content="2099-01-01">
+<meta name="dcterms.date" content="2025-01-14">
 
-<title>Gigi Sung’s Workspace - Useful Resources</title>
+<title>Gigi Sung’s Workspace - Meditron X Retrieval Augmented Generation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,7 +114,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Posts/index.html"> 
+    <a class="nav-link" href="../../ResearchLog/index.html"> 
 <span class="menu-text">Research Log</span></a>
   </li>  
   <li class="nav-item">
@@ -124,7 +124,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="../../Posts/index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../ResearchLog/index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -147,22 +147,27 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link active" data-scroll-target="#useful-resources">Useful Resources</a>
-  <ul class="collapse">
-  <li><a href="#public-health-datasets" id="toc-public-health-datasets" class="nav-link" data-scroll-target="#public-health-datasets"><strong>Public health datasets</strong></a></li>
-  <li><a href="#public-climate-datasets" id="toc-public-climate-datasets" class="nav-link" data-scroll-target="#public-climate-datasets"><strong>Public climate datasets</strong></a></li>
-  <li><a href="#public-social-political-datasets" id="toc-public-social-political-datasets" class="nav-link" data-scroll-target="#public-social-political-datasets"><strong>Public social-political datasets</strong></a></li>
-  </ul></li>
+  <li><a href="#meditron-70b" id="toc-meditron-70b" class="nav-link active" data-scroll-target="#meditron-70b">Meditron 70B</a></li>
+  <li><a href="#environment-setup" id="toc-environment-setup" class="nav-link" data-scroll-target="#environment-setup">1. Environment Setup</a></li>
+  <li><a href="#build-and-test-your-vector-store" id="toc-build-and-test-your-vector-store" class="nav-link" data-scroll-target="#build-and-test-your-vector-store">2. Build and Test Your Vector Store</a></li>
+  <li><a href="#start-the-local-server-in-lm-studio" id="toc-start-the-local-server-in-lm-studio" class="nav-link" data-scroll-target="#start-the-local-server-in-lm-studio">3. Start the Local Server in LM Studio</a></li>
+  <li><a href="#querying-the-vector-store-llm-in-one-flow" id="toc-querying-the-vector-store-llm-in-one-flow" class="nav-link" data-scroll-target="#querying-the-vector-store-llm-in-one-flow">4. Querying the Vector Store + LLM in One Flow</a></li>
+  <li><a href="#example-python-integration" id="toc-example-python-integration" class="nav-link" data-scroll-target="#example-python-integration">5. Example: Python Integration</a></li>
+  <li><a href="#expanding-to-a-chat-endpoint" id="toc-expanding-to-a-chat-endpoint" class="nav-link" data-scroll-target="#expanding-to-a-chat-endpoint">6. Expanding to a Chat Endpoint</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">7. Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/posts/useful_resources.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/ResearchLog/posts/2025-01-14-LLM.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Useful Resources</h1>
-</div>
+<h1 class="title">Meditron X Retrieval Augmented Generation</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">development</div>
+  </div>
+  </div>
 
 
 
@@ -178,7 +183,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2099</p>
+      <p class="date">January 14, 2025</p>
     </div>
   </div>
   
@@ -190,94 +195,193 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </header>
 
 
-<section id="useful-resources" class="level1">
-<h1>Useful Resources</h1>
-<p>This page contains a collection of useful resources for data science, machine learning, and artificial intelligence. The resources include books, courses, tutorials, tools, and more to help you learn and grow in the field of data science.</p>
-<ol start="0" type="1">
-<li><strong>Datasets</strong>
-<ul>
-<li><a href="https://www.kaggle.com/datasets">Kaggle Datasets</a> - A platform for data science and machine learning datasets</li>
-<li><a href="https://archive.ics.uci.edu/ml/index.php">UCI Machine Learning Repository</a> - A collection of databases, domain theories, and data generators that are used by the machine learning community for the empirical analysis of machine learning algorithms</li>
-<li><a href="https://datasetsearch.research.google.com/">Google Dataset Search</a> - A search engine for datasets</li>
-<li><a href="https://who.maps.arcgis.com/home/item.html?id=83535020ce154bd5a498957c159e3a99">ArcGIS World Roads</a> - World Roads represents the major roads, highways, local roads, and ferries of the world.</li>
-</ul></li>
-</ol>
-<p><br><br></p>
+<section id="meditron-70b" class="level2">
+<h2 class="anchored" data-anchor-id="meditron-70b">Meditron 70B</h2>
+<p>This project leverages a specialized Large Language Model (LLM)—built on LLama-2 and adapted to the medical domain—to help WHO EMRO staff quickly find and interpret vital health information. The model functions as both a dynamic search engine and an automated knowledge assistant. It can pull from WHO’s internal/historical documents (e.g., situation reports, response plans, rapid risk assessments) to generate targeted outputs, such as a “Response Plan for [disease]” or a “Public Health Support Assessment.” When opted in, the system can also draw upon external web-based resources to enrich its responses.</p>
+<p>Ultimately, the project aims to reduce the time and effort required for WHO teams to locate and analyze critical regional health data. By storing vector representations of documents and retrieving them based on user queries, the LLM surfaces the most relevant content, then synthesizes an answer or formatted report. This approach ensures quicker, more accurate decision-making for outbreak response, risk assessment, and public health planning.</p>
+<hr>
+<p>Below is a consolidated workflow that takes into account both your vector-store creation (via FAISS + Sentence Transformers) and using the local LM Studio API endpoint to query Meditron 7B. This will let you practice Retrieval-Augmented Generation (RAG) on your own machine until you’re ready for the 70B server-based solution.</p>
+</section>
+<section id="environment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="environment-setup">1. Environment Setup</h2>
 <ol type="1">
-<li><strong>Books</strong>
-<ul>
-<li><p><a href="https://www.oreilly.com/library/view/python-for-data/9781491957653/">Python for Data Analysis</a> by Wes McKinney</p></li>
-<li><p><a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a> by Aurélien Géron</p></li>
-<li><p><a href="https://www.deeplearningbook.org/">Deep Learning</a> by Ian Goodfellow, Yoshua Bengio, and Aaron Courville</p></li>
-<li><p><a href="">Python Machine Learning Essentials</a> by Bernard Baah</p></li>
-<li><p><a href="">Python Machine Learning Case Studies: Five Case Studies for the Data Scientist</a> by Danish Haroon <br><br></p></li>
-</ul></li>
-<li><strong>Courses &amp; Tutorials</strong>
-<ul>
-<li><a href="https://www.coursera.org/learn/machine-learning">Machine Learning</a> by Andrew Ng on Coursera</li>
-<li><a href="https://www.tensorflow.org/tutorials">TensorFlow Tutorials</a> - Official TensorFlow tutorials for beginners and experts</li>
-<li><a href="https://www.youtube.com/c/QiushengWu">Dr.&nbsp;Qiusheng Wu’s YouTube Channel</a> - Various tutorials on GIS, remote sensing, and Python programming</li>
-<li><a href="https://github.com/mafichman/MUSA_508_Lab">Upenn’s MUSA 508 Lab</a> - Tutorials and Materials for MUSA 508 - Public Policy Analytics - University of Pennsylvania Weitzman School of Design</li>
-<li><a href="https://python-public-policy.afeld.me/en/nyu/lecture_5.html">Python Coding for Public Policy @ NYU Wagner</a> - A course on Python programming for public policy at NYU Wagner, especially useful for API and web scraping.</li>
-<li><a href="https://github.com/afeld/python-public-policy">Python for Public Policy</a> - A course on Python programming for public policy at NYU Wagner, especially useful for API and web scraping.</li>
-</ul></li>
+<li>Install Dependencies • Python 3.9+ • pip install langchain sentence-transformers faiss-cpu PyPDF2 transformers torch requests</li>
+<li>(Optional) Create a Virtual Environment • Helps keep dependencies isolated. • Example:</li>
 </ol>
-<p><br><br></p>
+<pre><code>python -m venv .venv
+source .venv/bin/activate
+pip install ...</code></pre>
 <ol start="3" type="1">
-<li><strong>People</strong>
+<li>Collect WHO PDFs • Download or gather small PDF files to test your pipeline (e.g., monthly or weekly situation reports).</li>
+</ol>
+</section>
+<section id="build-and-test-your-vector-store" class="level2">
+<h2 class="anchored" data-anchor-id="build-and-test-your-vector-store">2. Build and Test Your Vector Store</h2>
+<p>Use a script similar to VSdatabase-test.py:</p>
+<ol type="1">
+<li>Text Extraction</li>
+</ol>
+<p>• Parse PDFs with PyPDF2 to extract text. 2. Chunking</p>
+<p>• Split the raw text into segments (e.g., ~500 tokens or words). 3. Embedding</p>
+<p>• Convert each chunk into a vector using SentenceTransformers (e.g., all-MiniLM-L6-v2). 4. FAISS Index</p>
+<p>• Store chunk embeddings in a FAISS index for fast similarity searches. • Confirm the index is built by printing index.ntotal.</p>
+<p>Example snippet for building the index:</p>
+<pre><code>pdf_path = "path_to_who_report.pdf"
+document_text = extract_text_from_pdf(pdf_path)
+chunks = chunk_text(document_text, chunk_size=500)
+vectors = text_to_vectors(chunks)  # uses SentenceTransformers
+index = build_faiss_index(vectors)
+faiss.write_index(index, "faiss_index.bin")
+</code></pre>
+</section>
+<section id="start-the-local-server-in-lm-studio" class="level2">
+<h2 class="anchored" data-anchor-id="start-the-local-server-in-lm-studio">3. Start the Local Server in LM Studio</h2>
+<ol type="1">
+<li>Open LM Studio, load “meditron-7b”.</li>
+<li>Click Start to launch the local server.</li>
+<li>By default, it listens at http://localhost:1234.</li>
+<li>Under “API Usage,” verify the endpoints and model name (e.g., meditron-7b)</li>
+<li>Confirm you see endpoints like: • POST /v1/completions • POST /v1/chat/completions • POST /v1/embeddings (if supported)</li>
+</ol>
+</section>
+<section id="querying-the-vector-store-llm-in-one-flow" class="level2">
+<h2 class="anchored" data-anchor-id="querying-the-vector-store-llm-in-one-flow">4. Querying the Vector Store + LLM in One Flow</h2>
+<p>Below is a conceptual combined workflow:</p>
+<pre><code>flowchart LR
+    A[WHO PDFs] --&gt; B[Extract &amp; Chunk Text]
+    B --&gt; C[Embed Chunks with SentenceTransformers]
+    C --&gt; D[Store in FAISS Index]
+    E[User Query] --&gt; F[Vector Store Query]
+    F --&gt; G[Retrieve Top-k Chunks]
+    G --&gt; H[Create Prompt with Chunks + Question]
+    H --&gt; I[POST to LM Studio LLM API]
+    I --&gt; J[LLM Generates Answer]
+    J --&gt; K[Answer Returned to User]</code></pre>
+<p>Steps Explained</p>
+<ol type="1">
+<li><p>User Query</p>
 <ul>
-<li><a href="https://github.com/annaduan09">Anna Duan</a> - MUSA</li>
+<li>You have a question, e.g.&nbsp;“What does the WHO say about outbreak detection in 2019?”</li>
+</ul></li>
+<li><p>Vector Store Query</p>
+<ul>
+<li>Use the same embedding method on the user query and search the FAISS index.</li>
+</ul></li>
+<li><p>Retrieve Top-k Chunks</p>
+<ul>
+<li>FAISS returns, say, the top 3–5 most relevant text segments from the PDF(s).</li>
+</ul></li>
+<li><p>Prompt Assembly</p>
+<ul>
+<li>Concatenate these chunks into a short “Context” string.</li>
 </ul></li>
 </ol>
-<p><br><br></p>
-<ol start="4" type="1">
-<li><p><strong>Tools</strong></p>
 <ul>
-<li><a href="https://jupyter.org/">Jupyter Notebook</a> - An open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text</li>
-<li><a href="https://colab.research.google.com/">Google Colab</a> - A free Jupyter notebook environment provided by Google, offering GPU and TPU support for running machine learning experiments in the cloud</li>
-<li><a href="https://www.kaggle.com/">Kaggle</a> - A platform for data science competitions, datasets, and notebooks, providing access to powerful computing resources and a community of data enthusiasts</li>
-<li><a href="https://scikit-learn.org/stable/">Scikit-learn</a> - A comprehensive library for machine learning in Python, offering various algorithms and tools for classification, regression, clustering, and more</li>
-<li><a href="https://www.tensorflow.org/">TensorFlow</a> - An open-source deep learning framework developed by Google, widely used for building and training neural networks</li>
-<li><a href="https://pytorch.org/">PyTorch</a> - Another popular deep learning framework, known for its dynamic computation graph and ease of use</li>
-<li><a href="https://matplotlib.org/">Matplotlib</a> - A flexible plotting library for creating static, interactive, and animated visualizations in Python</li>
-<li><a href="https://seaborn.pydata.org/">Seaborn</a> - Built on top of Matplotlib, Seaborn provides a high-level interface for creating attractive statistical graphics</li>
-<li><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> - A lightweight web framework for building RESTful APIs and web applications in Python</li>
-<li><a href="https://www.djangoproject.com/">Django</a> - A high-level web framework for rapid development and clean design, suitable for building complex web applications</li>
-</ul></li>
-</ol>
-<p><br><br></p>
-<p><strong>Open data</strong> helps create a lot of <strong>public datasets</strong> that you can access to make data-driven decisions. Here are some resources you can use to start searching for public datasets on your own:</p>
-<ul>
-<li><p>The <a href="https://cloud.google.com/public-datasets" title="This link takes you to the Google Cloud Public Datasets site."><u><span>Google Cloud Public Datasets</span></u></a> allow data analysts access to high-demand public datasets, and make it easy to uncover insights in the cloud.&nbsp;</p></li>
-<li><p>The <a href="https://datasetsearch.research.google.com/" title="This link takes you to Google's dataset search engine."><u><span>Dataset Search</span></u></a> can help you find available datasets online with keyword searches.&nbsp;</p></li>
-<li><p><a href="https://www.kaggle.com/datasets?utm_medium=paid&amp;utm_source=google.com+search&amp;utm_campaign=datasets&amp;gclid=CjwKCAiAt9z-BRBCEiwA_bWv-L6PpACh6RzmrJjQjmNGCCE7kky1FCtc6Jf1qld-4NwDMYL0WsUyxBoCdwAQAvD_BwE" title="This link takes you to the Kaggle Datasets page where you can explore, analyze, and share data."><u><span>Kaggle</span></u></a> has an Open Data search function that can help you find datasets to practice with.</p></li>
-<li><p>Finally, <a href="https://cloud.google.com/bigquery/public-data" title="This link takes you to the BigQuery public datasets documentation."><u><span>BigQuery</span></u></a> hosts 150+ public datasets you can access and use.&nbsp;</p></li>
+<li>Form a prompt that looks like:</li>
 </ul>
-<section id="public-health-datasets" class="level3">
-<h3 class="anchored" data-anchor-id="public-health-datasets"><strong>Public health datasets</strong></h3>
-<ol type="1">
-<li><p><a href="https://www.who.int/data/collections" title="This link takes you to the World Health Organization's data collections site."><u><span>Global Health Observatory data</span></u></a>: You can search for datasets from this page or explore featured data collections from the World Health Organization.&nbsp;&nbsp;</p></li>
-<li><p><a href="https://cloud.google.com/healthcare/docs/resources/public-datasets/tcia" title="This link takes you to the Google Cloud Cancer Imaging Archive (TCIA) overview page."><u><span>The Cancer Imaging Archive (TCIA) dataset</span></u></a>: Just like the earlier dataset, this data is hosted by the Google Cloud Public Datasets and can be uploaded to BigQuery.</p></li>
-<li><p><a href="https://cloud.google.com/life-sciences/docs/resources/public-datasets/1000-genomes" title="This link takes you to the Google Cloud Life Sciences 1000 Genomes project page."><u><span>1000 Genomes</span></u></a>: This is another dataset from the Google Cloud Public resources that can be uploaded to BigQuery.&nbsp;</p></li>
+<pre><code>CONTEXT:
+&lt;chunk 1&gt;
+&lt;chunk 2&gt;
+&lt;chunk 3&gt;
+
+USER QUESTION:
+&lt;your question here&gt;
+
+PLEASE ANSWER BASED ON THE ABOVE CONTEXT:</code></pre>
+<ol start="5" type="1">
+<li>Send Prompt to the LLM
+<ul>
+<li>Make a POST request to LM Studio’s v1/completions or v1/chat/completions.</li>
+</ul></li>
+<li>Receive Model Answer
+<ul>
+<li>Display or store the final answer from the model.</li>
+</ul></li>
 </ol>
 </section>
-<section id="public-climate-datasets" class="level3">
-<h3 class="anchored" data-anchor-id="public-climate-datasets"><strong>Public climate datasets</strong></h3>
-<ol type="1">
-<li><p><a href="https://www.ncei.noaa.gov/products" title="Natonal Climate Data Center Link"><u><span>National Climatic Data Center</span></u></a>: The NCDC Quick Links page has a selection of datasets you can explore.&nbsp;</p></li>
-<li><p><a href="https://www.climate.gov/maps-data/datasets" title="This link takes you to a NOAA dataset gallery from climate.gov."><u><span>NOAA Public Dataset Gallery</span></u></a>: The NOAA Public Dataset Gallery contains a searchable collection of public datasets.</p></li>
-</ol>
+<section id="example-python-integration" class="level2">
+<h2 class="anchored" data-anchor-id="example-python-integration">5. Example: Python Integration</h2>
+<p>Below is a minimal example showing how you might tie it together:</p>
+<pre><code>import requests
+import numpy as np
+import faiss
+from sentence_transformers import SentenceTransformer
+
+# 1) Load the FAISS index
+index = faiss.read_index("faiss_index.bin")
+
+# 2) Function to query FAISS
+embedding_model = SentenceTransformer('all-MiniLM-L6-v2')  # same model as used for storing
+
+def query_vector_store(user_query, index, chunks, k=3):
+    query_vector = embedding_model.encode(user_query)
+    distances, faiss_indices = index.search(np.array([query_vector]), k)
+    return [(faiss_indices[0][i], distances[0][i]) for i in range(k)]
+
+# 3) Retrieve top-k chunks
+chunks = [...]  # The list of text chunks you embedded during index creation
+user_query = "What does WHO say about cholera outbreaks in 2019?"
+
+results = query_vector_store(user_query, index, chunks, k=3)
+retrieved_texts = []
+for idx, dist in results:
+    retrieved_texts.append(chunks[idx])
+
+# 4) Build the final prompt
+context = "\n\n".join(retrieved_texts)
+prompt_text = f"Context:\n{context}\n\nUser Question:\n{user_query}\n\nAnswer:"
+
+# 5) Call the LM Studio local server
+url = "http://localhost:1234/v1/completions"
+headers = {"Content-Type": "application/json"}
+
+data = {
+    "model": "meditron-7b",   # Replace with the model name from LM Studio
+    "prompt": prompt_text,
+    "max_tokens": 300,
+    "temperature": 0.7
+}
+
+response = requests.post(url, headers=headers, json=data)
+
+# 6) Parse and print the response
+json_resp = response.json()
+if "choices" in json_resp:
+    print("Model answer:", json_resp["choices"][0]["text"])
+else:
+    print("Error:", json_resp)</code></pre>
 </section>
-<section id="public-social-political-datasets" class="level3">
-<h3 class="anchored" data-anchor-id="public-social-political-datasets"><strong>Public social-political datasets</strong></h3>
-<ol type="1">
-<li><p><a href="https://data.unicef.org/resources/dataset/sowc-2019-statistical-tables/" title="This link takes you to statistical tables for children's health published by Unicef."><u><span>UNICEF State of the World’s Children</span></u></a>: This dataset from UNICEF includes a collection of tables that can be downloaded.</p></li>
-<li><p><a href="https://www.bls.gov/cps/tables.htm" title="This link takes you to the U.S. Bureau of Labor Statistics page."><u><span>CPS Labor Force Statistics</span></u></a>: This page contains links to several available datasets that you can explore.</p></li>
-<li><p><a href="https://openpolicing.stanford.edu/" title="This link takes you to the Stanford open policing project page and datasets."><u><span>The Stanford Open Policing Project</span></u></a>: This dataset can be downloaded as a .csv file for your own use.</p></li>
-</ol>
+<section id="expanding-to-a-chat-endpoint" class="level2">
+<h2 class="anchored" data-anchor-id="expanding-to-a-chat-endpoint">6. Expanding to a Chat Endpoint</h2>
+<p>If you prefer the Chat style with roles (system, user, assistant): 1. Change the endpoint to /v1/chat/completions. 2. Format your data as:</p>
+<pre><code>data = {
+  "model": "meditron-7b",
+  "messages": [
+    {"role": "system", "content": "You are a helpful epidemiology assistant."},
+    {"role": "user", "content": f"Context:\n{context}\n\nQuestion:\n{user_query}"}
+  ],
+  "max_tokens": 300,
+  "temperature": 0.7
+}
+</code></pre>
+<pre><code>3.  Parse the response.json() similarly.</code></pre>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">7. Next Steps</h2>
+<pre><code>1.  Scale Up
+•   Once your server can handle 70B, replicate the same approach—only change the model name in LM Studio.
+2.  User Interface
+•   Build a Flask or Streamlit app that:
+•   Accepts user queries,
+•   Pulls relevant text from FAISS,
+•   Sends a combined prompt to the LLM,
+•   Displays the final response.
+3.  Ongoing Updates
+•   As WHO releases new PDFs, embed them, add to the FAISS index, and keep your pipeline fresh without retraining the model.</code></pre>
+<p>Final Summary</p>
+<p>By combining your vector-store retrieval (FAISS + SentenceTransformers) with the LM Studio local server (OpenAI-like API), you can implement a practical end-to-end RAG system on your personal Mac. This will allow you to test question-answering over WHO documents using the Meditron 7B model—setting the stage for seamless migration to the Meditron 70B once your dedicated server is ready.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -842,7 +946,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Posts/posts/useful_resources.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/ResearchLog/posts/2025-01-14-LLM.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>All rights reserved. 2024.</p>
 </div>
