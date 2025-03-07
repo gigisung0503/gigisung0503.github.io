@@ -3,18 +3,26 @@ title: "Welcome!"
 subtitle: "   "
 ---
 
-<iframe width="1000px" height="600px" src="https://maps.worldbank.org/projects?status=active&embed=true"></iframe>
+</br>
+</br>
+</br>
 
-*Source: [https://maps.worldbank.org/projects?status=active&embed=true](https://maps.worldbank.org/projects?status=active&embed=true)*
-<!-- ### Brief Biography
-I am a **geospatial analyst and urban planner** committed to leveraging technology and data to build equitable, resilient, and sustainable urban systems. At the **World Health Organization**, I lead projects combining satellite imagery and epidemiological data to confront public health challenges, including the **climate–disease** nexus in Yemen and GIS-driven emergency response strategies in Afghanistan.
+### I told you that my lung is failing.
 
-My experience spans urban mobility, **climate resilience**, and social equity, culminating in a fellowship with the Bloomberg Center for Cities to deploy GIS-based solutions in South Africa’s informal settlements. At Harvard GSD, I integrated research with technical innovation—analyzing pandemic-driven mobility shifts and evaluating infrastructure vulnerabilities to climate hazards.
+It is getting harder and harder to breathe in Cairo. Indoor, indirect smoking, outdoor fumes coming from the traffic. 
 
-I believe that inclusive **technology governance** is critical in urban development. By prioritizing local participation and bridging the **digital divide**, emerging tools—such as AI, GIS, and machine learning—can be harnessed to create smart city ecosystems that are not only efficient but equitable. Drawing on Python, SQL, GIS, and ML, I aim to craft data-driven solutions that serve as catalysts for positive urban transformation. -->
+<iframe width="1000px" height="600px" src="https://www.iqair.com/air-quality-map?zoomLevel=7&lat=30.06263&lng=31.24967"></iframe>
 
+*Source: [Cairo air quality map](https://www.iqair.com/air-quality-map/egypt/cairo/cairo)*
 
+</br>
+</br>
+</br>
 
 ### Tracker Dashboard, the World Bank
 I find this World Bank tracker dashboard very useful... Something that we could adopt at WHO EMRO🤔, including all the long-term/emergency programs. 
 460 projects with $72.6b commit amount over the span of 109 countries...!
+
+<iframe width="1000px" height="600px" src="https://maps.worldbank.org/projects?status=active&embed=true"></iframe>
+
+
