@@ -77,12 +77,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </script>
-<script src="assets/js/annotator.js"></script>
-<script src="assets/js/annotations-init.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="assets/css/annotator.css">
 </head>
 
 <body class="nav-fixed">
@@ -148,7 +145,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective">Objective</a></li>
+  <li><a href="#tracker-dashboard-the-world-bank" id="toc-tracker-dashboard-the-world-bank" class="nav-link active" data-scroll-target="#tracker-dashboard-the-world-bank">Tracker Dashboard, the World Bank</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -174,89 +171,17 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </header>
 
 
-<!-- 1) Include Mapbox GL and its CSS -->
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-<!-- 2) Include the Rain Layer plugin from CDN -->
-<script src="https://cdn.jsdelivr.net/npm/mapbox-gl-rain-layer@latest/dist/mapbox-gl-rain-layer.min.js"></script>
-<!-- 3) Container for map + overlays (title/timestamp) -->
-<div id="map-container" style="position: relative; width: 800px; height: 480px;">
-<!-- The actual map -->
-<div id="map" style="width: 100%; height: 100%;">
-
-</div>
-<!-- A title box on top of the map -->
-<div id="map-title" style="
-       position: absolute;
-       top: 10px; left: 10px;
-       font-size: 18px;
-       font-family: sans-serif;
-       background: rgba(255, 255, 255, 0.7);
-       padding: 6px 3px;
-       border-radius: 4px;
-       ">
-<pre><code>Global Rain Radar</code></pre>
-</div>
-<!-- A timestamp box below the title -->
-<div id="timestamp" style="
-       position: absolute;
-       top: 50px; left: 10px;
-       font-size: 14px;
-       font-family: sans-serif;
-       background: rgba(255, 255, 255, 0.7);
-       padding: 4px 8px;
-       border-radius: 4px;
-       ">
-<pre><code>&lt;!-- We'll fill this in dynamically --&gt;</code></pre>
-</div>
-</div>
-<script>
-  // 4) Your personal Mapbox access token:
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lnaXN1bmciLCJhIjoiY2xlMGhpM2hpMTV6dzNwbG9jN3g1bGg1MSJ9.za7zD76Y5ONC4-AFcERn_A';
-
-  // Create a new map instance
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v12',
-    center: [130.6917, 38.6895], // starting position [lng, lat]
-    zoom: 3,
-    pitch: 45,    // tilt the camera
-    bearing: -35.6
-  });
-
-  // Add the rain layer once the map has loaded
-  map.on('load', () => {
-
-    // Create the RainLayer instance
-    const rainLayer = new RainLayer({
-      id: 'rain',
-      source: 'rainviewer', // where the radar data come from
-      scale: 'noaa'         // the color scale 
-    });
-
-    // Add it to the map as a layer
-    map.addLayer(rainLayer);
-
-    // Update the local timestamp every 1 second
-    function updateTime() {
-      const now = new Date();
-      document.getElementById('timestamp').textContent = 
-        'Local time: ' + now.toLocaleString();
-    }
-    setInterval(updateTime, 1000);
-    // Call it once right away
-    updateTime();
-  });
-</script>
-<!-- ### Brief Biography
+<iframe width="1000px" height="600px" src="https://maps.worldbank.org/projects?status=active&amp;embed=true">
+</iframe>
+<p><em>Source: <a href="https://maps.worldbank.org/projects?status=active&amp;embed=true">https://maps.worldbank.org/projects?status=active&amp;embed=true</a></em> <!-- ### Brief Biography
 I am a **geospatial analyst and urban planner** committed to leveraging technology and data to build equitable, resilient, and sustainable urban systems. At the **World Health Organization**, I lead projects combining satellite imagery and epidemiological data to confront public health challenges, including the **climate–disease** nexus in Yemen and GIS-driven emergency response strategies in Afghanistan.
 
 My experience spans urban mobility, **climate resilience**, and social equity, culminating in a fellowship with the Bloomberg Center for Cities to deploy GIS-based solutions in South Africa’s informal settlements. At Harvard GSD, I integrated research with technical innovation—analyzing pandemic-driven mobility shifts and evaluating infrastructure vulnerabilities to climate hazards.
 
-I believe that inclusive **technology governance** is critical in urban development. By prioritizing local participation and bridging the **digital divide**, emerging tools—such as AI, GIS, and machine learning—can be harnessed to create smart city ecosystems that are not only efficient but equitable. Drawing on Python, SQL, GIS, and ML, I aim to craft data-driven solutions that serve as catalysts for positive urban transformation. -->
-<section id="objective" class="level3">
-<h3 class="anchored" data-anchor-id="objective">Objective</h3>
-<p>This portfolio highlights my analytical and technical projects in urban planning and climate resilience, demonstrating my commitment to deploying urban analytics for sustainable and resilient futures.</p>
+I believe that inclusive **technology governance** is critical in urban development. By prioritizing local participation and bridging the **digital divide**, emerging tools—such as AI, GIS, and machine learning—can be harnessed to create smart city ecosystems that are not only efficient but equitable. Drawing on Python, SQL, GIS, and ML, I aim to craft data-driven solutions that serve as catalysts for positive urban transformation. --></p>
+<section id="tracker-dashboard-the-world-bank" class="level3">
+<h3 class="anchored" data-anchor-id="tracker-dashboard-the-world-bank">Tracker Dashboard, the World Bank</h3>
+<p>I find this World Bank tracker dashboard very useful… Something that we could adopt at WHO EMRO🤔, including all the long-term/emergency programs. 460 projects with $72.6b commit amount over the span of 109 countries…!</p>
 
 
 </section>
