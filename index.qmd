@@ -9,7 +9,7 @@ subtitle: "   "
 
 ### I told you that my lung is failing.
 
-It is getting harder and harder to breathe in Cairo. Indoor, indirect smoking, outdoor fumes coming from the traffic. 
+It is getting harder and harder to breathe in Cairo. Indoor, indirect smoking, outdoor traffic fumes. 
 
 <iframe width="1000px" height="600px" src="https://www.iqair.com/air-quality-map?zoomLevel=7&lat=30.06263&lng=31.24967"></iframe>
 
