@@ -149,12 +149,8 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../ResearchLog/index.html"> 
-<span class="menu-text">Research Log</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../Doodling/index.html"> 
-<span class="menu-text">Doodling</span></a>
+    <a class="nav-link" href="../../xyz-logging/index.html"> 
+<span class="menu-text">xyz-logging</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -319,7 +315,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <ul>
 <li><strong>Python Libraries:</strong> For this analysis, we will use <code>pandas</code> for data manipulation, <code>geopandas</code> for spatial data handling, <code>matplotlib</code> and <code>seaborn</code> for visualization, and <code>cenpy</code> for accessing Census data.</li>
 </ul>
-<div id="04fc7c74" class="cell" data-execution_count="1">
+<div id="d8a93d08" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -330,7 +326,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <section id="census-data-download-and-wrangle" class="level3">
 <h3 class="anchored" data-anchor-id="census-data-download-and-wrangle">1.2.1 Census Data: Download and Wrangle</h3>
 <p><strong>Accessing Census Data</strong>: We can use the cenpy library to access Census data for Philadelphia. The variables of interest include total population, number of white residents, median household income, median contract rent, total living in poverty, and bachelor’s degree holders.</p>
-<div id="728ec9e5" class="cell" data-execution_count="2">
+<div id="6e9011c1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'B25026_001E'</span>: <span class="st">'TotalPop'</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'B02001_002E'</span>: <span class="st">'NumberWhites'</span>,</span>
@@ -341,10 +337,10 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'B06012_002E'</span>: <span class="st">'TotalPoverty'</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3e95e9ce" class="cell" data-execution_count="3">
+<div id="fd4efbca" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>acs <span class="op">=</span> cp.remote.APIConnection(<span class="st">'ACSDT5Y2017'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="822859ad" class="cell" data-execution_count="4">
+<div id="32f18514" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tiger.available()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>acs.set_mapservice(<span class="st">'tigerWMS_ACS2017'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -352,7 +348,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
-<div id="b27286fc" class="cell" data-execution_count="5">
+<div id="9f94f9ce" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>acs.mapservice</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>acs.mapservice.layers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -444,7 +440,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
  (ESRILayer) Counties Labels]</code></pre>
 </div>
 </div>
-<div id="cb3df8a3" class="cell" data-execution_count="6">
+<div id="eff48686" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>acs.mapservice.layers[<span class="dv">8</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>acs.mapservice.layers[<span class="dv">8</span>].variables</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>geodata <span class="op">=</span> acs.mapservice.query(layer<span class="op">=</span><span class="dv">8</span>, where<span class="op">=</span><span class="st">"STATE = '42' AND COUNTY = '101'"</span>)</span>
@@ -566,23 +562,23 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>G5020</td>
-<td>207903717001446</td>
-<td>42101000901</td>
+<td>207903717001432</td>
+<td>42101000402</td>
 <td>42</td>
 <td>101</td>
-<td>000901</td>
-<td>9.01</td>
-<td>Census Tract 9.01</td>
+<td>000402</td>
+<td>4.02</td>
+<td>Census Tract 4.02</td>
 <td>CT</td>
 <td>S</td>
-<td>105511</td>
+<td>303681</td>
 <td>0</td>
-<td>+39.9478866</td>
-<td>-075.1623004</td>
-<td>+39.9478866</td>
-<td>-075.1623004</td>
-<td>5717</td>
-<td>POLYGON ((-8367312.271 4858243.305, -8367301.9...</td>
+<td>+39.9532973</td>
+<td>-075.1686952</td>
+<td>+39.9532973</td>
+<td>-075.1686952</td>
+<td>18311</td>
+<td>POLYGON ((-8368261.381 4859050.821, -8368260.4...</td>
 </tr>
 </tbody>
 </table>
@@ -591,7 +587,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="8562776a" class="cell" data-execution_count="7">
+<div id="ae113726" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>geodata.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -601,7 +597,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="131d38a1" class="cell" data-execution_count="8">
+<div id="00ea31d2" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>acs.variables.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
@@ -697,7 +693,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="b16a0afb" class="cell" data-execution_count="9">
+<div id="ebc71b1c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>acs.geographies[<span class="st">'fips'</span>].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
@@ -769,7 +765,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="84994a44" class="cell" data-execution_count="10">
+<div id="7618c074" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(variables.keys())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>['B25026_001E',
@@ -781,7 +777,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
  'B06012_002E']</code></pre>
 </div>
 </div>
-<div id="64be2bcb" class="cell" data-execution_count="11">
+<div id="fc33e07e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> acs.query(cols<span class="op">=</span> <span class="bu">list</span>(variables.keys())</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>, geo_unit <span class="op">=</span> <span class="st">'tract:*'</span>,  geo_filter <span class="op">=</span> {<span class="st">'state'</span>:<span class="st">'42'</span> , <span class="st">'county'</span>:<span class="st">'101'</span>})</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -959,7 +955,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="3acf93d0" class="cell" data-execution_count="12">
+<div id="f8666d7d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>geodata.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>Index(['MTFCC', 'OID', 'GEOID', 'STATE', 'COUNTY', 'TRACT', 'BASENAME', 'NAME',
@@ -968,7 +964,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="c4366461" class="cell" data-execution_count="13">
+<div id="6afc2ebe" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>Index(['B25026_001E', 'B02001_002E', 'B15001_050E', 'B15001_009E',
@@ -978,7 +974,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 <p>Now, we are going to append geodata to census data.</p>
-<div id="2ed705be" class="cell" data-execution_count="14">
+<div id="9f9511aa" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tract17 <span class="op">=</span> pd.merge(data, geodata, left_on<span class="op">=</span><span class="st">'tract'</span>, right_on<span class="op">=</span><span class="st">'TRACT'</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>tract17.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1143,7 +1139,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="e8453c94" class="cell" data-execution_count="15">
+<div id="a4b1a703" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tract17.rename(columns<span class="op">=</span>variables, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>tract17</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
@@ -1451,7 +1447,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 </div>
 </div>
 </div>
-<div id="29910276" class="cell" data-execution_count="16">
+<div id="3d3bf667" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tract17<span class="op">=</span>gpd.GeoDataFrame(tract17, geometry<span class="op">=</span><span class="st">'geometry'</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>tract17.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -1467,7 +1463,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <section id="transit-open-data-download-and-wrangle" class="level3">
 <h3 class="anchored" data-anchor-id="transit-open-data-download-and-wrangle">1.2.2 Transit Open Data: Download and Wrangle</h3>
 <p><strong>Accessing Transit Data</strong>: Suppose we have a GeoJSON file with the locations of subway stops in Philadelphia. We can use geopandas to read this data.</p>
-<div id="b706bdca" class="cell" data-execution_count="17">
+<div id="78e9a1b0" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>septa_stops <span class="op">=</span> gpd.read_file(<span class="st">"https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/0c6e18b06d1675858dff1741a9e4a363bfa761db/DATA/Chapter1/PHL_CT00.geojson"</span>, geometry<span class="op">=</span><span class="st">'geometry'</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(septa_stops.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1487,7 +1483,7 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 4  MULTIPOLYGON (((-75.14882 39.95631, -75.14792 ...  </code></pre>
 </div>
 </div>
-<div id="632bee3d" class="cell" data-execution_count="18">
+<div id="c2636636" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>septa_stops.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -1501,11 +1497,11 @@ With MapServer: Census ACS 2017 WMS</code></pre>
 <section id="relating-tracts-subway-stops-in-space" class="level3">
 <h3 class="anchored" data-anchor-id="relating-tracts-subway-stops-in-space">1.2.3 Relating Tracts &amp; Subway Stops in Space</h3>
 <p>We can use geopandas to perform spatial operations such as buffering, intersection, and spatial joins to relate Census tracts to subway stops.</p>
-<div id="e6a7b9f7" class="cell" data-execution_count="19">
+<div id="5733dde6" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>buffered_stops <span class="op">=</span> septa_stops.<span class="bu">buffer</span>(<span class="dv">2640</span>)  <span class="co"># Buffer in feet</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>buffered_stops.head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/ls/4rhr7kfj5nd_v0fn499s11hm0000gn/T/ipykernel_58970/543701200.py:1: UserWarning:
+<pre><code>/var/folders/ls/4rhr7kfj5nd_v0fn499s11hm0000gn/T/ipykernel_26422/543701200.py:1: UserWarning:
 
 Geometry is in a geographic CRS. Results from 'buffer' are likely incorrect. Use 'GeoSeries.to_crs()' to re-project geometries to a projected CRS before this operation.
 

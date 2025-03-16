@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gigi Sung">
-<meta name="dcterms.date" content="2024-11-04">
+<meta name="dcterms.date" content="2025-01-14">
 
-<title>Gigi Sung’s Workspace - Open-source Alternatives to ArcGIS for Web Mapping</title>
+<title>Gigi Sung’s Workspace - Retrieval Augmented Generation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,12 +114,8 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../ResearchLog/index.html"> 
-<span class="menu-text">Research Log</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../Doodling/index.html"> 
-<span class="menu-text">Doodling</span></a>
+    <a class="nav-link" href="../../xyz-logging/index.html"> 
+<span class="menu-text">xyz-logging</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -147,40 +143,22 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#client-side-libraries" id="toc-client-side-libraries" class="nav-link active" data-scroll-target="#client-side-libraries">1. Client-Side Libraries</a>
+  <li><a href="#what-is-rag" id="toc-what-is-rag" class="nav-link active" data-scroll-target="#what-is-rag">What is RAG</a>
   <ul class="collapse">
-  <li><a href="#leaflet" id="toc-leaflet" class="nav-link" data-scroll-target="#leaflet"><strong><code>Leaflet</code></strong></a></li>
-  <li><a href="#openlayers" id="toc-openlayers" class="nav-link" data-scroll-target="#openlayers"><strong><code>OpenLayers</code></strong></a></li>
-  <li><a href="#maplibre-gl" id="toc-maplibre-gl" class="nav-link" data-scroll-target="#maplibre-gl"><strong><code>MapLibre GL</code></strong></a></li>
+  <li><a href="#ai-generation-without-retrieval-augmentation" id="toc-ai-generation-without-retrieval-augmentation" class="nav-link" data-scroll-target="#ai-generation-without-retrieval-augmentation">AI Generation without Retrieval Augmentation</a></li>
+  <li><a href="#ai-generation-with-retrieval-augmentation" id="toc-ai-generation-with-retrieval-augmentation" class="nav-link" data-scroll-target="#ai-generation-with-retrieval-augmentation">AI Generation with Retrieval Augmentation</a></li>
   </ul></li>
-  <li><a href="#server-side-and-data-hosting" id="toc-server-side-and-data-hosting" class="nav-link" data-scroll-target="#server-side-and-data-hosting">2. Server-Side and Data Hosting</a>
-  <ul class="collapse">
-  <li><a href="#geoserver" id="toc-geoserver" class="nav-link" data-scroll-target="#geoserver"><strong><code>GeoServer</code></strong></a></li>
-  <li><a href="#mapserver" id="toc-mapserver" class="nav-link" data-scroll-target="#mapserver"><strong><code>MapServer</code></strong></a></li>
-  <li><a href="#qgis-server" id="toc-qgis-server" class="nav-link" data-scroll-target="#qgis-server"><strong><code>QGIS</code> Server</strong></a></li>
-  </ul></li>
-  <li><a href="#databases-and-data-management" id="toc-databases-and-data-management" class="nav-link" data-scroll-target="#databases-and-data-management">3. Databases and Data Management</a>
-  <ul class="collapse">
-  <li><a href="#postgis" id="toc-postgis" class="nav-link" data-scroll-target="#postgis"><strong><code>PostGIS</code></strong></a></li>
-  <li><a href="#tileserver-gl-optional-for-vector-tiles" id="toc-tileserver-gl-optional-for-vector-tiles" class="nav-link" data-scroll-target="#tileserver-gl-optional-for-vector-tiles"><strong>TileServer GL</strong> (Optional for Vector Tiles)</a></li>
-  </ul></li>
-  <li><a href="#data-sources-and-basemaps" id="toc-data-sources-and-basemaps" class="nav-link" data-scroll-target="#data-sources-and-basemaps">4. Data Sources and Basemaps</a></li>
-  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together">5. Putting It All Together</a></li>
-  <li><a href="#how-do-these-tools-compare-to-arcgis" id="toc-how-do-these-tools-compare-to-arcgis" class="nav-link" data-scroll-target="#how-do-these-tools-compare-to-arcgis">6. How Do These Tools Compare to <code>ArcGIS</code>?</a></li>
-  <li><a href="#including-mapbox-in-the-conversation" id="toc-including-mapbox-in-the-conversation" class="nav-link" data-scroll-target="#including-mapbox-in-the-conversation">7. Including <code>Mapbox</code> in the Conversation</a></li>
-  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts">Final Thoughts</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Doodling/posts/2025-01-08-Map.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/xyz-logging/posts/2025-01-19-RAG.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Open-source Alternatives to <code>ArcGIS</code> for Web Mapping</h1>
+<h1 class="title">Retrieval Augmented Generation</h1>
   <div class="quarto-categories">
     <div class="quarto-category">development</div>
-    <div class="quarto-category">mapping</div>
   </div>
   </div>
 
@@ -198,7 +176,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 4, 2024</p>
+      <p class="date">January 14, 2025</p>
     </div>
   </div>
   
@@ -210,187 +188,22 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </header>
 
 
-<p>When looking for open-source alternatives to Esri’s <code>ArcGIS</code> for serving web-based map applications, you’ll find a vibrant ecosystem of tools and frameworks. <strong><em>Some of these can fully replace <code>ArcGIS</code> in both data handling (server-side) and visualization (client-side)</em></strong>, while others focus on a specific slice of the mapping stack. Below is an overview of key open-source components commonly used to build a complete web mapping solution—from server to client.</p>
-<hr>
-<section id="client-side-libraries" class="level2">
-<h2 class="anchored" data-anchor-id="client-side-libraries">1. Client-Side Libraries</h2>
-<section id="leaflet" class="level3">
-<h3 class="anchored" data-anchor-id="leaflet"><strong><code>Leaflet</code></strong></h3>
-<ul>
-<li><strong>What It Is</strong>: A lightweight JavaScript library for interactive maps.</li>
-<li><strong>Why It’s Great</strong>: Easy to learn, large plugin ecosystem, works well with raster tiles (e.g., from <code>Mapbox</code>, <code>OpenStreetMap</code>, or your own tile server).</li>
-<li><strong>Typical Use Case</strong>: Quick prototypes or production apps that need simple, slippy maps with markers, pop-ups, and basic overlays.</li>
-</ul>
+<section id="what-is-rag" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-rag">What is RAG</h2>
+<section id="ai-generation-without-retrieval-augmentation" class="level3">
+<h3 class="anchored" data-anchor-id="ai-generation-without-retrieval-augmentation">AI Generation without Retrieval Augmentation</h3>
+<p>LLM 의 도전과제 1. 최신정보의 부재 2. 출처의 부정확성</p>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>Hallucination</p>
+</blockquote>
+</blockquote>
 </section>
-<section id="openlayers" class="level3">
-<h3 class="anchored" data-anchor-id="openlayers"><strong><code>OpenLayers</code></strong></h3>
-<ul>
-<li><strong>What It Is</strong>: A more feature-rich JavaScript library for building advanced web maps.</li>
-<li><strong>Why It’s Great</strong>: Offers broad support for geospatial formats (WMS, WMTS, vector tiles, etc.) and more complex GIS-like functionality out-of-the-box.</li>
-<li><strong>Typical Use Case</strong>: Applications that need advanced map interactions, projections, and layers without heavy server-side customization.</li>
-</ul>
-</section>
-<section id="maplibre-gl" class="level3">
-<h3 class="anchored" data-anchor-id="maplibre-gl"><strong><code>MapLibre GL</code></strong></h3>
-<ul>
-<li><strong>What It Is</strong>: An open-source fork of <code>Mapbox</code> GL JS (licensed under BSD). It provides client-side vector rendering in the browser.</li>
-<li><strong>Why It’s Great</strong>: Retains the powerful style specification and performance of <code>Mapbox</code> GL, but free from the proprietary license constraints.</li>
-<li><strong>Typical Use Case</strong>: Building highly interactive and customizable vector tile-based web apps with 3D capabilities and smooth zoom/rotation.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="server-side-and-data-hosting" class="level2">
-<h2 class="anchored" data-anchor-id="server-side-and-data-hosting">2. Server-Side and Data Hosting</h2>
-<section id="geoserver" class="level3">
-<h3 class="anchored" data-anchor-id="geoserver"><strong><code>GeoServer</code></strong></h3>
-<ul>
-<li><strong>What It Is</strong>: A Java-based server that publishes geospatial data using open standards like WMS, WMTS, WFS, and WCS.</li>
-<li><strong>Why It’s Great</strong>:
-<ul>
-<li>Strong integration with <code>PostGIS</code> (PostgreSQL with geospatial extensions).<br>
-</li>
-<li>Flexible styling using SLD (Styled Layer Descriptor) or CSS-like styling.<br>
-</li>
-<li>Large community support, stable, and actively maintained.</li>
-</ul></li>
-<li><strong>Typical Use Case</strong>: Serving vector/raster layers to web apps, enabling OGC-compliant services, or powering complex geospatial workflows.</li>
-</ul>
-</section>
-<section id="mapserver" class="level3">
-<h3 class="anchored" data-anchor-id="mapserver"><strong><code>MapServer</code></strong></h3>
-<ul>
-<li><strong>What It Is</strong>: One of the oldest and most robust open-source map servers, written in C.</li>
-<li><strong>Why It’s Great</strong>:
-<ul>
-<li>High performance in rendering cartographic maps.<br>
-</li>
-<li>Also supports OGC standards (WMS, WFS, WCS).<br>
-</li>
-<li>Lightweight and can be very fast if configured properly.</li>
-</ul></li>
-<li><strong>Typical Use Case</strong>: Projects that need a stable and efficient map server for large datasets or high-traffic scenarios.</li>
-</ul>
-</section>
-<section id="qgis-server" class="level3">
-<h3 class="anchored" data-anchor-id="qgis-server"><strong><code>QGIS</code> Server</strong></h3>
-<ul>
-<li><strong>What It Is</strong>: The server component of the <code>QGIS</code> project (an open-source desktop GIS).<br>
-</li>
-<li><strong>Why It’s Great</strong>:
-<ul>
-<li>Uses <code>QGIS</code>’s own rendering engine, meaning the same styling you create in <code>QGIS</code> Desktop can be served to the web.<br>
-</li>
-<li>Supports OGC standards (WMS, WFS).<br>
-</li>
-<li>Seamless integration with <code>QGIS</code> Desktop, making it convenient to publish layers directly.</li>
-</ul></li>
-<li><strong>Typical Use Case</strong>: Organizations already using <code>QGIS</code> Desktop who want an easier path to publish maps with the same styling online.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="databases-and-data-management" class="level2">
-<h2 class="anchored" data-anchor-id="databases-and-data-management">3. Databases and Data Management</h2>
-<section id="postgis" class="level3">
-<h3 class="anchored" data-anchor-id="postgis"><strong><code>PostGIS</code></strong></h3>
-<ul>
-<li><strong>What It Is</strong>: A spatial extension of PostgreSQL, turning it into a powerful geospatial database.</li>
-<li><strong>Why It’s Great</strong>:
-<ul>
-<li>Can store and query large amounts of geospatial data efficiently.<br>
-</li>
-<li>Supports advanced GIS functions (buffer, intersect, spatial joins) for server-side analysis.</li>
-</ul></li>
-<li><strong>Typical Use Case</strong>: Any open-source web GIS stack that needs robust data storage and on-the-fly spatial querying.</li>
-</ul>
-</section>
-<section id="tileserver-gl-optional-for-vector-tiles" class="level3">
-<h3 class="anchored" data-anchor-id="tileserver-gl-optional-for-vector-tiles"><strong>TileServer GL</strong> (Optional for Vector Tiles)</h3>
-<ul>
-<li><strong>What It Is</strong>: An open-source Node.js server that hosts vector tiles (MBTiles or raw data) and serves them via styles compatible with <code>Mapbox</code>/MapLibre.</li>
-<li><strong>Why It’s Great</strong>:
-<ul>
-<li>Easy to set up a self-hosted vector tile service.<br>
-</li>
-<li>Works nicely with <code>MapLibre GL</code> or <code>Mapbox</code> GL JS front-ends.</li>
-</ul></li>
-<li><strong>Typical Use Case</strong>: When you want full control over your vector tiles or an offline map environment.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="data-sources-and-basemaps" class="level2">
-<h2 class="anchored" data-anchor-id="data-sources-and-basemaps">4. Data Sources and Basemaps</h2>
-<p>While you can use your own data, you might also need base layers or geocoding/routing services. Many open-source projects rely on <strong><code>OpenStreetMap</code></strong> data, which is crowdsourced and free. You can either:</p>
-<ul>
-<li><strong>Self-host</strong> your own OSM-based tiles with tools like <strong>OpenMapTiles</strong> or <strong>TileServer GL</strong>, or<br>
-</li>
-<li><strong>Use a third-party service</strong> (e.g., MapTiler, Carto, or <code>Mapbox</code>—though <code>Mapbox</code> is free up to certain usage limits but not fully open-source).</li>
-</ul>
-<hr>
-</section>
-<section id="putting-it-all-together" class="level2">
-<h2 class="anchored" data-anchor-id="putting-it-all-together">5. Putting It All Together</h2>
-<p>A typical fully open-source web GIS “stack” might look like this:</p>
-<ol type="1">
-<li><strong>Data Storage</strong>: <code>PostGIS</code> (for vector data), GeoTIFFs or other rasters on disk.<br>
-</li>
-<li><strong>Map Server</strong>: <code>GeoServer</code> or <code>MapServer</code> to publish data via WMS/WMTS (raster layers) or WFS (vector data).<br>
-</li>
-<li><strong>Frontend</strong>: <code>Leaflet</code>, <code>OpenLayers</code>, or <code>MapLibre GL</code> to render maps in the browser and provide interactive features.<br>
-</li>
-<li><strong>Styling and Tiles</strong>: Optionally use TileServer GL or <code>QGIS</code> Server for vector/raster tile services with custom cartography.</li>
-</ol>
-<p>This setup can replicate much of <code>ArcGIS</code>’s map serving functionality without the licensing costs. You do, however, shoulder more responsibility for setup, security, scalability, and maintenance.</p>
-<hr>
-</section>
-<section id="how-do-these-tools-compare-to-arcgis" class="level2">
-<h2 class="anchored" data-anchor-id="how-do-these-tools-compare-to-arcgis">6. How Do These Tools Compare to <code>ArcGIS</code>?</h2>
-<ol type="1">
-<li><strong>Cost</strong>:
-<ul>
-<li><strong>Open-source</strong> solutions are generally free to use (though you may pay for hosting and developer time).<br>
-</li>
-<li><strong><code>ArcGIS</code></strong> typically requires license fees, which can be significant for large deployments.</li>
-</ul></li>
-<li><strong>Flexibility</strong>:
-<ul>
-<li><strong>Open-source</strong> stacks let you customize every layer of the system—ideal if you have specific or niche requirements.<br>
-</li>
-<li><strong><code>ArcGIS</code></strong> provides a well-integrated ecosystem of desktop, online, and enterprise tools, but can be less flexible outside Esri’s ecosystem.</li>
-</ul></li>
-<li><strong>Community &amp; Support</strong>:
-<ul>
-<li><strong>Open-source</strong> communities (<code>GeoServer</code>, <code>MapServer</code>, <code>QGIS</code>, <code>Leaflet</code>, etc.) are large and active. Premium support can come from third-party consultants or in-house experts.<br>
-</li>
-<li><strong><code>ArcGIS</code></strong> offers official Esri support, training, and extensive documentation, which some organizations prefer for mission-critical deployments.</li>
-</ul></li>
-<li><strong>Advanced GIS Functions</strong>:
-<ul>
-<li><strong><code>ArcGIS</code></strong> has built-in advanced tools (e.g., network analysis, 3D, big data analytics) that can be convenient.<br>
-</li>
-<li><strong>Open-source</strong> solutions often require combining multiple tools (e.g., GRASS GIS, <code>PostGIS</code>, Python libraries) to achieve the same functionality. This modularity is powerful but adds complexity.</li>
-</ul></li>
-</ol>
-<hr>
-</section>
-<section id="including-mapbox-in-the-conversation" class="level2">
-<h2 class="anchored" data-anchor-id="including-mapbox-in-the-conversation">7. Including <code>Mapbox</code> in the Conversation</h2>
-<ul>
-<li><strong><code>Mapbox</code></strong> itself is not fully open-source (the <code>Mapbox</code> platform is commercial), but many of its underlying components—like [<code>Mapbox</code> GL JS v1 (BSD-licensed up to a certain version)] and <a href="https://github.com/%60mapbox%60/tile-reduce">TileReduce</a>—were open-source or open-core.<br>
-</li>
-<li><strong><code>MapLibre GL</code></strong> has emerged as a fully open-source alternative that continues the vector rendering engine in a community-led fashion.</li>
-</ul>
-<p>If you’re comfortable mixing open-source with commercial APIs, <code>Mapbox</code> can be an excellent choice for basemaps, geocoding, and styling—especially if you’re not subject to strict open-source mandates. Otherwise, <code>MapLibre GL</code> plus self-hosted tile services (via TileServer GL or <code>GeoServer</code>) can fulfill a truly open-source pipeline.</p>
-<hr>
-</section>
-<section id="final-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
-<p>Building an open-source web GIS stack requires piecing together various components for data storage (<code>PostGIS</code>), map serving (<code>GeoServer</code>, <code>MapServer</code>, <code>QGIS</code> Server), and frontend visualization (<code>Leaflet</code>, <code>OpenLayers</code>, or <code>MapLibre GL</code>). While <code>ArcGIS</code> offers a one-stop, proprietary solution, open-source alternatives can be just as robust, infinitely flexible, and cost-effective—provided you have the technical expertise (or are willing to learn) to configure and maintain them.</p>
-<p>In short, if you’re looking to replace <code>ArcGIS</code> for web-serving map applications with purely open-source tools (including MapLibre/<code>Mapbox</code>-like clients), you’ll find a rich, supportive community and a powerful suite of technologies ready to be tailored to your specific project needs.</p>
+<section id="ai-generation-with-retrieval-augmentation" class="level3">
+<h3 class="anchored" data-anchor-id="ai-generation-with-retrieval-augmentation">AI Generation with Retrieval Augmentation</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -955,7 +768,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/Doodling/posts/2025-01-08-Map.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gigisung0503/gigisung0503.github.io.git/blob/main/xyz-logging/posts/2025-01-19-RAG.md" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>All rights reserved. 2024.</p>
 </div>

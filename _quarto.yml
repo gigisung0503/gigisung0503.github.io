@@ -26,10 +26,10 @@ website:
       - about.qmd
       - text: "Projects"
         file: ./Projects/index.qmd
-      - text: "Research Log"
-        file: ./ResearchLog/index.qmd
-      - text: "Doodling"
-        file: ./Doodling/index.qmd
+      # - text: "Research Log"
+      #   file: ./ResearchLog/index.qmd
+      - text: "xyz-logging"
+        file: ./xyz-logging/index.qmd
       # - text: "Spatial SQL"
       #   file: ./Spatial SQL/index.qmd
       # - text: "Policy Analysis"
