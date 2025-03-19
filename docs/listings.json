@@ -1,0 +1,36 @@
+[
+  {
+    "listing": "/xyz-logging/index.html",
+    "items": [
+      "/xyz-logging/posts/useful_resources.html",
+      "/xyz-logging/posts/2025-03-16-paperReading1.html",
+      "/xyz-logging/posts/2025-02-16-palantir.html",
+      "/xyz-logging/posts/2025-02-05-gaza.html",
+      "/xyz-logging/posts/2025-01-14-LLM.html",
+      "/xyz-logging/posts/2025-01-19-RAG.html",
+      "/xyz-logging/posts/2025-01-05.html",
+      "/xyz-logging/posts/2025-01-08-Map.html",
+      "/xyz-logging/posts/umngeni.html",
+      "/xyz-logging/posts/informal_settlement.html",
+      "/xyz-logging/posts/lit_review.html",
+      "/xyz-logging/posts/eta_etl.html",
+      "/xyz-logging/posts/api.html",
+      "/xyz-logging/posts/post.html"
+    ]
+  },
+  {
+    "listing": "/ResearchLog/index.html",
+    "items": [
+      "/ResearchLog/posts/useful_resources.html",
+      "/ResearchLog/posts/2025-03-13-SC.html",
+      "/ResearchLog/posts/2025-01-14-LLM.html",
+      "/ResearchLog/posts/2025-01-19-RAG.html",
+      "/ResearchLog/posts/umngeni.html",
+      "/ResearchLog/posts/informal_settlement.html",
+      "/ResearchLog/posts/lit_review.html",
+      "/ResearchLog/posts/eta_etl.html",
+      "/ResearchLog/posts/api.html",
+      "/ResearchLog/posts/post.html"
+    ]
+  }
+]
