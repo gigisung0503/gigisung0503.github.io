@@ -13,12 +13,17 @@ title: "About me"
 <!-- Text gets a column with width 8/12 -->
 ::: {.g-col-8}
 
-Hello, my name is Gigi Sung, and I am a **geospatial analyst** and **urban planner** dedicated to leveraging technology and data for equitable, resilient, and sustainable urban development. As a graduate of the **Harvard Graduate School of Design** and an analyst at the **World Health Organization**, I operate at the intersection of cutting-edge research and impactful real-world applications, employing **spatial data science** to address critical public health challenges—ranging from climate–disease dynamics in Yemen to GIS-driven emergency response strategies in Afghanistan.
+Hello! I’m **Gigi Sung**, a geospatial analyst and urban planner with a passion for harnessing technology and data to foster equitable, resilient, and sustainable urban development. My work revolves around one key question: *How do we weave data-driven methods into daily public services for communities with vastly different resource levels?*
 
-My passion lies in **machine learning and deep learning** for urban planning, encompassing areas like land use classification, building footprint extraction, and urban growth prediction. I also recognize the **indispensable role of statistical models** in complementing algorithmic approaches, ensuring robust quantitative insights. In the realm of climate action, I focus on risk assessments, urban heat island mitigation, and identifying optimal renewable energy sites, all of which advance more adaptable and livable cities.
+After earning my master's degree at the **Harvard University**, I joined the **World Health Organization (EMRO)**, where I focus on spatial data science to address critical public health issues. My projects span from modeling climate–disease dynamics in Yemen to creating GIS-based emergency response strategies in Afghanistan. Along the way, I’ve:
+
+- **Developed the PopEstimationModel**—an open-source machine learning tool that rapidly estimates refugee camp populations using high-resolution satellite imagery.  
+- **Led predictive modeling efforts** for climate-induced vector-borne diseases, enhancing WHO’s early-warning capabilities for dengue and other outbreaks.  
+- **Spearheaded an LLM-based RAG agent** for the WHO GIS Portal, using LangChain to improve risk assessment accuracy and data retrieval from WHO documents with minimal hallucination.  
+- **Advised on policy and national GIS roadmaps**, helping ministries and country offices integrate geospatial intelligence into public health programs.  
+- **Delivered capacity-building training** across 13 WHO member states, advocating open data and open-source GIS solutions for stronger data governance and surveillance.  
 
 I firmly believe in **open data and open-source solutions** as catalysts for democratizing analytics and fostering collective progress. At the same time, my work emphasizes balancing quantitative rigor with qualitative understanding—grounding data-driven insights in the human context that shapes urban life. By integrating both analytical depth and empathetic awareness, I aim to develop strategies and frameworks that not only innovate but also include and empower the communities they serve.
-
 
 ::: 
 
