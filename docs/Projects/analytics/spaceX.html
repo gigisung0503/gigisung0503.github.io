@@ -149,8 +149,8 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../xyz-logging/index.html"> 
-<span class="menu-text">xyz-logging</span></a>
+    <a class="nav-link" href="../../Logging/index.html"> 
+<span class="menu-text">Logging</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -221,7 +221,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </section>
 <section id="import-libraries-and-define-auxiliary-functions" class="level3">
 <h3 class="anchored" data-anchor-id="import-libraries-and-define-auxiliary-functions">Import Libraries and Define Auxiliary Functions</h3>
-<div id="9e415506" class="cell" data-execution_count="1">
+<div id="6dbee537" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Requests allows us to make HTTP requests which we will use to get data from an API</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas is a software library written for the Python programming language for data manipulation and analysis.</span></span>
@@ -238,7 +238,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 </div>
 <p>Below we will define a series of helper functions that will help us use the API to extract information using identification numbers in the launch data.</p>
 <p>From the <code>rocket</code> column we would like to learn the booster name.</p>
-<div id="7b3cac6c" class="cell" data-execution_count="2">
+<div id="49b646bb" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Takes the dataset and uses the rocket column to call the API and append the data to the list</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> getBoosterVersion(data):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x <span class="kw">in</span> data[<span class="st">'rocket'</span>]:</span>
@@ -246,7 +246,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        response <span class="op">=</span> requests.get(<span class="st">"https://api.spacexdata.com/v4/rockets/"</span><span class="op">+</span><span class="bu">str</span>(x)).json()</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        BoosterVersion.append(response[<span class="st">'name'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4b67d55a" class="cell" data-execution_count="3">
+<div id="5efc1043" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>url<span class="op">=</span><span class="st">'https://api.spacexdata.com/v4/launches/past'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span>requests.get(url)</span>
@@ -10473,7 +10473,7 @@ gtag('config', 'G-EPVTNRSWSE', { 'anonymize_ip': true});
   'id': '62dd70d5202306255024d139'}]</code></pre>
 </div>
 </div>
-<div id="d9015914" class="cell" data-execution_count="4">
+<div id="05a3f5c8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>pd.json_normalize(response.json())</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

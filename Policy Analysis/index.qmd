@@ -2,7 +2,7 @@
 
 Welcome to my blog series where I delve into the fascinating world of data science in government. Inspired by Ken Steif's book, "Public Policy Analytics: Code & Context for Data Science in Government," this series aims to explore the intersection of data science and public policy, shedding light on how data-driven decision-making can shape effective governance.
 
-In each post, I will break down key concepts from the book, provide practical code examples, and discuss additional topics that expand on the book's content. However, while the book uses R for its examples, I will be adapting these concepts and demonstrating their implementation using Python. My goal is to make the complex world of public policy analytics accessible to a broad audience, whether you're a data scientist, a policy analyst, or simply someone interested in how data can be used to improve our communities.
+In each post, I will break down key concepts from the book, provide practical code examples, and discuss additional topics that expand on the book's content. However, while the book uses R for its examples, I will be adapting these concepts and demonstrating their implementation using Python. 
 
 ## Acknowledgment
 

@@ -59,7 +59,7 @@ variables = {
     'B25026_001E': 'TotalPop',
     'B02001_002E': 'NumberWhites',
     'B15001_050E': 'TotalFemaleBachelors',
-    'B15001_009E': 'TotalMaleBacheors',
+    'B15001_009E': 'TotalMaleBachelors',
     'B19013_001E': 'MedHHInc',
     'B25058_001E': 'MedRent',
     'B06012_002E': 'TotalPoverty'

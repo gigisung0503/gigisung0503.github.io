@@ -28,8 +28,8 @@ website:
         file: ./Projects/index.qmd
       # - text: "Research Log"
       #   file: ./ResearchLog/index.qmd
-      - text: "xyz-logging"
-        file: ./xyz-logging/index.qmd
+      - text: "Logging"
+        file: ./Logging/index.qmd
       # - text: "Spatial SQL"
       #   file: ./Spatial SQL/index.qmd
       # - text: "Policy Analysis"
