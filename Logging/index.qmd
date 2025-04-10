@@ -1,5 +1,5 @@
 ---
-title: "xyz-logging"
+title: "Logging"
 description: "Brief book-keeping of a day"
 listing: 
   contents: posts
