@@ -4,6 +4,10 @@ project:
   preview:
     port: 3333
 
+jupyter:                    # 설정 블록 jupyter (Jupyter)
+  python:                   # 언어별 설정 python (Python)
+    kernel: eda             # 사용할 커널 이름 kernel (Kernel)
+
 website:
   title: "Gigi Sung's Workspace"
   site-url: "https://gigisung0503.github.io/" 
