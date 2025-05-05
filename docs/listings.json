@@ -17,20 +17,5 @@
       "/Logging/posts/eta_etl.html",
       "/Logging/posts/post.html"
     ]
-  },
-  {
-    "listing": "/ResearchLog/index.html",
-    "items": [
-      "/ResearchLog/posts/useful_resources.html",
-      "/ResearchLog/posts/2025-03-13-SC.html",
-      "/ResearchLog/posts/2025-01-14-LLM.html",
-      "/ResearchLog/posts/2025-01-19-RAG.html",
-      "/ResearchLog/posts/umngeni.html",
-      "/ResearchLog/posts/informal_settlement.html",
-      "/ResearchLog/posts/lit_review.html",
-      "/ResearchLog/posts/eta_etl.html",
-      "/ResearchLog/posts/api.html",
-      "/ResearchLog/posts/post.html"
-    ]
   }
 ]
