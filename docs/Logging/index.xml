@@ -10,7 +10,7 @@
 <atom:link href="https://gigisung0503.github.io/Logging/index.xml" rel="self" type="application/rss+xml"/>
 <description>Brief book-keeping of a day</description>
 <generator>quarto-1.4.551</generator>
-<lastBuildDate>Wed, 31 Dec 2098 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 31 Dec 2098 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Useful Resources</title>
   <dc:creator>Gigi Sung</dc:creator>
@@ -112,7 +112,7 @@
 
  ]]></description>
   <guid>https://gigisung0503.github.io/Logging/posts/useful_resources.html</guid>
-  <pubDate>Wed, 31 Dec 2098 22:00:00 GMT</pubDate>
+  <pubDate>Wed, 31 Dec 2098 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Journal</title>
@@ -123,6 +123,11 @@
 
 
 
+<p>5월 16일, 2025년 in Seoul</p>
+<ul>
+<li>내 삶에 대해 사보타지 한다는 마음으로, 모든게 다 망해버렸으면 좋겠다는 반항하는 마음으로 산지 반년정도 된것 같다. 설레는 일이 이제 다시는 없을 줄 알았는데 역시, 죽으란 법은 없고 사람은 망각의 동물이라는 클리셰가 실체가 있었음을 인정한다. 나는 지금 일과 관계 모두에서 설레는 마음이 인다.</li>
+</ul>
+<hr>
 <p>5월 8일, 2025년 in Cairo</p>
 <ul>
 <li><p>나는 민지 언니가 너무 좋다. 옳고 그름에 대해서 꼰대같을 정도로 대쪽같이 확신을 주는 그 태도가 내가 서있는 반석이다. 민지언니는 내가 어지러워도 베고 누울 수 있는 단단한 바위다. 민지 언니가 부디 아프지 않고 오래 살았으면 좋겠다. 이럴 수도 있고 저럴 수도 있다는 마음가짐으로 살면 이럴 수도 있고 저럴 수도 있는 결과밖에 얻지 못한다고 언니가 말했다. <br></p></li>
@@ -166,7 +171,7 @@
  ]]></description>
   <category>journal</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-04-21-journal.html</guid>
-  <pubDate>Wed, 07 May 2025 21:00:00 GMT</pubDate>
+  <pubDate>Wed, 07 May 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>HeRams Ukraine</title>
@@ -200,7 +205,7 @@
 </section></div> ]]></description>
   <category>paper-reading</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-03-16-paperReading1.html</guid>
-  <pubDate>Sat, 15 Mar 2025 22:00:00 GMT</pubDate>
+  <pubDate>Sat, 15 Mar 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Palantir 기업리포트</title>
@@ -285,7 +290,7 @@
  ]]></description>
   <category>company</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-02-16-palantir.html</guid>
-  <pubDate>Sat, 15 Feb 2025 22:00:00 GMT</pubDate>
+  <pubDate>Sat, 15 Feb 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Trump’s Bold Gaza Proposal: Implications for Global Agencies and Food for Thought</title>
@@ -355,7 +360,7 @@
 </section></div> ]]></description>
   <category>review</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-02-05-gaza.html</guid>
-  <pubDate>Tue, 04 Feb 2025 22:00:00 GMT</pubDate>
+  <pubDate>Tue, 04 Feb 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Meditron X Retrieval Augmented Generation</title>
@@ -558,7 +563,7 @@ else:
  ]]></description>
   <category>development</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-01-14-LLM.html</guid>
-  <pubDate>Mon, 13 Jan 2025 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 13 Jan 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Retrieval Augmented Generation</title>
@@ -590,7 +595,7 @@ else:
  ]]></description>
   <category>development</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-01-19-RAG.html</guid>
-  <pubDate>Mon, 13 Jan 2025 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 13 Jan 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Random Thoughts These Days</title>
@@ -610,7 +615,7 @@ else:
  ]]></description>
   <category>journal</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-01-05.html</guid>
-  <pubDate>Fri, 03 Jan 2025 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 03 Jan 2025 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Open-source Alternatives to ArcGIS for Web Mapping</title>
@@ -808,7 +813,7 @@ else:
   <category>development</category>
   <category>mapping</category>
   <guid>https://gigisung0503.github.io/Logging/posts/2025-01-08-Map.html</guid>
-  <pubDate>Sun, 03 Nov 2024 22:00:00 GMT</pubDate>
+  <pubDate>Sun, 03 Nov 2024 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The Modern Missionary</title>
@@ -841,7 +846,7 @@ else:
 
  ]]></description>
   <guid>https://gigisung0503.github.io/Logging/posts/umngeni.html</guid>
-  <pubDate>Tue, 16 Jul 2024 21:00:00 GMT</pubDate>
+  <pubDate>Tue, 16 Jul 2024 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Detecting Informal Settlements with Satellite Imagery</title>
@@ -861,7 +866,7 @@ else:
 
  ]]></description>
   <guid>https://gigisung0503.github.io/Logging/posts/informal_settlement.html</guid>
-  <pubDate>Tue, 16 Jul 2024 21:00:00 GMT</pubDate>
+  <pubDate>Tue, 16 Jul 2024 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Automated Literature Review</title>
@@ -953,7 +958,7 @@ These insights underscore the importance of considering economic and social fact
 
  ]]></description>
   <guid>https://gigisung0503.github.io/Logging/posts/lit_review.html</guid>
-  <pubDate>Wed, 26 Jun 2024 21:00:00 GMT</pubDate>
+  <pubDate>Wed, 26 Jun 2024 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>EDA and ETL Convention</title>
@@ -1753,7 +1758,7 @@ font-style: inherit;">=</span> parallel_processing(df)</span></code></pre></div>
 
  ]]></description>
   <guid>https://gigisung0503.github.io/Logging/posts/eta_etl.html</guid>
-  <pubDate>Fri, 14 Jun 2024 21:00:00 GMT</pubDate>
+  <pubDate>Fri, 14 Jun 2024 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Supply Risk of Minerals</title>
@@ -2061,7 +2066,7 @@ font-style: inherit;">=</span> parallel_processing(df)</span></code></pre></div>
 
  ]]></description>
   <guid>https://gigisung0503.github.io/Logging/posts/post.html</guid>
-  <pubDate>Fri, 21 May 2021 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 21 May 2021 15:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
